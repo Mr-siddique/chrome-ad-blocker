@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "env": { "browser": true, "es2022": true, "webextensions": true, "node": true },
+  "parserOptions": { "ecmaVersion": 2022, "sourceType": "module" },
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-new-func": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "max-lines-per-function": ["error", { "max": 30, "skipBlankLines": true, "skipComments": true }]
+  },
+  "overrides": [
+    {
+      "files": ["tests/**/*.js", "scripts/**/*.js", "*.config.js"],
+      "env": { "jest": true, "node": true },
+      "parserOptions": { "sourceType": "script", "ecmaVersion": 2022 },
+      "rules": { "max-lines-per-function": "off" }
+    },
+    {
+      "files": ["tests/**/*.js"],
+      "parserOptions": { "sourceType": "module" }
+    }
+  ]
+}

@@ -464,3 +464,16 @@ For agents to use before making big decisions:
 ---
 
 **Remember:** This file is your collective memory. The more you log and learn, the better future decisions will be! 🧠
+
+---
+## Build Agent decisions
+
+### T1: Scaffolding decisions
+**Agent:** Build Agent | **Task:** T1 | **Risk:** LOW
+- Removed the `jest` key from package.json: Jest refuses to run with both it and jest.config.js present (both existed, `npm test` crashed). jest.config.js kept as the single source (thresholds unchanged).
+- Added `src/package.json` (`{"type":"module"}`, extra file): lets Node scripts (scripts/build-rules.js, CJS) `import()` the ES-module filter lists while jest/webpack still handle them normally.
+- Single content script on `<all_urls>` (all_frames, document_start) instead of separate per-host entries: platform detection happens inside the script, avoiding double injection. Plan mentioned per-host matches plus a general one; this is a minor deviation.
+- Permissions: `storage`, `declarativeNetRequest`, `activeTab`. No host_permissions (DNR block rules do not need them). Rule ruleset entries are added in T6/T12.
+- webpack `devtool: false`: default dev devtool uses eval, which MV3 CSP forbids. A small inline plugin copies static files (no new dependency).
+- tests/setup.js mocks support callback and promise styles and keep an in-memory store with onChanged.
+- ESLint enforces max 30 lines per function in src (tests exempt).

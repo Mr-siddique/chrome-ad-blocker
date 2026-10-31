@@ -28,7 +28,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Satisfies:** AT-17 (manifest half), foundation for AT-12
 - **Notes:** manifest MV3, `minimum_chrome_version: "90"`, service worker, declarativeNetRequest with static ruleset ids, content script matches for Prime Video and Jio Hotstar hosts plus `<all_urls>` general script, `action` popup, `options_page`, minimal permissions (`storage`, `declarativeNetRequest`, `tabs` or `activeTab`, `scripting` only if used). No remote code, no network calls.
 - **Test Strategy:** Unit: manifest.json schema checks (MV3, service_worker, version floor, permission whitelist, no `webRequestBlocking`, no remote URLs). `npm test` runs green with zero tests failing.
-- **Status:** NOT STARTED
+- **Status:** DONE (8 tests)
 
 ### T2: Filter engine core (matcher, pattern parsing, validation)
 - **Scope:** Medium
