@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "context": {
+    "projectName": "Chrome Ad Blocker Extension",
+    "projectType": "chrome-extension",
+    "manifestVersion": 3,
+    "language": "javascript",
+    "description": "Spec-driven agentic development for lightweight ad blocker"
+  },
+  "development": {
+    "agentLoop": {
+      "enabled": true,
+      "phases": [
+        "SPECIFY",
+        "PLAN",
+        "BUILD",
+        "TEST",
+        "REVIEW",
+        "ITERATE"
+      ],
+      "convergenceMaxIterations": 3,
+      "checkpointDirectory": "progress/"
+    },
+    "testing": {
+      "framework": "jest",
+      "coverageThreshold": 80,
+      "performanceBenchmarks": true,
+      "benchmarkTargets": {
+        "filterMatching": 10,
+        "contentScriptOverhead": 50,
+        "filterLoadTime": 200
+      }
+    },
+    "codeStyle": {
+      "standard": "eslint",
+      "enforceChromeMV3": true,
+      "requireTests": true,
+      "maxFunctionLines": 30
+    }
+  },
+  "tools": {
+    "git": {
+      "autoCommit": true,
+      "commitPerTask": true,
+      "tagReleases": true
+    },
+    "npm": {
+      "autoInstall": true,
+      "runScripts": {
+        "test": "jest --coverage",
+        "benchmark": "node tests/performance/benchmarks.js",
+        "build": "webpack --mode=production",
+        "dev": "webpack --mode=development --watch"
+      }
+    }
+  },
+  "agentInstructions": {
+    "orchestrator": "agents/orchestrator.md",
+    "spec": "agents/spec.md",
+    "planner": "agents/planner.md",
+    "builder": "agents/builder.md",
+    "tester": "agents/tester.md",
+    "reviewer": "agents/reviewer.md"
+  },
+  "progressTracking": {
+    "statusFile": "progress/status.md",
+    "planFile": "progress/PLAN.md",
+    "testResultsFile": "progress/test-results.json",
+    "reviewReportFile": "progress/review-report.md",
+    "blockerFile": "progress/blockers.md"
+  },
+  "humanGates": [
+    {
+      "phase": "PLAN",
+      "action": "AWAITING_APPROVAL",
+      "description": "Human must review and approve PLAN.md before BUILD starts"
+    },
+    {
+      "phase": "REVIEW",
+      "action": "AWAITING_APPROVAL",
+      "description": "Human must review final code before merge"
+    }
+  ],
+  "notes": {
+    "specDriven": "SPEC.md is the source of truth. All code is validated against it.",
+    "atomicCommits": "Agents commit after each task. No batch commits.",
+    "humanInControl": "Loop pauses at human gates. User decides when to proceed.",
+    "convergenceLimit": "If loop fails >3 times on same bug, escalate to human"
+  }
+}
