@@ -303,19 +303,88 @@ If code quality issues but no spec blockers:
    - Recommend for v2
 ```
 
+## Document Your Review
+
+### 1. Create progress/review-report.md
+```markdown
+# Code Review Report
+**Status:** APPROVED/REJECTED
+**Date:** 2024-01-16
+**Reviewer:** Review Agent
+
+## Findings
+[List all findings]
+
+## Blockers (if rejected)
+[List blockers and fix recommendations]
+```
+
+### 2. Log to progress/REASONING.md
+When rejecting, explain the reasoning so Build Agent can learn:
+
+```markdown
+### Rejection: Popup whitelist button untested
+**Agent:** Review Agent
+**Phase:** REVIEW
+**Date:** 2024-01-16 16:00
+
+**Decision:** REJECTED
+
+**Criteria Check:**
+- Acceptance criterion: "User can whitelist domains" → ❌ NOT TESTED
+- Test coverage: 85% ✅
+- Performance: Meets targets ✅
+
+**Blocker:**
+- Missing integration test for whitelist button
+- Unit test exists (storage.js) but popup integration missing
+
+**Recommendation for Build Agent:**
+- Add test in tests/integration/popup.test.js
+- Click whitelist button, verify storage updated
+- Verify persists across reload
+- See progress/REASONING.md for past mistakes to avoid
+
+**Learning for Future:**
+- Unit tests ≠ integration tests
+- Every SPEC criterion needs explicit test
+```
+
+### 3. Update progress/PROGRESS.md
+```markdown
+## REVIEW Phase Complete
+
+Status: APPROVED or REJECTED
+
+If APPROVED:
+- Ready to merge to main
+- All criteria met, no blockers
+
+If REJECTED:
+- Blockers: [list]
+- Build Agent will fix and resubmit
+- Re-review scheduled
+```
+
 ## You Are Done When
 
+Both conditions met:
+1. progress/review-report.md created with findings
+2. progress/REASONING.md updated with learnings (if rejected)
+
 ```bash
-git add progress/review-report.md
+git add progress/review-report.md progress/REASONING.md
 git commit -m "Review Agent: [APPROVED/REJECTED]"
 ```
 
 **If APPROVED:**
 - Orchestrator creates final commit
 - Feature tagged and merged to main
+- 🎉 FEATURE COMPLETE
 
 **If REJECTED:**
 - Orchestrator passes blockers to Build Agent
+- Build Agent reads REASONING.md for learnings
 - Build Agent fixes issues
 - You review again
 

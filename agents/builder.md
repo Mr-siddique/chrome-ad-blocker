@@ -248,6 +248,44 @@ When a task needs new permissions or features, update manifest.json:
 }
 ```
 
+## Tracking Your Work
+
+As you build, maintain these progress files:
+
+### 1. Update progress/PROGRESS.md
+```markdown
+## In Progress Tasks 🔄
+- [x] Task 1: Prime Video ad filter patterns (75% done)
+
+## Completed Tasks ✅
+- [x] Task 0: Framework setup
+```
+
+### 2. Document Decisions in progress/REASONING.md
+When you make a big decision, log it:
+```markdown
+### Decision: Use domain-based ad detection instead of patterns
+**Agent:** Build Agent
+**Task:** Prime Video Ad Filter (Task 1)
+**Date:** 2024-01-15 14:30
+
+**Decision:** Detect ads by domain (aiv-cdn.amazon.com) first, then patterns
+
+**Reasoning:** 
+- Domain detection is faster (O(1) lookup)
+- More accurate (fewer false positives)
+- Patterns fall back if domain miss
+
+**Risk Level:** LOW
+```
+
+### 3. Refer to ROUTING.md for file locations
+Before creating a file, check `ROUTING.md`:
+```bash
+# "Where should filters.js go?"
+grep -A 5 "filters.js" ../ROUTING.md
+```
+
 ## You Are Done When
 
 All tasks in PLAN.md marked DONE:
@@ -255,6 +293,16 @@ All tasks in PLAN.md marked DONE:
 git status  # Should be clean
 git log --oneline  # Should show commits for each task
 npm test    # Should pass all tests
+
+# Update progress files
+cat >> ../progress/PROGRESS.md << EOF
+
+## Completed Tasks ✅
+- [x] Task 1: Prime Video filter
+- [x] Task 2: Jio Hotstar filter
+- [x] Task 3: Service worker
+- [x] Task 4: Popup UI
+EOF
 ```
 
 Orchestrator then commits a summary and triggers Test Agent.

@@ -324,6 +324,51 @@ const duration = performance.now() - start;
 console.log(`Filter matching: ${duration}ms`);
 ```
 
+## Update Progress Files
+
+After running tests, update:
+
+### 1. progress/test-results.json (detailed results)
+```json
+{
+  "status": "PASS",
+  "coverage": { "statements": 87 },
+  "blockers": []
+}
+```
+
+### 2. progress/PROGRESS.md (human-readable summary)
+```markdown
+## Statistics
+
+Code Coverage: 87% (target 80%) ✅
+Test Pass Rate: 32/32 (100%) ✅
+Performance: All targets met ✅
+
+Metrics:
+- Filter matching: 7ms (target <10ms) ✅
+- Content script: 42ms (target <50ms) ✅
+- Prime Video block rate: 92% (target ≥90%) ✅
+- Jio Hotstar block rate: 91% (target ≥90%) ✅
+```
+
+### 3. progress/REASONING.md (log any issues found)
+```markdown
+### Test Results for Build Agent decisions
+**Agent:** Test Agent
+**Phase:** TEST
+**Date:** 2024-01-16 15:30
+
+**Issues Found:**
+1. Prime Video filter missing one ad domain (aiv-special-*.prd)
+   - Impact: 88% block rate instead of 90%
+   - Recommendation: Add to filter list
+
+**What Worked Well:**
+- Domain-based detection (fast, few false positives)
+- Jio Hotstar pattern comprehensive (91% accuracy)
+```
+
 ## You Are Done When
 
 progress/test-results.json shows:
@@ -334,5 +379,7 @@ progress/test-results.json shows:
   "blockers": []
 }
 ```
+
+Both PROGRESS.md and REASONING.md updated with findings.
 
 Orchestrator then triggers Review Agent.
