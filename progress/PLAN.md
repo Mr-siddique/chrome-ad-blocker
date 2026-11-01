@@ -99,7 +99,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T3, T4, T5, T6, T7
 - **Satisfies:** Spec "primary release gate"; blocks all later general-web merges if any streaming rate <90% or playback invariant fails
 - **Test Strategy:** Integration: runs the five suites programmatically and asserts each threshold; run again as regression check after T10.
-- **Status:** NOT STARTED
+- **Status:** DONE (235 tests total)
 
 ### T9: Storage layer (sync whitelist, local stats, quotas, fallbacks)
 - **Scope:** Medium

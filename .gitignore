@@ -35,3 +35,8 @@ progress/*.log
 # OS
 .DS_Store
 Thumbs.db
+
+# Generated reports
+progress/streaming-gate-report.json
+progress/perf-report.json
+progress/.streaming-gate-jest.json

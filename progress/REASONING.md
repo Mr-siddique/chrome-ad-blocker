@@ -518,3 +518,7 @@ For agents to use before making big decisions:
 - AT-4/AT-6/AT-11 are on a synthetic mock player. AT-11 latency (p95 ~2 ms) measures MutationObserver-to-removal in jsdom, not a real browser. AT-9 content-script overhead design: one observer, targeted queries; measured in T16 synthetically. None of this replaces AT-5 (manual, NOT run).
 - Server-side stitched ads (same `<video>`) are untouchable by design; the content video is protected.
 - Content script still reports via a stub `AD_BLOCKED` message; T10 replaces it with the typed messaging module.
+
+### T8: Streaming gate
+**Agent:** Build Agent | **Task:** T8 | **Risk:** LOW
+- The gate spawns a child `jest` (coverage off, explicit suite paths, so it cannot recurse) for AT-1/2/3/4/6 and also recomputes per-platform corpus rates. It writes `progress/streaming-gate-report.json`, which is gitignored (generated; also perf-report.json). Re-run after T12 as the regression check.
