@@ -1,10 +1,10 @@
-import { getTopHostname } from '../../src/content-script.js';
+import { getTopHostname, pickContext } from '../../src/content/runner.js';
 import { detectPlatform, getPlatformContext } from '../../src/content/platform-detect.js';
 
 function loadContentScript() {
   let mod;
   jest.isolateModules(() => {
-    mod = require('../../src/content-script.js');
+    mod = require('../../src/content/runner.js');
   });
   return mod;
 }
@@ -35,9 +35,42 @@ describe('detectPlatform', () => {
 });
 
 describe('content script start', () => {
-  it('does nothing on unsupported pages', async () => {
+  it('uses general banner rules on non-streaming pages', async () => {
+    document.body.innerHTML = '<article>text</article><div class="ad-slot"></div>';
+    const { start } = loadContentScript();
+    const observer = await start({ location: { hostname: 'example.com', pathname: '/' } }, document);
+    expect(observer).not.toBeNull();
+    expect(document.querySelector('.ad-slot')).toBeNull();
+    expect(document.querySelector('article')).not.toBeNull();
+    expect(chrome.runtime.sendMessage).toHaveBeenCalledWith(
+      expect.objectContaining({ type: 'AD_BLOCKED', platform: 'general' }),
+    );
+    observer.disconnect();
+  });
+
+  it('picks streaming context on streaming hosts and banner context elsewhere', () => {
+    expect(pickContext({ location: { hostname: 'www.hotstar.com', pathname: '/' } }).platform).toBe('jio-hotstar');
+    expect(pickContext({ location: { hostname: 'example.com', pathname: '/' } }).platform).toBe('general');
+  });
+
+  it('the entry script starts the runner', async () => {
+    chrome.runtime.sendMessage = jest.fn(async () => ({ ok: true, enabled: true }));
+    const observe = jest.spyOn(MutationObserver.prototype, 'observe').mockImplementation(() => {});
+    jest.isolateModules(() => {
+      require('../../src/content-script.js');
+    });
+    await flushPromises();
+    expect(chrome.runtime.sendMessage).toHaveBeenCalledWith({ type: 'PAGE_START', topFrame: true });
+    expect(observe).toHaveBeenCalled();
+    observe.mockRestore();
+  });
+
+  it('does nothing on a whitelisted page', async () => {
+    chrome.runtime.sendMessage = jest.fn(async () => ({ ok: true, enabled: false }));
+    document.body.innerHTML = '<div class="ad-slot"></div>';
     const { start } = loadContentScript();
     expect(await start({ location: { hostname: 'example.com', pathname: '/' } }, document)).toBeNull();
+    expect(document.querySelector('.ad-slot')).not.toBeNull();
   });
 
   it('removes ads on a streaming page and reports them to the background', async () => {

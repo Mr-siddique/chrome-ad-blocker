@@ -4,14 +4,14 @@ import { loadBundledFilters } from './utils/rules-loader.js';
 import * as storage from './utils/storage.js';
 import * as tabStats from './utils/tab-stats.js';
 
-const STREAMING_RULESET = 'streaming';
+const RULESETS = ['streaming', 'general'];
 const BADGE_COLOR = '#1a73e8';
 const WARNING_BADGE = { text: '!', color: '#c62828' };
 
 async function disableBlocking(error) {
   console.error('Ad blocker disabled: bundled filter list invalid:', error);
   try {
-    await chrome.declarativeNetRequest.updateEnabledRulesets({ disableRulesetIds: [STREAMING_RULESET] });
+    await chrome.declarativeNetRequest.updateEnabledRulesets({ disableRulesetIds: RULESETS });
   } catch (rulesetError) {
     console.error('Could not disable ruleset:', rulesetError);
   }
@@ -33,7 +33,7 @@ export async function applyBlockingState() {
   const enabled = health.ok && settings.enabled && !(await storage.isSessionDisabled());
   const key = enabled ? 'enableRulesetIds' : 'disableRulesetIds';
   try {
-    await chrome.declarativeNetRequest.updateEnabledRulesets({ [key]: [STREAMING_RULESET] });
+    await chrome.declarativeNetRequest.updateEnabledRulesets({ [key]: RULESETS });
   } catch (error) {
     console.error('Could not update rulesets:', error);
   }

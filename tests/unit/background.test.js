@@ -60,7 +60,7 @@ describe('background service worker', () => {
     await flushPromises();
     expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenCalledTimes(2);
     expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenCalledWith({
-      enableRulesetIds: ['streaming'],
+      enableRulesetIds: ['streaming', 'general'],
     });
   });
 
@@ -70,7 +70,7 @@ describe('background service worker', () => {
     const health = await initialize(() => ({ ok: false, error: 'corrupt', ruleSet: null }));
     expect(health.ok).toBe(false);
     expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenCalledWith({
-      disableRulesetIds: ['streaming'],
+      disableRulesetIds: ['streaming', 'general'],
     });
     expect(chrome.action.setBadgeText).toHaveBeenCalledWith({ text: '!' });
     expect(chrome.storage.local._data[HEALTH_KEY]).toMatchObject({ ok: false, error: 'corrupt' });

@@ -1,3 +1,4 @@
+import { GENERAL_FILTER } from '../filters/general-ads.js';
 import { JIO_HOTSTAR_FILTER } from '../filters/jio-hotstar.js';
 import { PRIME_VIDEO_FILTER } from '../filters/prime-video.js';
 import { isVastVpaidRequest } from '../filters/vast-vpaid.js';
@@ -5,7 +6,7 @@ import { buildRuleSet, shouldBlockUrl } from './filters.js';
 import { validatePattern } from './patterns.js';
 
 export { HEALTH_KEY } from './storage.js';
-const DEFAULT_FILTERS = [PRIME_VIDEO_FILTER, JIO_HOTSTAR_FILTER];
+const DEFAULT_FILTERS = [PRIME_VIDEO_FILTER, JIO_HOTSTAR_FILTER, GENERAL_FILTER];
 
 export function validateFilterList(filter) {
   if (!filter || typeof filter !== 'object') return 'filter list is not an object';

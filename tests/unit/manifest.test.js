@@ -28,6 +28,12 @@ describe('manifest.json', () => {
     );
   });
 
+  it('registers streaming and general static rulesets, enabled by default', () => {
+    const resources = manifest.declarative_net_request.rule_resources;
+    expect(resources.map((r) => r.id)).toEqual(['streaming', 'general']);
+    expect(resources.every((r) => r.enabled === true && r.path.startsWith('rules/'))).toBe(true);
+  });
+
   it('has a popup action and options page', () => {
     expect(manifest.action.default_popup).toBe('popup.html');
     expect(manifest.options_page).toBe('options.html');

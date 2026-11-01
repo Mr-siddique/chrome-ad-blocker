@@ -10,6 +10,7 @@ const PROTECTED_INNER =
   '[class*="subtitle" i], [class*="caption" i], [class*="progress" i]';
 const CANDIDATES =
   '[class*="ad-"], [class*="atvwebplayersdk-ad"], [id*="ad-"], [data-ad-type], ' +
+  '[class*="advert"], [id*="advert"], [class*="banner-ad"], [class*="adsbygoogle"], ' +
   '[data-testid], iframe, video, ins, img, script[src], embed, object';
 
 export function describeElement(el) {

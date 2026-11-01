@@ -1,9 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { GENERAL_FILTER } from '../../src/filters/general-ads.js';
 import { JIO_HOTSTAR_FILTER } from '../../src/filters/jio-hotstar.js';
 import { PRIME_VIDEO_FILTER } from '../../src/filters/prime-video.js';
 import { VAST_VPAID_FILTER } from '../../src/filters/vast-vpaid.js';
-import { BLOCKED_RESOURCE_TYPES, PRIORITY, TLD_EXPANSION, buildStreamingRules, ruleToUrlFilters } from '../../src/utils/dnr-rules.js';
+import { BLOCKED_RESOURCE_TYPES, PRIORITY, TLD_EXPANSION, buildGeneralRules, buildStreamingRules, ruleToUrlFilters } from '../../src/utils/dnr-rules.js';
 import { compileRules, evaluate, urlFilterToRegExp } from '../harness/dnr-sim.js';
 
 const sources = { filters: [PRIME_VIDEO_FILTER, JIO_HOTSTAR_FILTER], vast: VAST_VPAID_FILTER };
@@ -30,6 +31,11 @@ describe('generated streaming rules', () => {
   it('matches the committed src/rules/streaming-rules.json (run npm run build:rules)', () => {
     const file = path.resolve(__dirname, '../../src/rules/streaming-rules.json');
     expect(JSON.parse(fs.readFileSync(file, 'utf8'))).toEqual(generated);
+  });
+
+  it('matches the committed src/rules/general-rules.json (run npm run build:rules)', () => {
+    const file = path.resolve(__dirname, '../../src/rules/general-rules.json');
+    expect(JSON.parse(fs.readFileSync(file, 'utf8'))).toEqual(buildGeneralRules([GENERAL_FILTER]));
   });
 
   it('has unique sequential ids and stays within the static rule limit', () => {

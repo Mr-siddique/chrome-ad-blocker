@@ -139,7 +139,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T8 (streaming gate green), T10, T11
 - **Satisfies:** AT-7 (>=95%), spec precedence rule (re-run AT-1/AT-2/AT-4/AT-8 to prove no regression)
 - **Test Strategy:** Corpus replay asserts >=95%; matching must be size-aware (jsdom layout stubs for ad-size detection); regression: re-run `streaming-gate.test.js` and AT-8; disabling general ruleset must not affect streaming rates.
-- **Status:** NOT STARTED
+- **Status:** DONE (486 tests total, AT-7 97.4%)
 
 ### T13: Popup UI
 - **Scope:** Large

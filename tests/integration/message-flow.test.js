@@ -22,7 +22,7 @@ function loadBackground() {
 function loadContentScript() {
   let contentScript;
   jest.isolateModules(() => {
-    contentScript = require('../../src/content-script.js');
+    contentScript = require('../../src/content/runner.js');
   });
   return contentScript;
 }
@@ -116,16 +116,16 @@ describe('content script <-> background <-> storage', () => {
 
   it('session disable turns rulesets off and clears on browser startup; permanent persists', async () => {
     await chrome.runtime.sendMessage({ type: MSG.SET_DISABLED, disabled: true, scope: 'session' });
-    expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenLastCalledWith({ disableRulesetIds: ['streaming'] });
+    expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenLastCalledWith({ disableRulesetIds: ['streaming', 'general'] });
     chrome.runtime.onStartup.emit();
     await flushPromises();
     expect(await storage.isSessionDisabled()).toBe(false);
-    expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenLastCalledWith({ enableRulesetIds: ['streaming'] });
+    expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenLastCalledWith({ enableRulesetIds: ['streaming', 'general'] });
     await chrome.runtime.sendMessage({ type: MSG.SET_DISABLED, disabled: true, scope: 'permanent' });
     chrome.runtime.onStartup.emit();
     await flushPromises();
     expect((await storage.getSettings()).enabled).toBe(false);
-    expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenLastCalledWith({ disableRulesetIds: ['streaming'] });
+    expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenLastCalledWith({ disableRulesetIds: ['streaming', 'general'] });
     await chrome.runtime.sendMessage({ type: MSG.SET_DISABLED, disabled: false, scope: 'permanent' });
     expect((await storage.getSettings()).enabled).toBe(true);
   });

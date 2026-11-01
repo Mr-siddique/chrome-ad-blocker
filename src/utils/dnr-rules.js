@@ -69,4 +69,8 @@ export function buildStreamingRules(sources) {
   );
 }
 
+export function buildGeneralRules(filters) {
+  return buildStreamingRules({ filters, vast: { signatures: [] } });
+}
+
 export { BLOCKED_RESOURCE_TYPES };

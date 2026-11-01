@@ -1,0 +1,723 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "confirmed": false,
+    "source": "Author-generated from the bundled general ad host list plus 3 deliberately unlisted ad domains. URL paths are synthetic. Not validated against live traffic."
+  },
+  "items": [
+    {
+      "id": "ga-e-001",
+      "url": "https://ads.doubleclick.net/ads/serve?slot=0&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-001"
+    },
+    {
+      "id": "ga-e-002",
+      "url": "https://pubads.googlesyndication.com/ads/serve?slot=1&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-002"
+    },
+    {
+      "id": "ga-e-003",
+      "url": "https://securepubads.googleadservices.com/ads/serve?slot=2&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-003"
+    },
+    {
+      "id": "ga-e-004",
+      "url": "https://cdn.googletagservices.com/ads/serve?slot=3&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-004"
+    },
+    {
+      "id": "ga-e-005",
+      "url": "https://adservice.google.com/ads/serve?slot=4&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-005"
+    },
+    {
+      "id": "ga-e-006",
+      "url": "https://tags.2mdn.net/ads/serve?slot=5&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-006"
+    },
+    {
+      "id": "ga-e-007",
+      "url": "https://serve.amazon-adsystem.com/ads/serve?slot=6&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-007"
+    },
+    {
+      "id": "ga-e-008",
+      "url": "https://x.adnxs.com/ads/serve?slot=7&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-008"
+    },
+    {
+      "id": "ga-e-009",
+      "url": "https://ads.rubiconproject.com/ads/serve?slot=8&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-009"
+    },
+    {
+      "id": "ga-e-010",
+      "url": "https://pubads.pubmatic.com/ads/serve?slot=9&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-010"
+    },
+    {
+      "id": "ga-e-011",
+      "url": "https://securepubads.openx.net/ads/serve?slot=10&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-011"
+    },
+    {
+      "id": "ga-e-012",
+      "url": "https://cdn.casalemedia.com/ads/serve?slot=11&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-012"
+    },
+    {
+      "id": "ga-e-013",
+      "url": "https://static.indexww.com/ads/serve?slot=12&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-013"
+    },
+    {
+      "id": "ga-e-014",
+      "url": "https://tags.criteo.com/ads/serve?slot=13&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-014"
+    },
+    {
+      "id": "ga-e-015",
+      "url": "https://serve.criteo.net/ads/serve?slot=14&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-015"
+    },
+    {
+      "id": "ga-e-016",
+      "url": "https://x.taboola.com/ads/serve?slot=15&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-016"
+    },
+    {
+      "id": "ga-e-017",
+      "url": "https://ads.outbrain.com/ads/serve?slot=16&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-017"
+    },
+    {
+      "id": "ga-e-018",
+      "url": "https://pubads.revcontent.com/ads/serve?slot=17&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-018"
+    },
+    {
+      "id": "ga-e-019",
+      "url": "https://securepubads.mgid.com/ads/serve?slot=18&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-019"
+    },
+    {
+      "id": "ga-e-020",
+      "url": "https://cdn.zedo.com/ads/serve?slot=19&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-020"
+    },
+    {
+      "id": "ga-e-021",
+      "url": "https://static.adroll.com/ads/serve?slot=20&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-021"
+    },
+    {
+      "id": "ga-e-022",
+      "url": "https://tags.quantserve.com/ads/serve?slot=21&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-022"
+    },
+    {
+      "id": "ga-e-023",
+      "url": "https://serve.scorecardresearch.com/ads/serve?slot=22&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-023"
+    },
+    {
+      "id": "ga-e-024",
+      "url": "https://x.ads-twitter.com/ads/serve?slot=23&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-024"
+    },
+    {
+      "id": "ga-e-025",
+      "url": "https://ads.buysellads.com/ads/serve?slot=24&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-025"
+    },
+    {
+      "id": "ga-e-026",
+      "url": "https://srv.carbonads.net/ads/serve?slot=25&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-026"
+    },
+    {
+      "id": "ga-e-027",
+      "url": "https://securepubads.adcolony.com/ads/serve?slot=26&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-027"
+    },
+    {
+      "id": "ga-e-028",
+      "url": "https://cdn.applovin.com/ads/serve?slot=27&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-028"
+    },
+    {
+      "id": "ga-e-029",
+      "url": "https://unityads.unity3d.com/ads/serve?slot=28&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-029"
+    },
+    {
+      "id": "ga-e-030",
+      "url": "https://tags.mopub.com/ads/serve?slot=29&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-030"
+    },
+    {
+      "id": "ga-e-031",
+      "url": "https://serve.smaato.net/ads/serve?slot=30&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-031"
+    },
+    {
+      "id": "ga-e-032",
+      "url": "https://x.vungle.com/ads/serve?slot=31&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-032"
+    },
+    {
+      "id": "ga-e-033",
+      "url": "https://ads.chartboost.com/ads/serve?slot=32&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-033"
+    },
+    {
+      "id": "ga-e-034",
+      "url": "https://pubads.ironsrc.com/ads/serve?slot=33&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-034"
+    },
+    {
+      "id": "ga-e-035",
+      "url": "https://securepubads.supersonicads.com/ads/serve?slot=34&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-035"
+    },
+    {
+      "id": "ga-e-036",
+      "url": "https://cdn.startappservice.com/ads/serve?slot=35&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-036"
+    },
+    {
+      "id": "ga-e-037",
+      "url": "https://static.tapjoy.com/ads/serve?slot=36&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-037"
+    },
+    {
+      "id": "ga-e-038",
+      "url": "https://tags.fyber.com/ads/serve?slot=37&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-038"
+    },
+    {
+      "id": "ga-e-039",
+      "url": "https://serve.exoclick.com/ads/serve?slot=38&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-039"
+    },
+    {
+      "id": "ga-e-040",
+      "url": "https://x.popads.net/ads/serve?slot=39&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-040"
+    },
+    {
+      "id": "ga-e-041",
+      "url": "https://ads.propellerads.com/ads/serve?slot=40&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-041"
+    },
+    {
+      "id": "ga-e-042",
+      "url": "https://pubads.adsterra.com/ads/serve?slot=41&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-042"
+    },
+    {
+      "id": "ga-e-043",
+      "url": "https://securepubads.juicyads.com/ads/serve?slot=42&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-043"
+    },
+    {
+      "id": "ga-e-044",
+      "url": "https://cdn.clickadu.com/ads/serve?slot=43&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-044"
+    },
+    {
+      "id": "ga-e-045",
+      "url": "https://static.hilltopads.net/ads/serve?slot=44&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-045"
+    },
+    {
+      "id": "ga-e-046",
+      "url": "https://tags.adcash.com/ads/serve?slot=45&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-046"
+    },
+    {
+      "id": "ga-e-047",
+      "url": "https://serve.bidvertiser.com/ads/serve?slot=46&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-047"
+    },
+    {
+      "id": "ga-e-048",
+      "url": "https://x.infolinks.com/ads/serve?slot=47&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-048"
+    },
+    {
+      "id": "ga-e-049",
+      "url": "https://ads.kontera.com/ads/serve?slot=48&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-049"
+    },
+    {
+      "id": "ga-e-050",
+      "url": "https://pubads.zergnet.com/ads/serve?slot=49&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-050"
+    },
+    {
+      "id": "ga-e-051",
+      "url": "https://securepubads.nativo.com/ads/serve?slot=50&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-051"
+    },
+    {
+      "id": "ga-e-052",
+      "url": "https://cdn.conversantmedia.com/ads/serve?slot=51&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-052"
+    },
+    {
+      "id": "ga-e-053",
+      "url": "https://static.vindicosuite.com/ads/serve?slot=52&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-053"
+    },
+    {
+      "id": "ga-e-054",
+      "url": "https://tags.sitescout.com/ads/serve?slot=53&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-054"
+    },
+    {
+      "id": "ga-e-055",
+      "url": "https://serve.rfihub.com/ads/serve?slot=54&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-055"
+    },
+    {
+      "id": "ga-e-056",
+      "url": "https://x.crwdcntrl.net/ads/serve?slot=55&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-056"
+    },
+    {
+      "id": "ga-e-057",
+      "url": "https://ads.demdex.net/ads/serve?slot=56&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-057"
+    },
+    {
+      "id": "ga-e-058",
+      "url": "https://pubads.everesttech.net/ads/serve?slot=57&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-058"
+    },
+    {
+      "id": "ga-e-059",
+      "url": "https://securepubads.advertising.com/ads/serve?slot=58&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-059"
+    },
+    {
+      "id": "ga-e-060",
+      "url": "https://cdn.adblade.com/ads/serve?slot=59&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-060"
+    },
+    {
+      "id": "ga-e-061",
+      "url": "https://static.mediavine.com/ads/serve?slot=60&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-061"
+    },
+    {
+      "id": "ga-e-062",
+      "url": "https://tags.adthrive.com/ads/serve?slot=61&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-062"
+    },
+    {
+      "id": "ga-e-063",
+      "url": "https://serve.ezoic.net/ads/serve?slot=62&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-063"
+    },
+    {
+      "id": "ga-e-064",
+      "url": "https://x.moatads.com/ads/serve?slot=63&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-064"
+    },
+    {
+      "id": "ga-e-065",
+      "url": "https://ads.adsafeprotected.com/ads/serve?slot=64&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-065"
+    },
+    {
+      "id": "ga-e-066",
+      "url": "https://pubads.doubleverify.com/ads/serve?slot=65&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-066"
+    },
+    {
+      "id": "ga-e-067",
+      "url": "https://securepubads.serving-sys.com/ads/serve?slot=66&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-067"
+    },
+    {
+      "id": "ga-e-068",
+      "url": "https://cdn.innovid.com/ads/serve?slot=67&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-068"
+    },
+    {
+      "id": "ga-e-069",
+      "url": "https://static.flashtalking.com/ads/serve?slot=68&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-069"
+    },
+    {
+      "id": "ga-e-070",
+      "url": "https://tags.adsrvr.org/ads/serve?slot=69&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-070"
+    },
+    {
+      "id": "ga-e-071",
+      "url": "https://serve.krxd.net/ads/serve?slot=70&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-071"
+    },
+    {
+      "id": "ga-e-072",
+      "url": "https://x.spotxchange.com/ads/serve?slot=71&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-072"
+    },
+    {
+      "id": "ga-e-073",
+      "url": "https://ads.fwmrm.net/ads/serve?slot=72&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-073"
+    },
+    {
+      "id": "ga-e-074",
+      "url": "https://pubads.smartadserver.com/ads/serve?slot=73&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-074"
+    },
+    {
+      "id": "ga-e-075",
+      "url": "https://securepubads.sharethrough.com/ads/serve?slot=74&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-075"
+    },
+    {
+      "id": "ga-e-076",
+      "url": "https://cdn.tremorhub.com/ads/serve?slot=75&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-076"
+    },
+    {
+      "id": "ga-e-077",
+      "url": "https://static.springserve.com/ads/serve?slot=76&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-077"
+    },
+    {
+      "id": "ga-e-078",
+      "url": "https://tags.bidswitch.net/ads/serve?slot=77&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-078"
+    },
+    {
+      "id": "ga-e-079",
+      "url": "https://serve.contextweb.com/ads/serve?slot=78&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-079"
+    },
+    {
+      "id": "ga-e-080",
+      "url": "https://x.lijit.com/ads/serve?slot=79&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-080"
+    },
+    {
+      "id": "ga-e-081",
+      "url": "https://ads.33across.com/ads/serve?slot=80&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-081"
+    },
+    {
+      "id": "ga-e-082",
+      "url": "https://pubads.media.net/ads/serve?slot=81&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-082"
+    },
+    {
+      "id": "ga-e-083",
+      "url": "https://securepubads.yieldmo.com/ads/serve?slot=82&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-083"
+    },
+    {
+      "id": "ga-e-084",
+      "url": "https://cdn.triplelift.com/ads/serve?slot=83&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-084"
+    },
+    {
+      "id": "ga-e-085",
+      "url": "https://static.gumgum.com/ads/serve?slot=84&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-085"
+    },
+    {
+      "id": "ga-e-086",
+      "url": "https://tags.sovrn.com/ads/serve?slot=85&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-086"
+    },
+    {
+      "id": "ga-e-087",
+      "url": "https://serve.adform.net/ads/serve?slot=86&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-087"
+    },
+    {
+      "id": "ga-e-088",
+      "url": "https://x.mathtag.com/ads/serve?slot=87&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-088"
+    },
+    {
+      "id": "ga-e-089",
+      "url": "https://ads.tubemogul.com/ads/serve?slot=88&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-089"
+    },
+    {
+      "id": "ga-e-090",
+      "url": "https://pubads.brightroll.com/ads/serve?slot=89&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-090"
+    },
+    {
+      "id": "ga-e-091",
+      "url": "https://securepubads.lkqd.net/ads/serve?slot=90&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-091"
+    },
+    {
+      "id": "ga-e-092",
+      "url": "https://cdn.stickyadstv.com/ads/serve?slot=91&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-092"
+    },
+    {
+      "id": "ga-e-093",
+      "url": "https://static.adsymptotic.com/ads/serve?slot=92&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-093"
+    },
+    {
+      "id": "ga-e-094",
+      "url": "https://tags.bluekai.com/ads/serve?slot=93&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-094"
+    },
+    {
+      "id": "ga-e-095",
+      "url": "https://serve.exelator.com/ads/serve?slot=94&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-095"
+    },
+    {
+      "id": "ga-e-096",
+      "url": "https://x.rlcdn.com/ads/serve?slot=95&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-096"
+    },
+    {
+      "id": "ga-e-097",
+      "url": "https://ads.agkn.com/ads/serve?slot=96&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-097"
+    },
+    {
+      "id": "ga-e-098",
+      "url": "https://pubads.360yield.com/ads/serve?slot=97&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-098"
+    },
+    {
+      "id": "ga-e-099",
+      "url": "https://securepubads.ml314.com/ads/serve?slot=98&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-099"
+    },
+    {
+      "id": "ga-e-100",
+      "url": "https://cdn.teads.tv/ads/serve?slot=99&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-100"
+    },
+    {
+      "id": "ga-e-101",
+      "url": "https://static.undertone.com/ads/serve?slot=100&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-101"
+    },
+    {
+      "id": "ga-e-102",
+      "url": "https://tags.trafficjunky.net/ads/serve?slot=101&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-102"
+    },
+    {
+      "id": "ga-e-103",
+      "url": "https://serve.adtechus.com/ads/serve?slot=102&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-103"
+    },
+    {
+      "id": "ga-e-104",
+      "url": "https://x.inmobi.com/ads/serve?slot=103&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-104"
+    },
+    {
+      "id": "ga-e-105",
+      "url": "https://ads.inmobicdn.net/ads/serve?slot=104&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-105"
+    },
+    {
+      "id": "ga-e-106",
+      "url": "https://pubads.vserv.mobi/ads/serve?slot=105&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-106"
+    },
+    {
+      "id": "ga-e-107",
+      "url": "https://securepubads.affle.com/ads/serve?slot=106&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-107"
+    },
+    {
+      "id": "ga-e-108",
+      "url": "https://cdn.colombiaonline.com/ads/serve?slot=107&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-108"
+    },
+    {
+      "id": "ga-e-109",
+      "url": "https://static.tyroo.com/ads/serve?slot=108&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-109"
+    },
+    {
+      "id": "ga-e-110",
+      "url": "https://ads.yahoo.com/ads/serve?slot=109&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-110"
+    },
+    {
+      "id": "ga-e-111",
+      "url": "https://serve.admob.com/ads/serve?slot=110&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-111"
+    },
+    {
+      "id": "ga-e-112",
+      "url": "https://ads.linkedin.com/ads/serve?slot=111&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-112"
+    },
+    {
+      "id": "ga-e-113",
+      "url": "https://ads.pinterest.com/ads/serve?slot=112&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-113"
+    },
+    {
+      "id": "ga-e-114",
+      "url": "https://bat.bing.com/ads/serve?slot=113&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-114"
+    },
+    {
+      "id": "ga-e-115",
+      "url": "https://analytics.tiktok.com/ads/serve?slot=114&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-115"
+    },
+    {
+      "id": "ga-e-116",
+      "url": "https://ads.tiktok.com/ads/serve?slot=115&fmt=banner",
+      "confidence": "vendor-known",
+      "ruleId": "ga-116"
+    },
+    {
+      "id": "ga-e-117",
+      "url": "https://adserver.unlisted-adtech-example.com/serve?slot=1",
+      "confidence": "synthetic",
+      "note": "ad domain not in the bundled list; expected unblocked"
+    },
+    {
+      "id": "ga-e-118",
+      "url": "https://banners.unlisted-adtech-example.net/b/728x90.gif",
+      "confidence": "synthetic",
+      "note": "ad domain not in the bundled list; expected unblocked"
+    },
+    {
+      "id": "ga-e-119",
+      "url": "https://track.unlisted-adtech-example.org/pixel.gif",
+      "confidence": "synthetic",
+      "note": "ad domain not in the bundled list; expected unblocked"
+    }
+  ]
+}

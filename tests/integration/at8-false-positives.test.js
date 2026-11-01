@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { getBannerContext } from '../../src/content/banner-ads.js';
 import { PLATFORMS } from '../../src/content/platform-detect.js';
 import { findAdElements, removeAdElements } from '../../src/content/player-ads.js';
 import { isVastVpaidRequest } from '../../src/filters/vast-vpaid.js';
@@ -78,5 +79,14 @@ describe('AT-8 false positives: clean streaming DOM fixtures', () => {
     expect(document.body.innerHTML).toBe(before);
     expect(document.querySelectorAll(PROTECTED).length).toBe(protectedBefore);
     expect(protectedBefore).toBeGreaterThan(0);
+  });
+});
+
+describe('AT-8 re-run with general banner rules (T12 regression)', () => {
+  it.each(fixtures.map((f) => [f.name, f]))('%s is untouched by banner rules', (name, fixture) => {
+    document.body.innerHTML = new DOMParser().parseFromString(fixture.html, 'text/html').body.innerHTML;
+    const before = document.body.innerHTML;
+    expect(removeAdElements(document.body, getBannerContext())).toEqual([]);
+    expect(document.body.innerHTML).toBe(before);
   });
 });

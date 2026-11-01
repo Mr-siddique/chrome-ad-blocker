@@ -38,6 +38,11 @@
         "id": "streaming",
         "enabled": true,
         "path": "rules/streaming-rules.json"
+      },
+      {
+        "id": "general",
+        "enabled": true,
+        "path": "rules/general-rules.json"
       }
     ]
   }
