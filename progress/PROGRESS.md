@@ -76,3 +76,8 @@ Status: PASS for all automatable items (see progress/test-results.json). Manual/
 - DONE: TLD expansion widened from 15 to 25 TLDs.
 - OPEN (human): AT-5, real Chrome load, live corpus, real-page perf/memory, sync, jsdom devDependency. See progress/blockers.md.
 - npm test: 32+1 suites, all pass, coverage ~99.4% stmts (gate 80).
+
+## Test Agent re-test after FIX iteration 1
+- 33 suites / 649 tests pass; coverage 99.87% lines, all files >=97% statements (gate 80).
+- VAST/VPAID FPs gone (0 in clean corpus, permanent regression cases); network blocks via getMatchedRules covered by unit + integration tests; declarativeNetRequestFeedback in src and rebuilt dist manifest.
+- Overhead benchmark 7 runs p95 31.8-44.3 ms (<50, threshold unchanged). Manual/real-Chrome items remain NOT RUN.

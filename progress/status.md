@@ -1,9 +1,9 @@
 # Agentic Development Loop Status
 
 **Last Updated:** 2026-11-01 (started agentic loop)  
-**Current Phase:** BUILD (FIX iteration 1) - Build Agent running  
-**Last Agent:** Orchestrator (human approved FIX)  
-**Progress:** 85% - built and tested; blocked on manual/real-Chrome gates  
+**Current Phase:** REVIEW APPROVE-WITH-CONDITIONS (beta) - AWAITING HUMAN: manual gates + tag  
+**Last Agent:** Review Agent  
+**Progress:** 90% - automatable gates pass; AT-5, real-Chrome load, live-corpus confirmation open  
 
 ## Repository State
 

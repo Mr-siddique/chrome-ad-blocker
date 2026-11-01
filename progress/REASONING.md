@@ -636,3 +636,6 @@ For agents to use before making big decisions:
 
 **Decision:** The benchmark now does 20 warmup scans, then 5 rounds x 60 samples (300 total); the gated value is the median of the per-round p95s (pooled p95 and each round's p95 are recorded in perf-report.json). The 50 ms threshold is unchanged. Also cached the joined `adSelectors` string per filter (was re-joined for every element).
 **Finding (honest):** profiling shows ~20-37 ms of the ~34 ms is jsdom's own `querySelectorAll` over the 1500-row page with the CANDIDATES selector; the extension's own work is a small part, so the cache gave no measurable gain. Real Chrome's native selector engine is far faster, but real-page overhead is still NOT measured (manual task). Post-change: median-of-round p95 34.2 ms; one noisy round reached 42.3 ms and no longer decides the result.
+
+## Test Agent re-test (FIX iteration 1)
+Reran npm test, benchmarks (7 overhead runs 31.8-44.3 ms), inspected diffs for VAST FP fix, network-stats and benchmark change. dist/ was absent (gitignored); ran npm run build to confirm the permission. Benchmark change is warmup + median-of-round-p95, gate unchanged at 50; residual noise remains so flake risk rated MEDIUM. Network-count tests mock chrome API only; real Chrome behaviour NOT RUN. No regressions vs previous results.
