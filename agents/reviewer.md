@@ -413,3 +413,13 @@ git commit -m "Review Agent: [APPROVED/REJECTED]"
 - **Check tests:** Don't trust just passing tests; verify they test the right thing
 - **Performance matters:** If target is <50ms, 49ms passes but 51ms fails
 - **Document everything:** Progress/review-report.md is your evidence
+
+## Lessons From the First Loop (Rules Added)
+
+- Verdicts: APPROVE (battle-tested definition met), APPROVE-WITH-CONDITIONS (beta; list each condition), REJECT.
+- You may not APPROVE on author-written corpora alone. Block-rate claims need FIELD evidence in progress/FIELD-LOG.md.
+- Mark each past blocker resolved / partially resolved / open-human-only.
+- Check overfitting: a fix must generalise (host or document shape), not allow-list the exact reported URL.
+- Check permissions stay minimal and justified, polling is quota-safe, and no new network egress or tracking appeared.
+- For first-party ad blocking (YouTube), verify defensiveness: nothing thrown into the page, playback, controls, subtitles and live streams untouched.
+- Report the field-test count: how many consecutive clean sessions per platform since the last code change.

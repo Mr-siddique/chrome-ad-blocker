@@ -19,6 +19,21 @@ SPECIFY → PLAN → BUILD → TEST → REVIEW → (if fail) ITERATE
 
 Each phase may run multiple times (BUILD+TEST+REVIEW loop until convergence).
 
+**The loop does not end at COMMIT. It ends at BATTLE-TESTED** (see "Battle-Tested Definition").
+Automated gates passing is only a beta. After review, the loop continues:
+
+```
+REVIEW (APPROVE / APPROVE-WITH-CONDITIONS)
+   ↓
+FIELD TEST (human runs the real extension on real sites, reports captures)
+   ↓
+TRIAGE (orchestrator classifies each report: miss / false positive / breakage / noise)
+   ↓
+FIX (Build → Test → Review again), then back to FIELD TEST
+```
+
+Platforms in scope: Prime Video, Jio Hotstar, YouTube (added by human after the first field test showed the extension had no YouTube support). The human decides platform priority and what can be field-tested now; test one platform at a time when asked.
+
 ## Startup Checklist (Run This First)
 
 When invoked, always run in this order:
@@ -162,11 +177,43 @@ Review Agent: ALL tests PASS ✓
 
 **Timeout (prevent infinite loop):**
 ```
-Loop running >2 hours
+No agent progress (no new commit or report) for >2 hours of active agent time
   → Save current state to progress/
   → Report to human what's stuck
   → Recommend human intervention
 ```
+Wall-clock time is not the trigger: a single Build Agent run legitimately took ~9 hours. Always report elapsed time when an agent returns.
+
+## Battle-Tested Definition
+
+The loop exits as BATTLE-TESTED only when ALL hold:
+
+1. Every automatable gate passes (tests, coverage >80%, benchmarks, lint, production build).
+2. The built `dist/` was loaded in real Chrome by the human with no extension errors (AT-17).
+3. For each in-scope platform, the human completed the manual test log in `tests/manual/` (pre-roll, mid-roll, skippable, unskippable, live, subtitles/controls intact) and recorded results in `progress/FIELD-LOG.md`.
+4. **Two consecutive field-test sessions** per platform report zero escaped ads and zero breakage after the last code change. Any code change resets the count.
+5. Every real-world miss ever reported has a permanent regression fixture marked `confirmed:true` (see Field Capture Rule).
+6. Review Agent verdict is APPROVE with no open conditions that code can fix.
+
+Author-written corpora never count toward criteria 3 to 5. Only real-site evidence does.
+
+## Phase 7: FIELD TEST and TRIAGE
+
+**When to run:** after any Review APPROVE or APPROVE-WITH-CONDITIONS, and after every FIX.
+1. Give the human exact steps: rebuild if needed (`npm run build`), reload at `chrome://extensions`, hard-refresh the site, which platform to test, and what to capture (console output from the page, the extension service worker console, Network tab URLs for ad requests filtered by Media, whether the ad was pre-roll or mid-roll, the page URL).
+2. Wait. Do not guess results.
+3. Append every report to `progress/FIELD-LOG.md` (date, platform, build commit, result, captures).
+4. Triage each report:
+   - **Escaped ad (third-party host):** missing host or rule. Fix = add exact host (never a whole shared CDN such as akamaized.net) plus a `confirmed:true` fixture.
+   - **Escaped ad (first-party / same-host / in-player-JSON):** network rules cannot fix it; needs a page-level approach. Say so plainly.
+   - **False positive or breakage:** top priority; breakage of playback, controls or subtitles outranks missed ads.
+   - **Noise:** page console messages unrelated to the extension (log it as noise, do not "fix" it).
+   - Do not assume the extension caused an `ERR_BLOCKED_BY_CLIENT` line; the human may have another blocker installed. Ask them to disable others when it matters.
+5. Status: `AWAITING FIELD TEST: <platform>` while waiting. A triaged fix goes to BUILD with the specific report attached; the human's report itself is the approval to start a FIX for that item.
+
+## Field Capture Rule
+
+Every confirmed real-world miss or false positive becomes a permanent fixture in the matching corpus with `confirmed:true` and a note of the capture date. This is how circular author-written corpora are replaced with real evidence.
 
 ## Human Gates (You Must Pause Here)
 
@@ -208,6 +255,8 @@ Loop running >2 hours
 - **resume-loop** → Read progress/status.md, continue from last phase
 - **status** → Print current phase and progress
 - **trigger-phase PLAN** → Skip to PLAN phase (human override)
+- **field-test <platform>** → Print test steps for that platform, set status AWAITING FIELD TEST
+- **triage** → Read new entries in progress/FIELD-LOG.md and route each (see Phase 7)
 - **debug-state** → Dump git status, spec, plan, test results
 - **reset** → Clear progress/ directory and start over (DANGER)
 
@@ -246,6 +295,15 @@ After you invoke me with `start-loop`:
 1. Do NOT auto-approve
 2. Report failing test name to human
 3. Pass test output to Build Agent for fix
+
+## Lessons From the First Loop
+
+- Agents' reported numbers are claims. Re-run `npm test` yourself before relaying a result.
+- A passing score on a corpus the agents wrote is not evidence of real-world blocking.
+- Do not tag a release until the Battle-Tested Definition is met. A beta tag needs explicit human OK.
+- Never tell the human something is testable until `npm run build` produced a current `dist/` and its manifest was checked.
+- When a human says "do X now", their message is the approval for that gate; record it in progress/status.md.
+- Background-agent completion notices are not human approval.
 
 ## Remember
 

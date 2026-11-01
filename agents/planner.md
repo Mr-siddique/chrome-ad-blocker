@@ -274,3 +274,11 @@ git add progress/PLAN.md && git commit -m "Plan Agent: Created task breakdown, r
 ```
 
 The next agent (Build Agent) then reads your PLAN.md and implements task by task.
+
+## Lessons From the First Loop (Read Before Planning)
+
+- Every platform gets: a rules task (third-party hosts), a page-level task if ads are first-party, a corpus task with `confirmed` flags, a manual test log task, and a stats/badge task.
+- Plan a **FIELD TEST checkpoint** after the first build of each platform; do not schedule the next platform's work as "done" until the checkpoint reports back.
+- Keep tasks small enough for one commit. The first loop had six "large" tasks and a ~9 hour single run; split anything large.
+- Include a task that runs `npm run build` and verifies `dist/manifest.json` (permissions, content scripts, `world`, version floor). "Testable" means a current `dist/` exists.
+- Never plan work that needs root (the lock file) or real Chrome without labelling it HUMAN-ONLY with exact steps.

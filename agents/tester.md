@@ -383,3 +383,12 @@ progress/test-results.json shows:
 Both PROGRESS.md and REASONING.md updated with findings.
 
 Orchestrator then triggers Review Agent.
+
+## Lessons From the First Loop (Rules Added)
+
+- Report three evidence levels separately for every acceptance test: AUTOMATED-ON-CORPUS (circular, weak), HARNESS (jsdom or mock), FIELD (real Chrome, real site, from FIELD-LOG.md). Only FIELD evidence supports block-rate claims.
+- Run flaky benchmarks at least 5 times and report the spread. Never accept a changed threshold.
+- Check `dist/` is current: rebuild, then inspect `dist/manifest.json` for permissions, content scripts (including `world`), `minimum_chrome_version`, and that every referenced file exists.
+- Spot-check that filters are not matching corpus strings verbatim, and that any new fixture marked `confirmed:true` has a FIELD-LOG entry behind it.
+- After a field-driven fix, re-run the specific captured case first, then the full suite, then confirm no regression versus the previous `progress/test-results.json`.
+- Keep a `notRun` list in test-results.json for anything needing a human, and reprint it every time.

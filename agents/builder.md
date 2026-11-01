@@ -306,3 +306,14 @@ EOF
 ```
 
 Orchestrator then commits a summary and triggers Test Agent.
+
+## Lessons From the First Loop (Rules Added)
+
+1. **Never loosen a threshold to make a test pass.** Fix the code or make the measurement robust (warmup, more samples, median of runs).
+2. **Corpus honesty.** Mark every entry `confirmed:true` only if it came from a real capture (FIELD-LOG.md or the spec). Everything else is `confirmed:false`.
+3. **Field Capture Rule.** When given a real-world miss, add an exact-host rule (never a shared CDN such as akamaized.net, googlevideo.com) plus a permanent `confirmed:true` regression fixture before touching anything else. Check that the same host is not already covered.
+4. **First-party ads** (YouTube): DNR cannot help. Use a MAIN-world script that strips ad fields from player data defensively (never throw into the page, touch only objects that look like player responses), plus a DOM fallback. Do not touch player controls or subtitles.
+5. **Do not trigger site anti-adblock detection needlessly.** Note in REASONING.md when a block may be detected by the site.
+6. **Always finish with `npm run build`** and verify `dist/manifest.json` before reporting; the human tests `dist/`, not `src/`.
+7. Report how long the run took and any command that needs the human (sudo, real Chrome). Never use sudo.
+8. No claims about real-site behaviour you did not observe. Say "unverified".

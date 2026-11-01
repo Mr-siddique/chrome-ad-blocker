@@ -181,3 +181,12 @@ When you're done:
 Orchestrator runs: `git add SPEC.md && git commit -m "Spec Agent: Refined spec, all criteria testable and quantified"`
 
 The next agent (Plan Agent) then reads your refined SPEC.md and breaks it into tasks.
+
+## Lessons From the First Loop (Read Before Refining)
+
+- Platforms in scope: Prime Video, Jio Hotstar, YouTube. Add new ones only on human request.
+- Separate **third-party-host ads** (blockable by network rules; targets measurable) from **first-party / same-host / in-player-JSON ads** (YouTube-style; best-effort, no percentage target you cannot verify). Never write a numeric block-rate target for something that cannot be measured without a manual run.
+- Every criterion must say how it is verified: AUTOMATED (corpus or harness), MANUAL (human log in tests/manual/), or FIELD (real-site evidence in progress/FIELD-LOG.md). Corpora written by agents never satisfy a FIELD criterion.
+- State the Chrome version floor and what APIs it permits (`world: "MAIN"` content scripts need 111).
+- Add a BATTLE-TESTED section mirroring the orchestrator's definition (two consecutive clean field sessions per platform).
+- When the human reports a real-world miss, amend the spec with a confirmed fixture requirement, not a looser threshold.
