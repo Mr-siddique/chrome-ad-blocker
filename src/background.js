@@ -1,9 +1,19 @@
 import { MSG, validateMessage } from './utils/messaging.js';
 import { syncDynamicRules } from './utils/dynamic-rules.js';
 import { loadBundledFilters } from './utils/rules-loader.js';
+import generalRules from './rules/general-rules.json';
+import streamingRules from './rules/streaming-rules.json';
+import { PRIME_VIDEO_FILTER } from './filters/prime-video.js';
+import { JIO_HOTSTAR_FILTER } from './filters/jio-hotstar.js';
+import * as network from './utils/network-stats.js';
 import * as storage from './utils/storage.js';
 import * as tabStats from './utils/tab-stats.js';
 
+const RULE_INDEX = network.buildRuleIndex(
+  { streaming: streamingRules, general: generalRules },
+  [PRIME_VIDEO_FILTER, JIO_HOTSTAR_FILTER]
+);
+const POLL_DELAYS_MS = [2000, 6000, 15000];
 const RULESETS = ['streaming', 'general'];
 const BADGE_COLOR = '#1a73e8';
 const WARNING_BADGE = { text: '!', color: '#c62828' };
@@ -53,6 +63,25 @@ async function updateBadge(tabId, count) {
   }
 }
 
+// Network blocks are not pushed to the worker in packed extensions, so they are pulled from
+// getMatchedRules on navigation, on a few delayed polls, and whenever the popup opens.
+export async function syncNetworkBlocks(tabId, options = {}) {
+  if (typeof tabId !== 'number' || tabId < 0) return;
+  if (!(await network.refreshNetworkStats(tabId, RULE_INDEX, options))) return;
+  await updateBadge(tabId, tabStats.getTabStats(tabId).count);
+  await tabStats.persistTabStats();
+}
+
+export function onTabUpdated(tabId, changeInfo) {
+  if (changeInfo.status === 'loading') {
+    tabStats.resetTab(tabId);
+    updateBadge(tabId, 0);
+    for (const delay of POLL_DELAYS_MS) setTimeout(() => syncNetworkBlocks(tabId), delay);
+  } else if (changeInfo.status === 'complete') {
+    syncNetworkBlocks(tabId);
+  }
+}
+
 async function onAdBlocked(message, sender) {
   const tabId = sender.tab && sender.tab.id;
   if (typeof tabId !== 'number') return { ok: false, error: 'No tab' };
@@ -65,10 +94,9 @@ async function onAdBlocked(message, sender) {
 
 async function onPageStart(message, sender) {
   const tabId = sender.tab && sender.tab.id;
-  if (message.topFrame && typeof tabId === 'number') {
-    tabStats.resetTab(tabId);
-    await updateBadge(tabId, 0);
-  }
+  // The per-navigation reset happens in onTabUpdated so network blocks that happened before
+  // this content script ran are not discarded.
+  if (message.topFrame && typeof tabId === 'number') tabStats.ensureTab(tabId);
   return { ok: true };
 }
 
@@ -85,6 +113,7 @@ async function onPopupState(message) {
     storage.getSettings(), storage.getHealth(), storage.isSessionDisabled(),
     storage.isWhitelisted(message.hostname), storage.isBlacklisted(message.hostname),
   ]);
+  await syncNetworkBlocks(message.tabId, { force: true });
   const stats = tabStats.getTabStats(message.tabId);
   const labels = Object.entries(stats.byPlatform).map(([platform, count]) => ({
     platform, count, text: tabStats.platformLabel(platform, count),
@@ -166,6 +195,7 @@ export function registerListeners() {
     return true;
   });
   chrome.storage.onChanged.addListener(onStorageChanged);
+  chrome.tabs.onUpdated.addListener(onTabUpdated);
   chrome.tabs.onRemoved.addListener((tabId) => {
     tabStats.removeTab(tabId);
     tabStats.persistTabStats();

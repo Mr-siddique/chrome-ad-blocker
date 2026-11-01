@@ -10,6 +10,7 @@ const REQUIRED_ICON_SIZES = ['16', '48', '128'];
 const PERMISSION_JUSTIFICATIONS = {
   storage: 'Saves the whitelist, settings and local block statistics.',
   declarativeNetRequest: 'Blocks ad requests with bundled static rules and user dynamic rules, without reading page traffic.',
+  declarativeNetRequestFeedback: 'Reads which of our own block rules matched in a tab, only to show the blocked count and domains in the popup and badge.',
   activeTab: 'Lets the popup read the hostname of the current tab after the user opens it.',
 };
 

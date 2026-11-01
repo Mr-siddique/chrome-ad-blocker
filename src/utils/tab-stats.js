@@ -7,10 +7,25 @@ export const PLATFORM_LABELS = {
 
 const tabs = new Map();
 
-const emptyStats = () => ({ count: 0, byPlatform: {}, domains: {} });
+// netSince is the timestamp of the newest network-level block already counted for the tab.
+const emptyStats = () => ({ count: 0, byPlatform: {}, domains: {}, netSince: Date.now() });
 
 export function resetTab(tabId) {
   tabs.set(tabId, emptyStats());
+}
+
+export function ensureTab(tabId) {
+  if (!tabs.has(tabId)) tabs.set(tabId, emptyStats());
+}
+
+export function getNetSince(tabId) {
+  const stats = tabs.get(tabId);
+  return stats && Number.isFinite(stats.netSince) ? stats.netSince : 0;
+}
+
+export function setNetSince(tabId, timestamp) {
+  ensureTab(tabId);
+  tabs.get(tabId).netSince = timestamp;
 }
 
 export function removeTab(tabId) {

@@ -108,6 +108,7 @@ function makeDnr() {
     }),
     getDynamicRules: jest.fn(async () => [...dynamicRules]),
     updateEnabledRulesets: jest.fn(async () => undefined),
+    getMatchedRules: jest.fn(async () => ({ rulesMatchedInfo: [] })),
     getAvailableStaticRuleCount: jest.fn(async () => 30000),
     MAX_NUMBER_OF_DYNAMIC_RULES: 5000,
   };

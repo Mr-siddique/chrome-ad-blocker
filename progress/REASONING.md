@@ -607,3 +607,26 @@ For agents to use before making big decisions:
 3. The 3 false positives are real VAST/VPAID heuristic hits on informational pages. Within the <2% limit; the clean corpus is mostly synthetic, so the true rate is unknown. Suggest confirming main_frame navigations are not blocked by the VAST path-token rules.
 4. jsdom not in devDependencies (root-owned lock). Needs a human `npm install --save-dev jsdom`.
 5. Process note: my CPU-load experiment hung and left busy-loop processes; they were killed. No src/ or tests changes made.
+
+## FIX iteration 1 (Build Agent)
+
+### Decision: Count network-level blocks via getMatchedRules (declarativeNetRequestFeedback)
+**Agent:** Build Agent | **Date:** 2026-11-01 | **Risk Level:** MEDIUM
+
+**Decision:** Add the `declarativeNetRequestFeedback` permission and pull matches with `chrome.declarativeNetRequest.getMatchedRules({tabId, minTimeStamp})`, mapping `rulesetId:ruleId` to platform and domain with an index built from the bundled rule JSON (block rules only, allow matches ignored).
+
+**Reasoning:**
+- `onRuleMatchedDebug` only fires for unpacked extensions, so it cannot be the product mechanism. `getMatchedRules` is available from Chrome 88 with the feedback permission, so it meets the v90 floor.
+- `webRequest` observers were rejected: SPEC section on limits says no blocking webRequest, and it would add a broad permission that sees all traffic.
+- The API is pull-based, so polls run on tab `loading`/`complete`, at 2 s/6 s/15 s after load, and whenever the popup opens (forced). Reset-per-navigation moved from PAGE_START to `tabs.onUpdated(loading)` so blocks made before the content script starts are kept.
+
+**Honest limitations:**
+- Polling is best effort: a sleeping service worker can miss delayed polls (the popup open poll catches up). Chrome versions with a getMatchedRules quota (documented as 20 calls/10 min for non-activeTab callers) are protected by a self-imposed 18/10 min budget for background polls; popup polls are always attempted.
+- The API gives rule ids, not URLs, so the popup domain list shows the rule's host filter (e.g. `ads.example.com`), `VAST/VPAID request` for heuristic rules, or `your block list` for dynamic rules.
+- A request blocked at network level whose placeholder is later removed from the DOM is counted twice (no way to correlate). Not verified in real Chrome (manual task in progress/blockers.md).
+- The new permission needs a Web Store justification (added to scripts/validate-manifest.js). It does not expose page content or URLs.
+
+### Decision: Exempt documentation-shaped VAST/VPAID URLs instead of narrowing signatures
+**Date:** 2026-11-01 | **Risk Level:** LOW
+
+**Decision:** Keep the broad signatures (so real wrapper blocking is unchanged) and add an exemption for documentation shapes (`/vast/|`, `/<doc-word>/vast`, `/vast/<doc-word>`, `/<doc-word>-vpaid`, ...), both in the JS matcher and as priority-2 DNR allow rules. Host rules (priority 3) still beat them, so an ad host cannot hide behind a doc path. The 3 known FPs are permanent `known-fp-regression` corpus items asserting 0 flagged. Real wrappers (`/ads/vast/v4/a`, `vast.xml`, `vpaid.js`) have explicit tests. Residual risk: a real wrapper whose path is literally `/vast/overview` would be allowed; judged very unlikely.

@@ -85,11 +85,13 @@ describe('content script <-> background <-> storage', () => {
     expect((await chrome.runtime.sendMessage({ type: MSG.GET_TAB_STATS, tabId: 2 })).stats.byPlatform).toEqual({ 'jio-hotstar': 2 });
   });
 
-  it('resets the tab count on a top-frame page start but not on sub-frames', async () => {
+  it('resets the tab count when the tab starts loading, not on page start or sub-frames', async () => {
     await chrome.runtime.sendMessage({ type: MSG.AD_BLOCKED, platform: 'prime-video', items: [{}] });
     await chrome.runtime.sendMessage({ type: MSG.PAGE_START, topFrame: false });
-    expect((await chrome.runtime.sendMessage({ type: MSG.GET_TAB_STATS, tabId: 1 })).stats.count).toBe(1);
     await chrome.runtime.sendMessage({ type: MSG.PAGE_START, topFrame: true });
+    expect((await chrome.runtime.sendMessage({ type: MSG.GET_TAB_STATS, tabId: 1 })).stats.count).toBe(1);
+    chrome.tabs.onUpdated.emit(1, { status: 'loading' });
+    await flushPromises();
     expect((await chrome.runtime.sendMessage({ type: MSG.GET_TAB_STATS, tabId: 1 })).stats.count).toBe(0);
     expect(chrome.action.setBadgeText).toHaveBeenLastCalledWith({ tabId: 1, text: '' });
   });
@@ -148,5 +150,44 @@ describe('content script <-> background <-> storage', () => {
     await chrome.runtime.sendMessage({ type: MSG.AD_BLOCKED, platform: 'prime-video', items: [{}] });
     chrome.tabs.onRemoved.emit(1);
     expect((await chrome.runtime.sendMessage({ type: MSG.GET_TAB_STATS, tabId: 1 })).stats.count).toBe(0);
+  });
+});
+
+describe('network-level blocks reach the badge and popup state', () => {
+  const streaming = require('../../src/rules/streaming-rules.json');
+  const primeRule = streaming.find((r) => r.condition.urlFilter.startsWith('||aiv-cdn.amazon.com'));
+
+  beforeEach(async () => {
+    loadBackground();
+    connect();
+    await flushPromises();
+  });
+
+  it('counts getMatchedRules hits in popup stats, per-platform label and badge', async () => {
+    chrome.tabs.onUpdated.emit(1, { status: 'loading' });
+    const now = Date.now();
+    chrome.declarativeNetRequest.getMatchedRules.mockResolvedValue({
+      rulesMatchedInfo: [{ rule: { rulesetId: 'streaming', ruleId: primeRule.id }, timeStamp: now + 10 }],
+    });
+    const state = await chrome.runtime.sendMessage({ type: MSG.GET_POPUP_STATE, tabId: 1, hostname: 'www.primevideo.com' });
+    expect(state.stats.count).toBe(1);
+    expect(state.stats.byPlatform).toEqual({ 'prime-video': 1 });
+    expect(state.labels[0].text).toBe('Blocked 1 Prime Video ad');
+    expect(chrome.action.setBadgeText).toHaveBeenLastCalledWith({ tabId: 1, text: '1' });
+  });
+
+  it('polls again when the tab finishes loading', async () => {
+    chrome.declarativeNetRequest.getMatchedRules.mockClear();
+    chrome.tabs.onUpdated.emit(1, { status: 'complete' });
+    await flushPromises();
+    expect(chrome.declarativeNetRequest.getMatchedRules).toHaveBeenCalled();
+  });
+
+  it('ignores invalid tab ids', async () => {
+    const { syncNetworkBlocks } = loadBackground();
+    chrome.declarativeNetRequest.getMatchedRules.mockClear();
+    await syncNetworkBlocks(-1);
+    await syncNetworkBlocks(undefined);
+    expect(chrome.declarativeNetRequest.getMatchedRules).not.toHaveBeenCalled();
   });
 });

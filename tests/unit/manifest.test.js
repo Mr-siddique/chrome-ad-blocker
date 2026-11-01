@@ -1,6 +1,6 @@
 const manifest = require('../../src/manifest.json');
 
-const ALLOWED_PERMISSIONS = ['storage', 'declarativeNetRequest', 'activeTab', 'tabs', 'scripting'];
+const ALLOWED_PERMISSIONS = ['storage', 'declarativeNetRequest', 'declarativeNetRequestFeedback', 'activeTab', 'tabs', 'scripting'];
 
 describe('manifest.json', () => {
   it('is Manifest V3 with a service worker and no background page', () => {
