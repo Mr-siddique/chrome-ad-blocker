@@ -49,7 +49,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T2
 - **Satisfies:** AT-1 (>=90%), part of AT-6 (static ads), spec Core Detection unit-test minimum (>=50 endpoints)
 - **Test Strategy:** Corpus replay computes blocked/total and asserts >=0.90 with the ratio printed; per-item failure list output for triage; unit test asserts >=50 endpoint patterns exist and each named spec endpoint matches; guard test that media/subtitle/manifest URLs fixtures are NOT matched (feeds T11).
-- **Status:** NOT STARTED
+- **Status:** DONE (82 tests total, corpus rate 92.1%)
 
 ### T4: Jio Hotstar filter list, ad corpus, block-rate test (STREAMING)
 - **Scope:** Large

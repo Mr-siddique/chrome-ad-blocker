@@ -1,0 +1,479 @@
+{
+  "meta": {
+    "platform": "prime-video",
+    "version": "1.0.0",
+    "confirmed": false,
+    "source": "Author-generated from SPEC.md named endpoints and public ad-tech domains. URL paths are synthetic. Not validated against live traffic captures."
+  },
+  "items": [
+    {
+      "id": "pv-e-001",
+      "url": "https://aiv-cdn.amazon.com/ads/preroll/ad_1000.mp4",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "spec",
+      "ruleId": "pv-001"
+    },
+    {
+      "id": "pv-e-002",
+      "url": "https://ad-tier-12.prd.primevideo.com/v1/adbreak",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "spec",
+      "ruleId": "pv-002"
+    },
+    {
+      "id": "pv-e-003",
+      "url": "https://aax-us-east.amazon-adsystem.com/e/dtb/bid",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-003"
+    },
+    {
+      "id": "pv-e-004",
+      "url": "https://mads.amazon.com/video/ads/v1/serve?placement=overlay&slot=3",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-004"
+    },
+    {
+      "id": "pv-e-005",
+      "url": "https://securepubads.g.doubleclick.net/gampad/ads",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-005"
+    },
+    {
+      "id": "pv-e-006",
+      "url": "https://pagead2.googlesyndication.com/pagead/ads",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-006"
+    },
+    {
+      "id": "pv-e-007",
+      "url": "https://www.googleadservices.com/pagead/conversion/1/",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-007"
+    },
+    {
+      "id": "pv-e-008",
+      "url": "https://imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-008"
+    },
+    {
+      "id": "pv-e-009",
+      "url": "https://s0.2mdn.net/instream/video/client.js",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-009"
+    },
+    {
+      "id": "pv-e-010",
+      "url": "https://z.moatads.com/moatvideo.js",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-010"
+    },
+    {
+      "id": "pv-e-011",
+      "url": "https://ads.adsafeprotected.com/video/ads/v1/serve?placement=bumper&slot=10",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-011"
+    },
+    {
+      "id": "pv-e-012",
+      "url": "https://pubads.doubleverify.com/video/ads/v1/serve?placement=overlay&slot=11",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-012"
+    },
+    {
+      "id": "pv-e-013",
+      "url": "https://vast.serving-sys.com/video/ads/v1/serve?placement=preroll&slot=12",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-013"
+    },
+    {
+      "id": "pv-e-014",
+      "url": "https://video.innovid.com/video/ads/v1/serve?placement=midroll&slot=13",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-014"
+    },
+    {
+      "id": "pv-e-015",
+      "url": "https://serve.flashtalking.com/video/ads/v1/serve?placement=bumper&slot=14",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-015"
+    },
+    {
+      "id": "pv-e-016",
+      "url": "https://ads.adsrvr.org/video/ads/v1/serve?placement=overlay&slot=15",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-016"
+    },
+    {
+      "id": "pv-e-017",
+      "url": "https://pubads.krxd.net/video/ads/v1/serve?placement=preroll&slot=16",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-017"
+    },
+    {
+      "id": "pv-e-018",
+      "url": "https://vast.casalemedia.com/video/ads/v1/serve?placement=midroll&slot=17",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-018"
+    },
+    {
+      "id": "pv-e-019",
+      "url": "https://video.rubiconproject.com/video/ads/v1/serve?placement=bumper&slot=18",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-019"
+    },
+    {
+      "id": "pv-e-020",
+      "url": "https://serve.pubmatic.com/video/ads/v1/serve?placement=overlay&slot=19",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-020"
+    },
+    {
+      "id": "pv-e-021",
+      "url": "https://ads.openx.net/video/ads/v1/serve?placement=preroll&slot=20",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-021"
+    },
+    {
+      "id": "pv-e-022",
+      "url": "https://pubads.spotxchange.com/video/ads/v1/serve?placement=midroll&slot=21",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-022"
+    },
+    {
+      "id": "pv-e-023",
+      "url": "https://2a7e9.v.fwmrm.net/ad/g/1",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-023"
+    },
+    {
+      "id": "pv-e-024",
+      "url": "https://video.adnxs.com/video/ads/v1/serve?placement=overlay&slot=23",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-024"
+    },
+    {
+      "id": "pv-e-025",
+      "url": "https://serve.criteo.com/video/ads/v1/serve?placement=preroll&slot=24",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-025"
+    },
+    {
+      "id": "pv-e-026",
+      "url": "https://ads.criteo.net/video/ads/v1/serve?placement=midroll&slot=25",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-026"
+    },
+    {
+      "id": "pv-e-027",
+      "url": "https://pubads.teads.tv/video/ads/v1/serve?placement=bumper&slot=26",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-027"
+    },
+    {
+      "id": "pv-e-028",
+      "url": "https://vast.smartadserver.com/video/ads/v1/serve?placement=overlay&slot=27",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-028"
+    },
+    {
+      "id": "pv-e-029",
+      "url": "https://video.sharethrough.com/video/ads/v1/serve?placement=preroll&slot=28",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-029"
+    },
+    {
+      "id": "pv-e-030",
+      "url": "https://serve.tremorhub.com/video/ads/v1/serve?placement=midroll&slot=29",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-030"
+    },
+    {
+      "id": "pv-e-031",
+      "url": "https://ads.springserve.com/video/ads/v1/serve?placement=bumper&slot=30",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-031"
+    },
+    {
+      "id": "pv-e-032",
+      "url": "https://pubads.bidswitch.net/video/ads/v1/serve?placement=overlay&slot=31",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-032"
+    },
+    {
+      "id": "pv-e-033",
+      "url": "https://vast.contextweb.com/video/ads/v1/serve?placement=preroll&slot=32",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-033"
+    },
+    {
+      "id": "pv-e-034",
+      "url": "https://video.indexww.com/video/ads/v1/serve?placement=midroll&slot=33",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-034"
+    },
+    {
+      "id": "pv-e-035",
+      "url": "https://serve.lijit.com/video/ads/v1/serve?placement=bumper&slot=34",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-035"
+    },
+    {
+      "id": "pv-e-036",
+      "url": "https://ads.33across.com/video/ads/v1/serve?placement=overlay&slot=35",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-036"
+    },
+    {
+      "id": "pv-e-037",
+      "url": "https://pubads.media.net/video/ads/v1/serve?placement=preroll&slot=36",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-037"
+    },
+    {
+      "id": "pv-e-038",
+      "url": "https://vast.yieldmo.com/video/ads/v1/serve?placement=midroll&slot=37",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-038"
+    },
+    {
+      "id": "pv-e-039",
+      "url": "https://video.triplelift.com/video/ads/v1/serve?placement=bumper&slot=38",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-039"
+    },
+    {
+      "id": "pv-e-040",
+      "url": "https://serve.gumgum.com/video/ads/v1/serve?placement=overlay&slot=39",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-040"
+    },
+    {
+      "id": "pv-e-041",
+      "url": "https://ads.sovrn.com/video/ads/v1/serve?placement=preroll&slot=40",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-041"
+    },
+    {
+      "id": "pv-e-042",
+      "url": "https://pubads.adform.net/video/ads/v1/serve?placement=midroll&slot=41",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-042"
+    },
+    {
+      "id": "pv-e-043",
+      "url": "https://vast.mathtag.com/video/ads/v1/serve?placement=bumper&slot=42",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-043"
+    },
+    {
+      "id": "pv-e-044",
+      "url": "https://video.advertising.com/video/ads/v1/serve?placement=overlay&slot=43",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-044"
+    },
+    {
+      "id": "pv-e-045",
+      "url": "https://serve.tubemogul.com/video/ads/v1/serve?placement=preroll&slot=44",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-045"
+    },
+    {
+      "id": "pv-e-046",
+      "url": "https://ads.brightroll.com/video/ads/v1/serve?placement=midroll&slot=45",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-046"
+    },
+    {
+      "id": "pv-e-047",
+      "url": "https://pubads.lkqd.net/video/ads/v1/serve?placement=bumper&slot=46",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-047"
+    },
+    {
+      "id": "pv-e-048",
+      "url": "https://vast.stickyadstv.com/video/ads/v1/serve?placement=overlay&slot=47",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-048"
+    },
+    {
+      "id": "pv-e-049",
+      "url": "https://video.adsymptotic.com/video/ads/v1/serve?placement=preroll&slot=48",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-049"
+    },
+    {
+      "id": "pv-e-050",
+      "url": "https://serve.bluekai.com/video/ads/v1/serve?placement=midroll&slot=49",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-050"
+    },
+    {
+      "id": "pv-e-051",
+      "url": "https://ads.exelator.com/video/ads/v1/serve?placement=bumper&slot=50",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-051"
+    },
+    {
+      "id": "pv-e-052",
+      "url": "https://pubads.rlcdn.com/video/ads/v1/serve?placement=overlay&slot=51",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-052"
+    },
+    {
+      "id": "pv-e-053",
+      "url": "https://vast.agkn.com/video/ads/v1/serve?placement=preroll&slot=52",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-053"
+    },
+    {
+      "id": "pv-e-054",
+      "url": "https://video.360yield.com/video/ads/v1/serve?placement=midroll&slot=53",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-054"
+    },
+    {
+      "id": "pv-e-055",
+      "url": "https://serve.ml314.com/video/ads/v1/serve?placement=bumper&slot=54",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "pv-055"
+    },
+    {
+      "id": "pv-e-056",
+      "url": "https://aiv-delivery.net/dm/ad-break-1/seg_00012.m4s",
+      "kind": "midroll",
+      "stitched": true,
+      "confidence": "synthetic"
+    },
+    {
+      "id": "pv-e-057",
+      "url": "https://aiv-delivery.net/dm/ad-break-2/seg_00044.m4s",
+      "kind": "midroll",
+      "stitched": true,
+      "confidence": "synthetic"
+    },
+    {
+      "id": "pv-e-058",
+      "url": "https://aiv-delivery.net/dm/ad-break-3/seg_00101.m4s",
+      "kind": "midroll",
+      "stitched": true,
+      "confidence": "synthetic"
+    },
+    {
+      "id": "pv-e-059",
+      "url": "https://ads.unlisted-adtech-example.net/serve?slot=pre",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "synthetic",
+      "note": "ad domain not in the bundled list; expected unblocked (spec edge case)"
+    }
+  ]
+}

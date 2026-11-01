@@ -483,3 +483,11 @@ For agents to use before making big decisions:
 - Rules are `{id, host, path?, contains?, heuristic?}`. Non-wildcard hosts go into a Map and are looked up by walking host suffixes (O(labels)); wildcard hosts use anchored regexes. `*` in a host is one label; a trailing `.*` is a TLD (com, de, co.uk) so `primevideo.com.evil` cannot match.
 - Subtitles are never blocked. Manifests/segments are protected only from `heuristic` rules, so an explicit ad-host rule can still block an ad manifest (needed for the 90% target).
 - Size matching applies only to iframe/ins elements (+-2px) to limit false positives on legitimate 300x250 images.
+
+### T3/T4: Streaming corpora are author-generated (HONESTY NOTE)
+**Agent:** Build Agent | **Task:** T3, T4 | **Risk:** MEDIUM
+- Only `aiv-cdn.amazon.com/ads`, `ad-tier-*.prd.primevideo.*` (Prime Video) and `ads.jiohotstar.com`, `cdn-*.hotstar.com/ads` (Jio Hotstar) come from SPEC.md; they are `confidence: "spec"` and unverified against live traffic.
+- Other entries are real, well-known ad-tech domains (doubleclick.net, moatads.com, fwmrm.net, ...) marked `vendor-known`: whether the platform actually requests them is NOT verified. Nothing is claimed to be a confirmed Prime Video / Jio Hotstar ad host. Indian ad-tech entries on the Hotstar list (inmobi, vserv, affle, colombiaonline, tyroo) are likewise vendor-known only.
+- Player DOM class names (e.g. `atvwebplayersdk-adtimeindicator*`, `ad-overlay`) are unverified guesses and will not match a live player until confirmed.
+- Corpus URLs and DOM fixtures were generated from the same lists they test, so matched items are matched by construction. The only honest "misses" are deliberately included: server-side stitched segment URLs / DOM (video marked as the ad but untouchable), and ad domains not in the list / unknown DOM structure. This ~7% unblockable share is the author's assumption, not a measurement. The AT-1/AT-2 pass proves the machinery, not the real-world 90%. T17 live-capture confirmation is still required.
+- Corpus assembly: endpoints + DOM fixtures are combined for the 90% check, and each half is also asserted >=90% individually. Fixtures are marked with `data-corpus-ad`; a fixture counts as blocked only if every marked element is detected and no unmarked element (video, controls, subtitles) is flagged.
