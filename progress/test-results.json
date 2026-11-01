@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-11-01T00:00:00Z",
+  "agent": "Test Agent",
+  "status": "PASS",
+  "status_note": "PASS for everything automatable, on an author-built UNCONFIRMED corpus and a synthetic jsdom harness. Not evidence of real-world rates. Manual / real-Chrome items are NOT RUN and are listed separately; they are not counted as passed.",
+  "tests": {
+    "suites": { "total": 32, "passed": 32, "failed": 0 },
+    "all": { "total": 620, "passed": 620, "failed": 0 }
+  },
+  "coverage": { "statements": 99.46, "branches": 96.17, "functions": 99.27, "lines": 99.86, "min_file_lines": 98.87, "min_file_statements": 98, "gate": 80, "pass": true },
+  "performance": {
+    "filter-load": { "target": 200, "actual": 1.29, "unit": "ms p95", "pass": true, "scope": "synthetic" },
+    "content-script-overhead": { "target": 50, "actual_runs_p95": [35.38, 35.28, 36.14, 34.20, 37.70, 46.26, 37.51, 34.92, 38.02], "min": 34.2, "max": 46.26, "unit": "ms p95", "pass": true, "scope": "synthetic jsdom, 1500-node page", "flake_risk": "HIGH: worst of 9 runs was 46.3 ms (4 ms from the gate); the 46 ms run followed a CPU-load experiment so may be inflated by residual load" },
+    "detection-latency": { "target": 100, "actual": 0.22, "unit": "ms p95", "pass": true, "scope": "synthetic" },
+    "storage-access": { "target": 20, "actual": 0.009, "unit": "ms p95", "pass": true, "scope": "synthetic" },
+    "url-match": { "target": 10, "actual": 0.004, "unit": "ms p95", "pass": true, "scope": "synthetic" }
+  },
+  "acceptance_tests": {
+    "AT-1": { "status": "PASS", "evidence": "Prime Video 59 endpoints + 30 DOM, combined 92.1% (>=90); corpus unconfirmed" },
+    "AT-2": { "status": "PASS", "evidence": "Jio Hotstar 43 endpoints + 30 DOM, combined 91.8%; corpus unconfirmed" },
+    "AT-3": { "status": "PASS", "evidence": "48 synthetic VAST/VPAID fixtures, 91.7% per group" },
+    "AT-4": { "status": "PASS", "evidence": "mock player harness only" },
+    "AT-5": { "status": "NOT RUN", "evidence": "manual, real sites; tests/manual/AT-5-playback-log.md is blank" },
+    "AT-6": { "status": "PASS", "evidence": "mock player, static + dynamic injection" },
+    "AT-7": { "status": "PASS", "evidence": "97.4% combined on 119 domains + 108 DOM fixtures" },
+    "AT-8": { "status": "PASS", "evidence": "3/1414 = 0.21% (<2%, <20 of 1000); 0 of 55 streaming DOM fixtures had subtitle/control altered" },
+    "AT-9": { "status": "PASS", "evidence": "synthetic p95 34-46 ms across 9 runs; real-page measurement NOT RUN" },
+    "AT-10": { "status": "PASS", "evidence": "synthetic p95 ~1.3 ms; real cold starts NOT RUN" },
+    "AT-11": { "status": "PASS", "evidence": "synthetic p95 ~0.2 ms in mock harness" },
+    "AT-12": { "status": "PASS", "evidence": "99.86% lines; every file >=98%" },
+    "AT-13": { "status": "PASS", "evidence": "message-flow + popup integration tests" },
+    "AT-14": { "status": "PASS", "evidence": "simulated reload only; browser-profile restart NOT RUN" },
+    "AT-15": { "status": "PASS", "evidence": "popup.test.js (0/1/100+ blocks)" },
+    "AT-16": { "status": "PASS", "evidence": "options.test.js, import-export round trip" },
+    "AT-17": { "status": "PASS (automated part only)", "evidence": "node scripts/validate-manifest.js: Manifest OK; extension-load.test.js. Real Chrome load with 0 SW errors NOT RUN" }
+  },
+  "not_run": [
+    "AT-5 manual playback on >=10 titles per platform",
+    "AT-17 real Chrome load / service worker error console / Web Store validation",
+    "AT-9 on 50 real streaming + 50 regular pages",
+    "AT-10 real service worker cold starts",
+    "AT-14 browser profile restart",
+    "Two-profile whitelist sync (<5 min)",
+    "Service worker memory <=50 MB after 1 h",
+    "Playback impact: rebuffer and dropped frames on >=10 titles per platform",
+    "Live-traffic confirmation of Prime Video / Jio Hotstar corpus endpoints and player DOM class names"
+  ],
+  "skepticism_findings": [
+    "Filters are vendor-domain/host rules, not corpus strings verbatim: probes with novel paths/subdomains (newads.criteo.net, cdn-77.hotstar.com/ads/x.mp4) block, and content URLs (aiv-cdn.amazon.com/video/, hotstar subtitles .vtt) do not. Stitched items (5) and unlisted hosts are correctly unblocked and counted in the denominator.",
+    "Circularity remains: corpus hosts are mostly from the same vendor lists as the rules (confidence vendor-known 53/59 PV, 38/43 JH), so rates are expected to be high. Real-world rate is unmeasured.",
+    "3 AT-8 false positives are real: https://www.iab.com/guidelines/vast/, https://blog.example.com/what-is-vpaid, https://docs.example.org/vast/overview are blocked by VAST/VPAID heuristics (DNR/path token). 0.21% is under the <2% limit, but the author seeded only 4 such edge URLs (1 is correctly passed), so the real FP rate on VAST-related pages could be higher. These are main-frame-like page URLs; confirm DNR does not block main_frame navigations.",
+    "Clean corpus: only ~350 of 1414 URLs are real domains (rest synthetic/lookalike), so 0.21% flatters the real rate.",
+    "Content script overhead measures scan time on jsdom, not page load delta; margin is thin and flaky (see performance)."
+  ],
+  "blockers": [
+    "jsdom is not in devDependencies (package-lock.json is root-owned); the benchmark relies on the transitive copy via jest-environment-jsdom. A human must run: npm install --save-dev jsdom",
+    "Corpora unconfirmed; manual items unrun, so the SPEC Definition of Done cannot be declared met"
+  ]
+}

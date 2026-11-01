@@ -1,7 +1,7 @@
 # Development Progress Tracker
 
 **Last Updated:** 2026-11-01
-**Phase:** BUILD (Build Agent)
+**Phase:** TEST (Test Agent)
 
 ## Completed Tasks
 - [x] T1: Project scaffolding, manifest, test infrastructure - MV3 manifest, webpack/babel/eslint config, richer chrome mocks, fixtures README (8 tests)
@@ -57,3 +57,13 @@ See progress/blockers.md (if present).
 | AT-17 Loads cleanly | Manifest, build output and module loading automated; real Chrome load NOT RUN (manual) | tests/integration/extension-load.test.js, README |
 
 Other unverified items: corpus endpoints and player DOM class names are not confirmed against live traffic; two-profile whitelist sync, service worker memory, rebuffer/dropped-frame impact are NOT RUN.
+
+
+## Test Agent verification (2026-11-01)
+Status: PASS for all automatable items (see progress/test-results.json). Manual/real-Chrome items are NOT RUN.
+- npm test: 32 suites, 620/620 passed. Coverage 99.86% lines, 99.46% stmts, 96.17% branches; lowest file 98.87% lines (gate 80%).
+- Benchmarks (synthetic jsdom): filter load 1.3 ms, detection 0.22 ms, storage 0.009 ms, match 0.004 ms, all well under target.
+- Content-script overhead p95 over 9 independent runs: 34.2-46.3 ms (target 50). FLAKE RISK: one run reached 46.3 ms.
+- AT-8: the 3 false positives are real (VAST/VPAID heuristics on iab.com/guidelines/vast/, /what-is-vpaid, /vast/overview). 0.21% is under the 2% limit, with 0 subtitle/control altered.
+- NOT RUN: AT-5, real-Chrome AT-17, real-page AT-9/10, profile restart (AT-14), two-profile sync, SW memory, playback impact, live corpus confirmation.
+- Blocker: jsdom missing from devDependencies (root-owned lock file); needs `npm install --save-dev jsdom` by a human.

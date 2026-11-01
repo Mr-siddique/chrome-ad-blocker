@@ -594,3 +594,16 @@ For agents to use before making big decisions:
 **Agent:** Build Agent | **Task:** T18 | **Risk:** LOW
 - Added generated placeholder icons (src/icons, Web Store requires them); the manifest validator also demands a justification string per permission. The production build is exercised inside jest (webpack into a temp dir) and validated against the manifest. SPEC.md was intentionally NOT ticked: AT results rest on an unconfirmed corpus and synthetic harness, and AT-5/AT-17 (real Chrome) are manual; the honest per-AT status lives in progress/PROGRESS.md.
 - Deviations summary: single content-script entry on <all_urls>; extra files (src/package.json, dnr-rules.js, dynamic-rules.js, runner.js, tests/harness/*, content-script/dynamic-rules tests, icons); package.json `jest` key removed (conflicted with jest.config.js); jsdom not added to devDependencies (lock file not writable).
+
+
+### Test Agent: verification run
+**Agent:** Test Agent | **Phase:** TEST | **Date:** 2026-11-01
+
+**Results:** 620/620 tests, 99.86% line coverage, all synthetic perf p95s under target. Status PASS (automatable only); NOT RUN items are kept separate and not counted as passed.
+
+**Issues / observations:**
+1. Content-script overhead is the weakest gate. 9 runs gave p95 34.2-46.3 ms vs 50 ms. The 46.3 ms run came right after a CPU-load experiment, but it shows CI flake risk. Recommend relaxing the CI threshold for jsdom or using a median-of-N approach, and measuring in real Chrome (manual).
+2. Skeptical corpus check: rules are host/path based, not corpus string copies. Novel subdomains/paths block; content/subtitle URLs pass; stitched items and unlisted hosts are correctly missed. But corpus and rules share the same vendor lists, so the rates are circular until live traffic confirms them.
+3. The 3 false positives are real VAST/VPAID heuristic hits on informational pages. Within the <2% limit; the clean corpus is mostly synthetic, so the true rate is unknown. Suggest confirming main_frame navigations are not blocked by the VAST path-token rules.
+4. jsdom not in devDependencies (root-owned lock). Needs a human `npm install --save-dev jsdom`.
+5. Process note: my CPU-load experiment hung and left busy-loop processes; they were killed. No src/ or tests changes made.
