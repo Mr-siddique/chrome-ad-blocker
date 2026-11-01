@@ -18,7 +18,9 @@ module.exports = {
     },
   },
   setupFilesAfterEnv: ['<rootDir>/tests/setup.js'],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
+  // Timing-based perf suite is CPU-bound, so it fails under parallel Jest workers on shared CI
+  // runners. It runs alone via `npm run test:perf` and the CI benchmark step.
+  testPathIgnorePatterns: ['/node_modules/', '/dist/', ...(process.env.RUN_PERF ? [] : ['/tests/performance/'])],
   collectCoverage: process.env.CI ? true : false,
   verbose: true,
 };

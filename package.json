@@ -13,7 +13,7 @@
     "dev": "webpack --mode=development --watch",
     "build": "npm run build:rules && webpack --mode=production",
     "build:rules": "node scripts/build-rules.js",
-    "test:perf": "jest tests/performance --coverage=false",
+    "test:perf": "RUN_PERF=1 jest tests/performance --coverage=false --runInBand",
     "validate": "node scripts/validate-manifest.js"
   },
   "keywords": [
