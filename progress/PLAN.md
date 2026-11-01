@@ -189,7 +189,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T13 (popup exists to exercise), T16
 - **Satisfies:** AT-5 (MANUAL), manual sync check (Storage and Sync), manual halves of the Performance Targets table, confirmation of corpus endpoints against live captures (planning assumption 4)
 - **Test Strategy:** Templates only (no code); the human tester fills them in with their own Prime Video and Jio Hotstar accounts. The Review Agent checks that the logs are completed before sign-off.
-- **Status:** NOT STARTED
+- **Status:** DONE (templates only; 592 tests total)
 
 ### T18: Release gates (coverage, manifest validation, clean load, final regression)
 - **Scope:** Medium

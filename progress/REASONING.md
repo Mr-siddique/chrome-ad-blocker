@@ -585,3 +585,7 @@ For agents to use before making big decisions:
 - Overhead is measured as the scan time itself instead of "(parse + scan) minus (parse)" because subtracting two independent parse timings is dominated by noise.
 - The benchmark needs `jsdom`. It is installed as a transitive dependency of `jest-environment-jsdom`. I could not add it to package.json devDependencies because package-lock.json is owned by root and not writable here (an out-of-sync lock would break `npm ci`). Recommend a human run `npm install --save-dev jsdom` to make it explicit.
 - CI: `.github/workflows/ci.yml` (Node 22) runs lint, tests with coverage gate, benchmark, build and uploads reports. Not executed here (no GitHub runner).
+
+### T17: Manual protocols
+**Agent:** Build Agent | **Task:** T17 | **Risk:** LOW
+- Three blank templates under tests/manual/ (AT-5 playback + real block rate + live-capture confirmation of corpus endpoints; two-profile sync; real-page performance). Each states "STATUS: NOT RUN". Nothing manual has been executed by the Build Agent and AT-5, the sync check and the real-page metrics must not be reported as passed until a human fills these in. AT-5 template also includes a table for the real observed block rate, since the committed corpus is unconfirmed.
