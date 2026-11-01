@@ -91,3 +91,9 @@ describe('dnr simulator and priority resolution', () => {
     expect(evaluate('https://example.com/vastu-shastra', compiled)).toBe('none');
   });
 });
+
+describe('TLD expansion coverage', () => {
+  it.each(['ae', 'sg', 'co.in', 'nl', 'co.za'])('wildcard hosts also cover .%s', (tld) => {
+    expect(ruleToUrlFilters({ host: 'ads.example.*' })).toContain(`||ads.example.${tld}^`);
+  });
+});

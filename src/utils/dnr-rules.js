@@ -18,6 +18,7 @@ const PLAYER_FILTERS = ['.mpd^', '.m3u8^', '.ism^', '.m4s^'];
 // terminated with the `^` separator.
 export const TLD_EXPANSION = [
   'com', 'net', 'org', 'co.uk', 'de', 'fr', 'es', 'it', 'jp', 'co.jp', 'in', 'ca', 'com.au', 'com.br', 'com.mx',
+  'ae', 'sg', 'co.in', 'nl', 'se', 'pl', 'sa', 'ie', 'co.za', 'com.tr',
 ];
 
 export function ruleToUrlFilters(rule) {

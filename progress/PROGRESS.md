@@ -67,3 +67,12 @@ Status: PASS for all automatable items (see progress/test-results.json). Manual/
 - AT-8: the 3 false positives are real (VAST/VPAID heuristics on iab.com/guidelines/vast/, /what-is-vpaid, /vast/overview). 0.21% is under the 2% limit, with 0 subtitle/control altered.
 - NOT RUN: AT-5, real-Chrome AT-17, real-page AT-9/10, profile restart (AT-14), two-profile sync, SW memory, playback impact, live corpus confirmation.
 - Blocker: jsdom missing from devDependencies (root-owned lock file); needs `npm install --save-dev jsdom` by a human.
+
+
+## FIX iteration 1 (Build Agent, 2026-11-01)
+- DONE: network-level (DNR) blocks now counted in badge/popup/per-platform labels via getMatchedRules + declarativeNetRequestFeedback (best-effort, polled; see REASONING.md). Not verified in real Chrome (blockers.md M3).
+- DONE: 3 known VAST/VPAID false positives fixed and kept as permanent `known-fp-regression` corpus cases; clean corpus now flags 0. Real wrapper blocking unchanged (tests).
+- DONE: overhead benchmark stabilised (warmup + 5 rounds, median of p95s; 50 ms threshold unchanged). Median ~34 ms.
+- DONE: TLD expansion widened from 15 to 25 TLDs.
+- OPEN (human): AT-5, real Chrome load, live corpus, real-page perf/memory, sync, jsdom devDependency. See progress/blockers.md.
+- npm test: 32+1 suites, all pass, coverage ~99.4% stmts (gate 80).
