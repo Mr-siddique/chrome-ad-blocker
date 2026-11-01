@@ -59,6 +59,7 @@ function collectEntries({ filters, vast }) {
     ...hostEntries,
     ...vastEntries,
     ...allow(PLAYER_FILTERS, PRIORITY.allowPlayer),
+    ...allow(vast.docAllowFilters || [], PRIORITY.allowPlayer),
     ...allow(SUBTITLE_FILTERS, PRIORITY.allowSubtitle),
   ];
 }

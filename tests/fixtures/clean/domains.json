@@ -6859,17 +6859,17 @@
     {
       "id": "clean-1371",
       "url": "https://www.iab.com/guidelines/vast/",
-      "category": "heuristic-edge"
+      "category": "known-fp-regression"
     },
     {
       "id": "clean-1372",
       "url": "https://blog.example.com/what-is-vpaid",
-      "category": "heuristic-edge"
+      "category": "known-fp-regression"
     },
     {
       "id": "clean-1373",
       "url": "https://docs.example.org/vast/overview",
-      "category": "heuristic-edge"
+      "category": "known-fp-regression"
     },
     {
       "id": "clean-1374",

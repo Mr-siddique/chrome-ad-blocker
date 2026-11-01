@@ -26,9 +26,25 @@ const SIGNATURES = [
   { type: 'vpaid', on: 'url', test: /vpaid/, urlFilters: ['vpaid'] },
 ];
 
+// Informational pages about the protocols (e.g. iab.com/guidelines/vast/) share the tokens
+// of real wrappers. These documentation shapes are exempt; real wrappers are not named so.
+const DOC_WORDS = [
+  'overview', 'guidelines', 'guideline', 'docs', 'documentation', 'spec', 'specification',
+  'faq', 'about', 'intro', 'introduction', 'tutorial', 'guide', 'what-is',
+];
+const PROTOCOLS = ['vast', 'vpaid'];
+const DOC_ALLOW_FILTERS = PROTOCOLS.flatMap((proto) => [
+  `/${proto}/|`,
+  ...DOC_WORDS.flatMap((word) => [`/${proto}/${word}`, `/${word}/${proto}`, `/${word}-${proto}`]),
+]);
+const DOC_PATH = new RegExp(
+  `(^|/)(${PROTOCOLS.join('|')})/($|(${DOC_WORDS.join('|')})(/|$))|/(${DOC_WORDS.join('|')})[/-](${PROTOCOLS.join('|')})(/|$)`
+);
+
 export const VAST_VPAID_FILTER = {
   id: 'vast-vpaid',
-  version: '1.1.0',
+  version: '1.2.0',
+  docAllowFilters: DOC_ALLOW_FILTERS,
   signatures: SIGNATURES.flatMap((signature) => signature.urlFilters.map((urlFilter) => ({
     type: signature.type,
     urlFilter,
@@ -45,6 +61,7 @@ function targetFor(signature, parsed) {
 export function classifyAdProtocolRequest(url) {
   const parsed = parseUrl(url);
   if (!parsed || isSubtitleUrl(url) || isAllowlistedPlayerResource(url)) return null;
+  if (DOC_PATH.test(parsed.path.toLowerCase())) return null;
   const hit = SIGNATURES.find((signature) => signature.test.test(targetFor(signature, parsed)));
   return hit ? hit.type : null;
 }

@@ -49,6 +49,20 @@ describe('AT-8 false positives: clean domains and URLs', () => {
     expect(unexpected).toEqual([]);
   });
 
+  it('keeps the known VAST/VPAID false positives fixed (permanent regression cases)', () => {
+    const known = corpus.items.filter((i) => i.category === 'known-fp-regression');
+    expect(known.map((i) => i.url)).toEqual([
+      'https://www.iab.com/guidelines/vast/',
+      'https://blog.example.com/what-is-vpaid',
+      'https://docs.example.org/vast/overview',
+    ]);
+    expect(known.filter((i) => engines(i.url).length)).toEqual([]);
+  });
+
+  it('flags nothing at all in the clean corpus any more', () => {
+    expect(blocked).toEqual([]);
+  });
+
   it('never blocks subtitles, streaming content or artwork', () => {
     const streaming = corpus.items.filter((i) => i.category.startsWith('streaming') || i.category.startsWith('adversarial'));
     expect(streaming.length).toBeGreaterThan(200);

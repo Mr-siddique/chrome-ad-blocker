@@ -59,3 +59,28 @@ describe('VAST_VPAID_FILTER', () => {
     }
   });
 });
+
+describe('documentation pages are not wrappers', () => {
+  it.each([
+    'https://www.iab.com/guidelines/vast/',
+    'https://blog.example.com/what-is-vpaid',
+    'https://docs.example.org/vast/overview',
+    'https://docs.example.org/docs/vpaid/',
+  ])('does not flag %s', (url) => {
+    expect(isVastVpaidRequest(url)).toBe(false);
+  });
+
+  it.each([
+    'https://x.com/ads/vast/v4/a',
+    'https://x.com/vast/1234',
+    'https://x.com/vast.xml',
+    'https://x.com/creative/vpaid.js',
+    'https://x.com/guidelines/ads/vast.xml',
+  ])('still flags real wrapper %s', (url) => {
+    expect(isVastVpaidRequest(url)).toBe(true);
+  });
+
+  it('exposes DNR allow filters for the same documentation shapes', () => {
+    expect(VAST_VPAID_FILTER.docAllowFilters).toEqual(expect.arrayContaining(['/vast/overview', '/what-is-vpaid', '/vast/|']));
+  });
+});
