@@ -1,6 +1,20 @@
 import { isYoutubeApiUrl, stripPlayerAds } from './strip.js';
 
 export const EVENT_TYPE = 'sab-youtube-stripped';
+export const CONFIG_TYPE = 'sab-youtube-config';
+
+// Whitelisted or disabled pages: the isolated world (which can read storage) switches stripping off.
+const config = { enabled: true };
+
+export function listenForConfig(win) {
+  if (typeof win.addEventListener !== 'function') return;
+  win.addEventListener('message', (event) => {
+    const data = event.data;
+    if (event.source === win && data && data.source === CONFIG_TYPE && data.enabled === false) config.enabled = false;
+  });
+}
+
+const strip = (value) => (config.enabled ? stripPlayerAds(value) : 0);
 
 function report(win, removed) {
   if (!removed) return;
@@ -15,7 +29,7 @@ function wrapJsonParse(win) {
   const original = win.JSON.parse;
   win.JSON.parse = function parse(...args) {
     const result = original.apply(this, args);
-    report(win, stripPlayerAds(result));
+    report(win, strip(result));
     return result;
   };
 }
@@ -24,7 +38,7 @@ function wrapResponseJson(win, proto) {
   const original = proto.json;
   proto.json = async function json(...args) {
     const data = await original.apply(this, args);
-    if (isYoutubeApiUrl(this.url)) report(win, stripPlayerAds(data));
+    if (isYoutubeApiUrl(this.url)) report(win, strip(data));
     return data;
   };
 }
@@ -32,7 +46,7 @@ function wrapResponseJson(win, proto) {
 function stripText(win, nativeParse, text) {
   try {
     const data = nativeParse.call(win.JSON, text);
-    const removed = stripPlayerAds(data);
+    const removed = strip(data);
     if (!removed) return text;
     report(win, removed);
     return JSON.stringify(data);
@@ -59,7 +73,7 @@ function trapInitialResponse(win) {
     enumerable: true,
     get: () => stored,
     set: (value) => {
-      report(win, stripPlayerAds(value));
+      report(win, strip(value));
       stored = value;
     },
   });
@@ -73,6 +87,7 @@ export function install(win = window) {
     () => wrapResponseJson(win, win.Response.prototype),
     () => wrapResponseText(win, win.Response.prototype, nativeParse),
     () => trapInitialResponse(win),
+    () => listenForConfig(win),
   ];
   return steps.filter((step) => {
     try {

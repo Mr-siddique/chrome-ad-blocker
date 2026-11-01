@@ -71,6 +71,12 @@ describe('manifest YouTube scripts (Amendment A1)', () => {
     expect(main.matches).toEqual(['*://www.youtube.com/*', '*://m.youtube.com/*']);
   });
 
+  it('registers the isolated YouTube fallback on YouTube only', () => {
+    const fallback = scripts.find((s) => s.js.includes('youtube-ads.js'));
+    expect(fallback.world).toBeUndefined();
+    expect(fallback.matches).toEqual(main.matches);
+  });
+
   it('adds no permissions for YouTube support', () => {
     expect(manifest.permissions).toEqual(['storage', 'declarativeNetRequest', 'declarativeNetRequestFeedback', 'activeTab']);
     expect(manifest.host_permissions).toBeUndefined();

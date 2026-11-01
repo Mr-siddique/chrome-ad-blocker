@@ -21,8 +21,8 @@ function fakeWindow() {
 const PLAYER_URL = 'https://www.youtube.com/youtubei/v1/player?key=k';
 
 describe('MAIN-world install', () => {
-  it('installs all four hooks', () => {
-    expect(install(fakeWindow().win)).toBe(4);
+  it('installs all hooks', () => {
+    expect(install(fakeWindow().win)).toBe(5);
   });
 
   it('strips parsed JSON and reports the count to the isolated world', () => {
@@ -71,7 +71,24 @@ describe('MAIN-world install', () => {
     const { win } = fakeWindow();
     win.Response = undefined;
     win.postMessage = () => { throw new Error('closed'); };
-    expect(install(win)).toBe(2);
+    expect(install(win)).toBe(3);
     expect(win.JSON.parse(JSON.stringify(playerResponse())).adSlots).toBeUndefined();
+  });
+});
+
+describe('MAIN-world disable switch', () => {
+  it('stops stripping after the isolated world reports the page as disabled', () => {
+    jest.isolateModules(() => {
+      const mod = require('../../src/youtube/main-world.js');
+      const listeners = [];
+      const { win } = fakeWindow();
+      win.addEventListener = (type, fn) => listeners.push(fn);
+      mod.install(win);
+      const send = (data, source = win) => listeners.forEach((fn) => fn({ data, source }));
+      send({ source: mod.CONFIG_TYPE, enabled: false }, {});
+      expect(win.JSON.parse(JSON.stringify(playerResponse())).adSlots).toBeUndefined();
+      send({ source: mod.CONFIG_TYPE, enabled: false });
+      expect(win.JSON.parse(JSON.stringify(playerResponse())).adSlots).toBeDefined();
+    });
   });
 });

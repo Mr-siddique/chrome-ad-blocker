@@ -40,6 +40,7 @@ module.exports = {
     background: './src/background.js',
     'content-script': './src/content-script.js',
     'youtube-main': './src/youtube-main.js',
+    'youtube-ads': './src/youtube-ads.js',
     popup: './src/popup.js',
     options: './src/options.js',
   },
