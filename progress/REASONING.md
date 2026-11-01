@@ -639,3 +639,26 @@ For agents to use before making big decisions:
 
 ## Test Agent re-test (FIX iteration 1)
 Reran npm test, benchmarks (7 overhead runs 31.8-44.3 ms), inspected diffs for VAST FP fix, network-stats and benchmark change. dist/ was absent (gitignored); ran npm run build to confirm the permission. Benchmark change is warmup + median-of-round-p95, gate unchanged at 50; residual noise remains so flake risk rated MEDIUM. Network-count tests mock chrome API only; real Chrome behaviour NOT RUN. No regressions vs previous results.
+
+## YouTube scope change (Amendment A1) - Build Agent
+
+### Decision: Strip ad fields from player responses in a MAIN-world script, with a DOM fallback
+**Agent:** Build Agent | **Date:** 2026-11-01 | **Risk Level:** HIGH (unverified against real YouTube)
+
+**Decision:** YouTube ads are first-party and cannot be separated at network level, so (1) `youtube-main.js` (manifest `"world": "MAIN"`, document_start, www/m.youtube.com) wraps `JSON.parse`, `Response.prototype.json/text` (only for `/youtubei/v1/player|next` urls) and traps the `window.ytInitialPlayerResponse` setter, deleting `adPlacements`, `playerAds`, `adSlots`, `adBreakParams`, `adBreakHeartbeatParams` from objects that have a `responseContext` AND at least one of those keys. (2) `youtube-ads.js` (isolated world) watches `.html5-video-player`, clicks skip buttons, otherwise mutes + seeks to a finite duration + 16x rate only while `.ad-showing` / `.ytp-ad-player-overlay` is present and restores mute/rate afterwards, and injects a CSS-only hide rule for ad containers. minimum_chrome_version raised 90 -> 111 (human-approved) for MAIN-world content scripts.
+
+**Reasoning / deviations from the brief:**
+- `fetch` itself is not wrapped; hooking `Response.prototype.json/text` covers fetch consumers without rebuilding Response objects (cheaper, less breakage risk). XHR consumers are covered only through the `JSON.parse` hook.
+- `.video-ads` children are NOT treated as "ad playing": `.ytp-ad-overlay-container` (a banner over content) lives there and would cause muting/seeking of real content. Only `.ad-showing` and `.ytp-ad-player-overlay(-layout)` count.
+- The MAIN world cannot read extension storage, so the isolated script tells it (via postMessage) to stop stripping when the site is whitelisted/disabled. Stripping before that message arrives (document_start race) still happens on the first response.
+- The generic `<all_urls>` content script now returns early on YouTube hosts: its `ad-` class matching would hit player internals (`ad-showing`, `ytp-ad-*`) and could remove the nodes the fallback needs.
+- Counting: one block per detected ad episode (DOM) and one per stripped response (message), so counts are approximate (a response parsed twice counts twice). No new permissions, no host_permissions, no network calls.
+- The clean corpus and benchmark needed no changes; thresholds untouched.
+
+**Honest limits (NOT verified on real YouTube):**
+- Fixtures model publicly described response shapes, not captured traffic. Field names/locations can change at any time; YouTube also ships anti-adblock enforcement and server-side ad insertion (SSAI) that field stripping cannot remove.
+- Selector names (`.ad-showing`, skip button classes) are from memory of the current player DOM and can drift.
+- If YouTube makes `ytInitialPlayerResponse` non-configurable or reads it before our trap, the initial pre-roll relies on the fallback.
+- Hooking `JSON.parse` globally adds a small cost per parse (a shape check); not measured on a real page.
+- Automated perf run on this machine was noisy (load average ~22): two of six runs failed the content-script overhead gate (>50 ms) and four of six passed; unrelated to YouTube code, but the CI flake risk noted earlier stands.
+- No 90% target is claimed for YouTube; manual log is `tests/manual/youtube-log.md`.
