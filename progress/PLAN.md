@@ -159,7 +159,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T9, T10, T2 (pattern validation)
 - **Satisfies:** AT-16 (export then import identical; invalid patterns rejected with message and not saved; reset restores bundled defaults), AT-14 (settings persistence through reload), edge cases: malformed import rejected/skipped with count and existing rules unchanged, match-all pattern rejected, storage quota messaging
 - **Test Strategy:** Round-trip equality test (deep-equal rule set), malformed/oversized import fixtures, invalid-pattern table test, reset-to-defaults test, category toggle effect test on generated dynamic rules, persistence test simulating extension reload by re-instantiating modules against the same mock store.
-- **Status:** NOT STARTED
+- **Status:** DONE (558 tests total)
 
 ### T15: Error handling and edge-case hardening
 - **Scope:** Medium

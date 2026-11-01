@@ -563,3 +563,12 @@ For agents to use before making big decisions:
 - Service worker unavailable: `sendWithRetry` with a 500 ms delay, i.e. one retry well within the spec's 1 second; a second failure shows the error state.
 - "Popup open/close during playback = 0 interruptions" is verified on the mock player (popup never messages the page, mock DOM and clock unchanged). The real-site check remains manual (T17).
 - Controls: whitelist, "pause until browser restarts" (session), "off permanently", settings button, per-platform labels, blocked-domain list, health warning, "Not available on this page" for non-http(s) tabs. The toolbar badge is set by the background (T10).
+
+### T14: Options page
+**Agent:** Build Agent | **Task:** T14 | **Risk:** MEDIUM
+- Export format: `{format:"streaming-ad-blocker-rules", version:1, customPatterns, whitelist, blacklist, categories}`. Import rejects non-JSON, wrong format/version, missing lists, >256 KB or >2000 entries per list (existing rules untouched). Individual invalid entries (bad patterns, bad domains, bad category values) are skipped and counted in the status message. `applyRuleSet` snapshots the current rules and rolls back if any write fails (tested with a mid-import quota failure).
+- "Reset to defaults" clears custom patterns, whitelist and blacklist and re-enables all categories (bundled defaults = empty user rules); confirmation is an in-page two-step control, not `window.confirm`.
+- Categories (images/scripts/iframes) are implemented as dynamic DNR `allow` rules at priority 4 for the disabled resource type (beats host/heuristic blocks at 1-3, loses to the explicit blacklist at 5 and whitelist at 10), and the content script skips removing `img`/`script`/`iframe` elements of a disabled category (background returns `categories` in `GET_BLOCKING_STATE`). Custom patterns are dynamic block rules at priority 3 so category exemptions apply to them too. A pattern with a TLD wildcard expands to the same explicit TLD list as the static rules.
+- The options page edits `chrome.storage.sync` directly; the service worker listens to `storage.onChanged` (sync, rule-related keys) and re-derives dynamic rules and ruleset state. `syncDynamicRules` is now serialized with a promise queue because concurrent syncs would race on rule ids.
+- `saveSettings` now deep-merges `categories` (a partial patch no longer resets the other toggles).
+- Custom pattern limits: at most 1900 expanded dynamic rule filters; excess is ignored at the DNR level (a visible limit message is not implemented).

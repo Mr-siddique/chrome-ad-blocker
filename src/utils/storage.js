@@ -1,3 +1,5 @@
+import { parsePattern, validatePattern } from './patterns.js';
+
 export const HEALTH_KEY = 'health';
 export const SETTINGS_KEY = 'settings';
 export const STATS_KEY = 'statsDaily';
@@ -100,17 +102,18 @@ async function updateList(name, change) {
   return result;
 }
 
-function listApi(name) {
-  const withDomain = (input, run) => {
-    const domain = normalizeDomain(input);
-    return domain ? run(domain) : Promise.resolve(fail('Invalid domain'));
+function listApi(name, normalize) {
+  const withEntry = (input, run) => {
+    const entry = normalize(input);
+    return entry.value ? run(entry.value) : Promise.resolve(fail(entry.error));
   };
   return {
     get: () => readList(name),
-    add: (input) => withDomain(input, (domain) =>
-      updateList(name, (list) => (list.includes(domain) ? list : [...list, domain]))),
-    remove: (input) => withDomain(input, (domain) =>
-      updateList(name, (list) => (list.includes(domain) ? list.filter((d) => d !== domain) : list))),
+    set: (values) => updateList(name, () => values),
+    add: (input) => withEntry(input, (value) =>
+      updateList(name, (list) => (list.includes(value) ? list : [...list, value]))),
+    remove: (input) => withEntry(input, (value) =>
+      updateList(name, (list) => (list.includes(value) ? list.filter((d) => d !== value) : list))),
     has: async (hostname) => {
       const host = normalizeDomain(hostname);
       const list = await readList(name);
@@ -119,8 +122,21 @@ function listApi(name) {
   };
 }
 
-const whitelist = listApi('whitelist');
-const blacklist = listApi('blacklist');
+const domainEntry = (input) => {
+  const value = normalizeDomain(input);
+  return value ? { value } : { error: 'Invalid domain' };
+};
+
+export function normalizePattern(input) {
+  const check = validatePattern(input);
+  if (!check.valid) return { error: check.error };
+  const { host, path } = parsePattern(input);
+  return { value: `${host}${path}` };
+}
+
+const whitelist = listApi('whitelist', domainEntry);
+const blacklist = listApi('blacklist', domainEntry);
+const patterns = listApi('customPatterns', normalizePattern);
 
 async function moveBetween(domainInput, adder, remover) {
   const added = await adder(domainInput);
@@ -131,6 +147,10 @@ async function moveBetween(domainInput, adder, remover) {
 export const getWhitelist = whitelist.get;
 export const removeFromWhitelist = whitelist.remove;
 export const isWhitelisted = whitelist.has;
+export const getCustomPatterns = patterns.get;
+export const addCustomPattern = patterns.add;
+export const removeCustomPattern = patterns.remove;
+export const setCustomPatterns = patterns.set;
 export const getBlacklist = blacklist.get;
 export const removeFromBlacklist = blacklist.remove;
 export const isBlacklisted = blacklist.has;
@@ -149,7 +169,9 @@ export async function getSettings() {
 }
 
 export async function saveSettings(patch) {
-  const next = mergeSettings({ ...(await getSettings()), ...patch });
+  const current = await getSettings();
+  const categories = { ...current.categories, ...(patch.categories || {}) };
+  const next = mergeSettings({ ...current, ...patch, categories });
   const result = await writeItems('sync', { [SETTINGS_KEY]: next });
   return result.ok ? succeed(next) : fail(result.error === 'quota' ? SYNC_FULL : result.error);
 }
@@ -219,4 +241,51 @@ export async function recordBlocked({ platform, count = 1, domain = null, now = 
   await evictOldestStats();
   const remaining = (await getBlockedStats()).days;
   return writeItems('local', { [STATS_KEY]: { ...remaining, [dayKey]: trimmed[dayKey] } });
+}
+
+export async function getRuleSet() {
+  const [customPatterns, whitelistEntries, blacklistEntries, settings] = await Promise.all([
+    patterns.get(), whitelist.get(), blacklist.get(), getSettings(),
+  ]);
+  return {
+    customPatterns,
+    whitelist: whitelistEntries,
+    blacklist: blacklistEntries,
+    categories: { ...settings.categories },
+  };
+}
+
+async function writeRuleSet(ruleSet) {
+  const steps = [
+    () => patterns.set(ruleSet.customPatterns),
+    () => whitelist.set(ruleSet.whitelist),
+    () => blacklist.set(ruleSet.blacklist),
+    () => saveSettings({ categories: ruleSet.categories }),
+  ];
+  for (const step of steps) {
+    const result = await step();
+    if (!result.ok) return result;
+  }
+  return succeed(ruleSet);
+}
+
+// Replaces all user rules; if any write fails the previous rules are restored.
+export async function applyRuleSet(ruleSet) {
+  const previous = await getRuleSet();
+  const result = await writeRuleSet(ruleSet);
+  if (result.ok) return result;
+  await writeRuleSet(previous);
+  return result;
+}
+
+export async function resetToDefaults() {
+  const defaults = {
+    customPatterns: [],
+    whitelist: [],
+    blacklist: [],
+    categories: { ...DEFAULT_SETTINGS.categories },
+  };
+  const result = await writeRuleSet(defaults);
+  if (!result.ok) return result;
+  return saveSettings({ enabled: DEFAULT_SETTINGS.enabled });
 }

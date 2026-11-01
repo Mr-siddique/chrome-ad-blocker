@@ -46,8 +46,15 @@ function domainOf(el, hit) {
   return hit.rule ? hit.rule.host : null;
 }
 
+const TAG_CATEGORY = { img: 'images', script: 'scripts', iframe: 'iframes' };
+
+function categoryDisabled(el, context) {
+  const category = TAG_CATEGORY[el.tagName.toLowerCase()];
+  return Boolean(category && context.categories && context.categories[category] === false);
+}
+
 function inspect(el, context) {
-  if (!el.isConnected) return null;
+  if (!el.isConnected || categoryDisabled(el, context)) return null;
   const hit = classify(el, context);
   if (!hit || isProtected(el, context)) return null;
   return { el, reason: hit.reason, domain: domainOf(el, hit) };

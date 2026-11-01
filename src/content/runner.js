@@ -31,5 +31,5 @@ export async function start(win = window, doc = document) {
   // If the background is unreachable, keep blocking: that is the safe default.
   if (state.ok && state.enabled === false) return null;
   const onRemoved = (items) => sendMessage({ type: MSG.AD_BLOCKED, platform, items });
-  return observeAds(doc.documentElement, context, onRemoved);
+  return observeAds(doc.documentElement, { ...context, categories: state.categories }, onRemoved);
 }

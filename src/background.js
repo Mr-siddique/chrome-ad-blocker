@@ -68,6 +68,11 @@ async function onPageStart(message, sender) {
   return { ok: true };
 }
 
+async function onBlockingState(message) {
+  const [enabled, settings] = await Promise.all([storage.isBlockingEnabledFor(message.hostname), storage.getSettings()]);
+  return { ok: true, enabled, categories: settings.categories };
+}
+
 async function onPopupState(message) {
   const [settings, health, sessionDisabled, whitelisted, blacklisted] = await Promise.all([
     storage.getSettings(), storage.getHealth(), storage.isSessionDisabled(),
@@ -99,7 +104,7 @@ async function onSetDisabled(message) {
 const HANDLERS = {
   [MSG.PAGE_START]: onPageStart,
   [MSG.AD_BLOCKED]: onAdBlocked,
-  [MSG.GET_BLOCKING_STATE]: async (m) => ({ ok: true, enabled: await storage.isBlockingEnabledFor(m.hostname) }),
+  [MSG.GET_BLOCKING_STATE]: onBlockingState,
   [MSG.GET_TAB_STATS]: async (m) => ({ ok: true, stats: tabStats.getTabStats(m.tabId) }),
   [MSG.GET_POPUP_STATE]: onPopupState,
   [MSG.SET_WHITELIST]: (m) => updateList(storage.addToWhitelist, storage.removeFromWhitelist, m.whitelisted, m.domain),
@@ -115,6 +120,19 @@ export async function handleMessage(message, sender = {}) {
   } catch (error) {
     console.error('Message handler failed:', error);
     return { ok: false, error: String((error && error.message) || error) };
+  }
+}
+
+const RULE_KEY = /^(whitelist|blacklist|customPatterns)\.|^settings$/;
+
+// The options page edits storage directly; the worker re-derives dynamic rules from it.
+export async function onStorageChanged(changes, area) {
+  if (area !== 'sync' || !Object.keys(changes).some((key) => RULE_KEY.test(key))) return;
+  try {
+    await syncDynamicRules();
+    await applyBlockingState();
+  } catch (error) {
+    console.error('Could not apply rule changes:', error);
   }
 }
 
@@ -136,6 +154,7 @@ export function registerListeners() {
     handleMessage(message, sender).then(sendResponse);
     return true;
   });
+  chrome.storage.onChanged.addListener(onStorageChanged);
   chrome.tabs.onRemoved.addListener((tabId) => {
     tabStats.removeTab(tabId);
     tabStats.persistTabStats();

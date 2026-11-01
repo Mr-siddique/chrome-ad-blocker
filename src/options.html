@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <title>Streaming Ad Blocker - Settings</title>
+  <link rel="stylesheet" href="styles/options.css">
+</head>
+<body>
+  <main class="options">
+    <h1>Streaming Ad Blocker settings</h1>
+    <p id="error" class="banner banner-error" role="alert" hidden></p>
+    <p id="status" class="banner banner-ok" role="status" hidden></p>
+
+    <section>
+      <h2>What to block</h2>
+      <label class="row"><input id="category-images" type="checkbox"> <span>Images</span></label>
+      <label class="row"><input id="category-scripts" type="checkbox"> <span>Scripts</span></label>
+      <label class="row"><input id="category-iframes" type="checkbox"> <span>Frames (iframes)</span></label>
+    </section>
+
+    <section>
+      <h2>Custom filter patterns</h2>
+      <p class="muted">A host with optional path, for example <code>ads.example.com</code> or <code>cdn-*.example.com/ads</code>. Use * inside a host label.</p>
+      <form id="pattern-form" class="inline-form">
+        <input id="pattern-input" type="text" autocomplete="off" aria-label="New filter pattern">
+        <button type="submit">Add pattern</button>
+      </form>
+      <ul id="pattern-list" class="entries"></ul>
+    </section>
+
+    <section>
+      <h2>Sites where blocking is off</h2>
+      <form id="whitelist-form" class="inline-form">
+        <input id="whitelist-input" type="text" autocomplete="off" aria-label="Domain to whitelist" placeholder="example.com">
+        <button type="submit">Add domain</button>
+      </form>
+      <ul id="whitelist-list" class="entries"></ul>
+    </section>
+
+    <section>
+      <h2>Import and export</h2>
+      <textarea id="transfer-text" rows="8" spellcheck="false" aria-label="Rules as JSON"></textarea>
+      <div class="inline-form">
+        <button id="export-button" type="button">Export</button>
+        <button id="import-button" type="button">Import</button>
+        <input id="import-file" type="file" accept="application/json,.json" aria-label="Choose a rules file">
+      </div>
+    </section>
+
+    <section>
+      <h2>Reset</h2>
+      <button id="reset-button" type="button">Reset to defaults</button>
+      <div id="reset-confirm" hidden>
+        <p>This removes all custom patterns and whitelist entries and turns every category back on.</p>
+        <button id="reset-confirm-button" type="button">Yes, reset everything</button>
+        <button id="reset-cancel-button" type="button">Cancel</button>
+      </div>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
