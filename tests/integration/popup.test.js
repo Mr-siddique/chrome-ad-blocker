@@ -90,6 +90,16 @@ describe('AT-15 popup rendering', () => {
     expect(console.error).not.toHaveBeenCalled();
   });
 
+  it('labels YouTube blocks and counts them in the total', async () => {
+    openTab('https://www.youtube.com/watch?v=abc');
+    await blockAds(7, 'youtube', 3, 'youtube.com');
+    await loadPopup().init(document);
+    expect(text('count')).toBe('3');
+    expect(text('labels')).toBe('Blocked 3 YouTube ads');
+    expect(text('domains')).toContain('youtube.com');
+    expect(console.error).not.toHaveBeenCalled();
+  });
+
   it('shows only the current tab counts (no cross-tab leakage)', async () => {
     connect(1);
     await blockAds(1, 'prime-video', 5);

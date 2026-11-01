@@ -2,6 +2,7 @@ export const TAB_STATS_KEY = 'tabStats';
 export const PLATFORM_LABELS = {
   'prime-video': 'Prime Video',
   'jio-hotstar': 'Jio Hotstar',
+  youtube: 'YouTube',
   general: 'web',
 };
 

@@ -61,3 +61,14 @@ describe('tab stats', () => {
     expect(console.error).toHaveBeenCalledTimes(2);
   });
 });
+
+describe('YouTube platform plumbing', () => {
+  it('labels, counts and badges YouTube blocks', () => {
+    tabStats.recordRemoved(4, 'youtube', [{ domain: 'youtube.com' }, { domain: 'youtube.com' }]);
+    const stats = tabStats.getTabStats(4);
+    expect(stats.byPlatform).toEqual({ youtube: 2 });
+    expect(tabStats.platformLabel('youtube', 2)).toBe('Blocked 2 YouTube ads');
+    expect(tabStats.platformLabel('youtube', 1)).toBe('Blocked 1 YouTube ad');
+    expect(tabStats.badgeText(stats.count)).toBe('2');
+  });
+});

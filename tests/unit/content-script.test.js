@@ -86,6 +86,13 @@ describe('content script start', () => {
     observer.disconnect();
   });
 
+  it('leaves YouTube to its dedicated scripts: no generic DOM removal', async () => {
+    document.body.innerHTML = '<div class="html5-video-player ad-showing"><div class="ytp-ad-player-overlay"></div></div>';
+    const { start } = loadContentScript();
+    expect(await start({ location: { hostname: 'www.youtube.com', pathname: '/watch' } }, document)).toBeNull();
+    expect(document.querySelector('.ytp-ad-player-overlay')).not.toBeNull();
+  });
+
   it('keeps blocking when the extension context is invalidated', async () => {
     chrome.runtime.sendMessage = jest.fn(() => {
       throw new Error('Extension context invalidated');
