@@ -10,8 +10,8 @@ describe('manifest.json', () => {
     expect(manifest.background.scripts).toBeUndefined();
   });
 
-  it('declares the Chrome version floor of 90', () => {
-    expect(manifest.minimum_chrome_version).toBe('90');
+  it('declares the Chrome version floor of 111', () => {
+    expect(manifest.minimum_chrome_version).toBe('111');
   });
 
   it('requests only whitelisted permissions and never webRequestBlocking', () => {

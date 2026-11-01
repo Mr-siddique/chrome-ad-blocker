@@ -198,7 +198,7 @@ Performance regression tests run on every deploy and results are reported in CI.
 - General banner ad blocking (secondary).
 
 ## Out of Scope (Future)
-- Other streaming platforms (Netflix, Disney+, YouTube Premium).
+- Other streaming platforms (Netflix, Disney+, YouTube Premium). YouTube ad stripping on the free tier is in scope under Amendment A1 only.
 - AI-based content classification.
 - Advanced domain reputation system.
 - Cross-browser support (Chrome only for MVP).
@@ -229,12 +229,12 @@ Performance regression tests run on every deploy and results are reported in CI.
 ## Constraints and Assumptions
 **Technical**
 - Chrome Manifest V3 only; service worker, no background page.
-- Minimum supported Chrome version: v90.
+- Minimum supported Chrome version: v111 (raised from v90 by Amendment A1; required for content scripts with `"world": "MAIN"`).
 - No external runtime dependencies; extension is functional offline.
 - The extension makes no network requests of its own.
 
 **User / Environment**
-- Users run a modern desktop Chrome (v90+).
+- Users run a modern desktop Chrome (v111+).
 - Users are signed in to Chrome for sync features to work.
 - Tests of real platforms require valid Prime Video and Jio Hotstar accounts supplied by the tester.
 
@@ -267,3 +267,27 @@ Performance regression tests run on every deploy and results are reported in CI.
 2. **Build Agent:** Create filter lists for Prime Video and Jio Hotstar first, general ads second. Create files as needed. Commit after each streaming feature is complete.
 3. **Test Agent:** Implement AT-1 to AT-17 as automated tests (AT-5 and the sync check are manual with a written log). Target >85% coverage; release gate is >80%. Profile on real streaming pages.
 4. **Review Agent:** Compare each feature against this spec and block if unmet. Verify the 90% streaming block rate for both platforms, the performance targets on streaming pages, and absence of false positives affecting content, subtitles, or controls.
+
+---
+
+## AMENDMENT A1: YouTube as a third platform (human-approved scope change, 2026-11-01)
+Status of the rest of this spec is unchanged (FINALIZED). This amendment adds YouTube and raises `minimum_chrome_version` from 90 to 111.
+
+**Why different:** YouTube in-stream ads are first-party. They are served from `googlevideo.com` and described inside the player response JSON (`ytInitialPlayerResponse`, `/youtubei/v1/player`, `/youtubei/v1/next`) under `adPlacements`, `playerAds`, `adSlots` and similar fields. Network (DNR) rules cannot separate them from content, so blocking is done by (1) a MAIN-world document_start script that strips those fields from parsed player responses, and (2) an isolated-world DOM fallback that skips or fast-forwards an ad that still plays and hides ad containers with CSS.
+
+**Target status (honest):** NO numeric block-rate target (and specifically not 90%) is claimed for YouTube. It is best-effort, first-party, and cannot be verified by automated tests because YouTube's payloads and player DOM change without notice. Verification is MANUAL; results are recorded in `tests/manual/youtube-log.md`. Automated tests cover only the logic against fixtures that mimic known response shapes.
+
+- [ ] **AT-18 Ad fields stripped from player responses (automated, fixture-based)**
+  - How to test: Feed realistic player-response fixtures (initial `ytInitialPlayerResponse`, `/youtubei/v1/player`, `/youtubei/v1/next`, via the `window` setter trap, `JSON.parse`, and `Response.json()/text()`) through the MAIN-world logic.
+  - Pass if: `adPlacements`, `playerAds`, `adSlots` and ad-break fields are absent from the result; all other fields (`videoDetails`, `streamingData`, `captions`, `playabilityStatus`, `responseContext`) are deeply unchanged; non-YouTube-shaped objects and non-matching URLs are returned untouched; no exception reaches the caller on malformed input.
+- [ ] **AT-19 Skip / fast-forward fallback (automated, jsdom fixtures)**
+  - How to test: DOM fixtures with `.ad-showing` on `.html5-video-player`, with and without a skip button.
+  - Pass if: a present skip button is clicked; otherwise the video is muted, `currentTime` is set to a finite duration and `playbackRate` raised (max 16) only while the ad shows, and the original mute/rate are restored afterwards; with no ad, nothing is touched.
+- [ ] **AT-20 No breakage of playback, controls, subtitles, live streams (automated + MANUAL)**
+  - Pass if (automated): the fallback never modifies controls (`.ytp-chrome-bottom`, `.ytp-subtitles-button`, captions window) and never seeks or changes rate/mute when no ad is showing, including when duration is `Infinity` or `NaN` (live). MANUAL: confirmed on real YouTube for pre-roll, mid-roll, skippable, unskippable, live stream, Shorts, captions and controls, logged in `tests/manual/youtube-log.md`.
+- [ ] **AT-21 No new network egress (automated)**
+  - Pass if: the YouTube code makes no `fetch`/XHR/beacon calls of its own and adds no host permissions beyond content-script match patterns; the manifest permission list is unchanged.
+
+**Platform plumbing:** blocks are reported with platform id `youtube` and displayed as "Blocked N YouTube ads" in the popup and counted in the badge.
+
+**Known limits:** server-side ad insertion (SSAI) and any ad delivered in a response shape we do not strip cannot be removed by field stripping and fall to the fallback. YouTube may detect and degrade playback for blockers (e.g. enforcement overlays); this is outside this extension's control.
