@@ -15,8 +15,12 @@ async function disableBlocking(error) {
   } catch (rulesetError) {
     console.error('Could not disable ruleset:', rulesetError);
   }
-  await chrome.action.setBadgeBackgroundColor({ color: WARNING_BADGE.color });
-  await chrome.action.setBadgeText({ text: WARNING_BADGE.text });
+  try {
+    await chrome.action.setBadgeBackgroundColor({ color: WARNING_BADGE.color });
+    await chrome.action.setBadgeText({ text: WARNING_BADGE.text });
+  } catch (badgeError) {
+    console.error('Could not show warning badge:', badgeError);
+  }
 }
 
 export async function initialize(loader = loadBundledFilters) {
@@ -69,8 +73,11 @@ async function onPageStart(message, sender) {
 }
 
 async function onBlockingState(message) {
-  const [enabled, settings] = await Promise.all([storage.isBlockingEnabledFor(message.hostname), storage.getSettings()]);
-  return { ok: true, enabled, categories: settings.categories };
+  const [allowed, settings, health] = await Promise.all([
+    storage.isBlockingEnabledFor(message.hostname), storage.getSettings(), storage.getHealth(),
+  ]);
+  // A corrupted bundled list disables blocking everywhere, including DOM removal.
+  return { ok: true, enabled: allowed && health.ok !== false, categories: settings.categories };
 }
 
 async function onPopupState(message) {
@@ -147,9 +154,13 @@ export async function bootstrap({ startup = false } = {}) {
   await applyBlockingState();
 }
 
+function logFailure(label) {
+  return (error) => console.error(`${label} failed:`, error);
+}
+
 export function registerListeners() {
-  chrome.runtime.onInstalled.addListener(() => bootstrap());
-  chrome.runtime.onStartup.addListener(() => bootstrap({ startup: true }));
+  chrome.runtime.onInstalled.addListener(() => bootstrap().catch(logFailure('install')));
+  chrome.runtime.onStartup.addListener(() => bootstrap({ startup: true }).catch(logFailure('startup')));
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     handleMessage(message, sender).then(sendResponse);
     return true;
@@ -163,5 +174,5 @@ export function registerListeners() {
 
 registerListeners();
 // A terminated service worker restarts without firing onStartup, so re-check on every wake.
-initialize();
-tabStats.restoreTabStats();
+initialize().catch(logFailure('initialize'));
+tabStats.restoreTabStats().catch(logFailure('restore'));

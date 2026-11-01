@@ -79,8 +79,13 @@ export function removeAdElements(root, context) {
 
 export function observeAds(root, context, onRemoved) {
   const handle = (target) => {
-    const removed = removeAdElements(target, context);
-    if (removed.length) onRemoved(removed);
+    // An unexpected DOM must never throw into the page or the extension error console.
+    try {
+      const removed = removeAdElements(target, context);
+      if (removed.length) onRemoved(removed);
+    } catch (error) {
+      return;
+    }
   };
   const observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {

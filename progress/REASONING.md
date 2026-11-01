@@ -572,3 +572,9 @@ For agents to use before making big decisions:
 - The options page edits `chrome.storage.sync` directly; the service worker listens to `storage.onChanged` (sync, rule-related keys) and re-derives dynamic rules and ruleset state. `syncDynamicRules` is now serialized with a promise queue because concurrent syncs would race on rule ids.
 - `saveSettings` now deep-merges `categories` (a partial patch no longer resets the other toggles).
 - Custom pattern limits: at most 1900 expanded dynamic rule filters; excess is ignored at the DNR level (a visible limit message is not implemented).
+
+### T15: Edge-case hardening
+**Agent:** Build Agent | **Task:** T15 | **Risk:** LOW
+- tests/integration/edge-cases.test.js has a block per row of the SPEC edge-case table (stitched-ad row is covered by the corpus in AT-1/AT-2, noted in the test file via the corpus).
+- Gaps found and fixed in source: (1) with a corrupted bundled list the DOM remover kept running; `GET_BLOCKING_STATE` now reports `enabled:false` when health is not ok. (2) Several background promises (`onInstalled`, `onStartup`, wake-time initialize/restore, badge calls) could reject unhandled, which would show errors in the service worker console; they are now caught and logged. (3) The MutationObserver callback now swallows unexpected exceptions so odd DOM can never throw into the page.
+- A static check asserts no `fetch`/XHR/WebSocket/`sendBeacon`/EventSource/`eval`/`new Function` anywhere under src/.

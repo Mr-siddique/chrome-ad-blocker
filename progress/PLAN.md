@@ -169,7 +169,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T10, T13, T14
 - **Satisfies:** Spec Edge Cases table in full (corrupted bundled list, storage failures, service worker restart, unknown DOM, offline, ad-network domain change leaves unknown domains unblocked, element removal that hits a control is a defect), AT-12 branch coverage, AT-17 (0 errors)
 - **Test Strategy:** One test per row of the spec edge-case table, asserting the stated expected behavior; no uncaught exceptions or console errors.
-- **Status:** NOT STARTED
+- **Status:** DONE (586 tests total)
 
 ### T16: Performance benchmarks and CI regression checks
 - **Scope:** Medium
