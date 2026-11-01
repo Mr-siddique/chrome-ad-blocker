@@ -1,3 +1,4 @@
+import { getTopHostname } from '../../src/content-script.js';
 import { detectPlatform, getPlatformContext } from '../../src/content/platform-detect.js';
 
 function loadContentScript() {
@@ -34,15 +35,15 @@ describe('detectPlatform', () => {
 });
 
 describe('content script start', () => {
-  it('does nothing on unsupported pages', () => {
+  it('does nothing on unsupported pages', async () => {
     const { start } = loadContentScript();
-    expect(start({ location: { hostname: 'example.com', pathname: '/' } }, document)).toBeNull();
+    expect(await start({ location: { hostname: 'example.com', pathname: '/' } }, document)).toBeNull();
   });
 
   it('removes ads on a streaming page and reports them to the background', async () => {
     document.body.innerHTML = '<video src="blob:x"></video><div class="ad-overlay"></div>';
     const { start } = loadContentScript();
-    const observer = start({ location: { hostname: 'www.hotstar.com', pathname: '/' } }, document);
+    const observer = await start({ location: { hostname: 'www.hotstar.com', pathname: '/' } }, document);
     expect(observer).not.toBeNull();
     expect(document.querySelector('.ad-overlay')).toBeNull();
     expect(document.querySelector('video')).not.toBeNull();
@@ -52,13 +53,13 @@ describe('content script start', () => {
     observer.disconnect();
   });
 
-  it('keeps blocking when the extension context is invalidated', () => {
+  it('keeps blocking when the extension context is invalidated', async () => {
     chrome.runtime.sendMessage = jest.fn(() => {
       throw new Error('Extension context invalidated');
     });
     document.body.innerHTML = '<div class="ad-overlay"></div>';
     const { start } = loadContentScript();
-    const observer = start({ location: { hostname: 'www.hotstar.com', pathname: '/' } }, document);
+    const observer = await start({ location: { hostname: 'www.hotstar.com', pathname: '/' } }, document);
     expect(document.querySelector('.ad-overlay')).toBeNull();
     observer.disconnect();
   });
@@ -67,9 +68,22 @@ describe('content script start', () => {
     chrome.runtime.sendMessage = jest.fn(() => Promise.reject(new Error('no receiver')));
     document.body.innerHTML = '<div class="ad-overlay"></div>';
     const { start } = loadContentScript();
-    const observer = start({ location: { hostname: 'www.hotstar.com', pathname: '/' } }, document);
+    const observer = await start({ location: { hostname: 'www.hotstar.com', pathname: '/' } }, document);
     await flushPromises();
     expect(document.querySelector('.ad-overlay')).toBeNull();
     observer.disconnect();
+  });
+});
+
+describe('getTopHostname', () => {
+  it('uses the top ancestor origin inside frames', () => {
+    const win = { location: { hostname: 'player.cdn.net', ancestorOrigins: ['https://x.com', 'https://www.primevideo.com'] } };
+    expect(getTopHostname(win)).toBe('www.primevideo.com');
+  });
+
+  it('falls back to the own hostname', () => {
+    expect(getTopHostname({ location: { hostname: 'a.com', ancestorOrigins: [] } })).toBe('a.com');
+    expect(getTopHostname({ location: { hostname: 'a.com' } })).toBe('a.com');
+    expect(getTopHostname({ location: { hostname: 'a.com', ancestorOrigins: ['not a url'] } })).toBe('a.com');
   });
 });

@@ -119,7 +119,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T6, T7, T9
 - **Satisfies:** AT-13 (blocking disabled on whitelisted domain, blacklisted domain blocked), AT-12 (message passing coverage), spec 2 badge and per-tab isolation, edge cases: whitelisted page does no removal, multiple tabs no leakage, service worker restart no state loss
 - **Test Strategy:** Unit for message validation and stat accumulation; integration across content script <-> background <-> mocked storage including two-tab isolation, service worker restart simulation, and whitelisted-domain no-op assertion.
-- **Status:** NOT STARTED
+- **Status:** DONE (323 tests total)
 
 ### T11: Clean corpus and false-positive suite (streaming-sensitive)
 - **Scope:** Medium

@@ -531,3 +531,12 @@ For agents to use before making big decisions:
 - Stats are per-day buckets in `storage.local` (`statsDaily`, max 90 days). On local quota errors the oldest half is evicted. On sync quota errors stats are evicted first (per the spec edge-case row), the write is retried once, and then a visible message is returned; the whitelist is never evicted. Note that evicting local stats does not actually free sync space; the behavior follows the spec wording.
 - tests/setup.js now enforces Chrome's sync (100 KB / 8 KB per item / 512 items) and local (10 MB) quotas. `HEALTH_KEY` moved into storage.js; rules-loader re-exports it.
 - Custom patterns and import/export persistence arrive in T14.
+
+### T10: Messaging, per-tab stats, whitelist enforcement
+**Agent:** Build Agent | **Task:** T10 | **Risk:** MEDIUM
+- Added `src/utils/dynamic-rules.js` (not in PLAN): builds dynamic DNR rules from storage. Whitelist => `allowAllRequests` (priority 10, main_frame+sub_frame of the domain, so the whole page is exempt); blacklist => dynamic `block` rules for requests to that domain (priority 5, never main_frame). Id ranges: whitelist 1-900, blacklist 1000-1900, custom 2000+, category 4000+ (T14). `allowAllRequests` is Chrome 84+; I did not use `requestDomains` (101+).
+- No `webNavigation`/`tabs` permission: top-frame navigation is signalled by the content script's `PAGE_START` message (sender.tab.id is available without permissions), which resets that tab's count and badge. `tabs.onRemoved` drops closed tabs. Per-tab stats are persisted to storage.local (`tabStats`) so a restarted worker keeps counts; cleared on browser startup.
+- Content script asks the background `GET_BLOCKING_STATE` for the TOP page hostname (ancestorOrigins in frames) before observing. If the background is unreachable it keeps blocking. `start()` is now async. Disable/whitelist therefore takes effect on next page load, as AT-13 specifies.
+- Blocking-state switch (`applyBlockingState`) enables/disables the `streaming` static ruleset from settings, session flag and health. Static ruleset state is only re-applied on install/startup and on user changes, not on every worker wake.
+- Counting: DOM removals reported by the content script. Request-level blocks (static DNR) are not counted (no getMatchedRules at v90) - the badge count underestimates real blocking.
+- Handler errors return `{ok:false,error}` instead of throwing; malformed messages are rejected by `validateMessage`.

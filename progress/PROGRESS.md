@@ -13,9 +13,9 @@
 - [x] T7: Player DOM handling (content script, dynamic injection, playback integrity) - content script, player DOM ad removal with protected controls/subtitles, mock player harness, AT-4/AT-6/AT-11 tests (227 tests total)
 - [x] T8: Streaming checkpoint (quality gate, no new features) - streaming gate aggregating AT-1/2/3/4/6 (PASS) (235 tests total)
 - [x] T9: Storage layer (sync whitelist, local stats, quotas, fallbacks) - chunked sync whitelist/blacklist, settings, session flag, per-day local stats, quota handling (272 tests total, storage.js 98.7% stmts)
+- [x] T10: Messaging, per-tab stats, whitelist/blacklist enforcement, badge - typed messaging, per-tab stats + badge, whitelist/blacklist DNR enforcement, session/permanent disable (323 tests total)
 
 ## Remaining Tasks
-- [ ] T10: Messaging, per-tab stats, whitelist/blacklist enforcement, badge
 - [ ] T11: Clean corpus and false-positive suite (streaming-sensitive)
 - [ ] T12: General banner ad blocking (secondary)
 - [ ] T13: Popup UI

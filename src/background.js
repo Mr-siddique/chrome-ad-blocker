@@ -1,6 +1,11 @@
-import { HEALTH_KEY, loadBundledFilters } from './utils/rules-loader.js';
+import { MSG, validateMessage } from './utils/messaging.js';
+import { syncDynamicRules } from './utils/dynamic-rules.js';
+import { loadBundledFilters } from './utils/rules-loader.js';
+import * as storage from './utils/storage.js';
+import * as tabStats from './utils/tab-stats.js';
 
 const STREAMING_RULESET = 'streaming';
+const BADGE_COLOR = '#1a73e8';
 const WARNING_BADGE = { text: '!', color: '#c62828' };
 
 async function disableBlocking(error) {
@@ -14,28 +19,130 @@ async function disableBlocking(error) {
   await chrome.action.setBadgeText({ text: WARNING_BADGE.text });
 }
 
-async function recordHealth(bundle) {
-  const health = { ok: bundle.ok, error: bundle.error, checkedAt: Date.now() };
-  try {
-    await chrome.storage.local.set({ [HEALTH_KEY]: health });
-  } catch (error) {
-    console.error('Could not persist health state:', error);
-  }
-  return health;
-}
-
 export async function initialize(loader = loadBundledFilters) {
   const bundle = loader();
-  const health = await recordHealth(bundle);
+  const health = { ok: bundle.ok, error: bundle.error, checkedAt: Date.now() };
+  await storage.setHealth(health);
   if (!bundle.ok) await disableBlocking(bundle.error);
   return health;
 }
 
+export async function applyBlockingState() {
+  const health = await storage.getHealth();
+  const settings = await storage.getSettings();
+  const enabled = health.ok && settings.enabled && !(await storage.isSessionDisabled());
+  const key = enabled ? 'enableRulesetIds' : 'disableRulesetIds';
+  try {
+    await chrome.declarativeNetRequest.updateEnabledRulesets({ [key]: [STREAMING_RULESET] });
+  } catch (error) {
+    console.error('Could not update rulesets:', error);
+  }
+  return enabled;
+}
+
+async function updateBadge(tabId, count) {
+  try {
+    await chrome.action.setBadgeBackgroundColor({ tabId, color: BADGE_COLOR });
+    await chrome.action.setBadgeText({ tabId, text: tabStats.badgeText(count) });
+  } catch (error) {
+    // The tab may already be closed; the badge is cosmetic.
+  }
+}
+
+async function onAdBlocked(message, sender) {
+  const tabId = sender.tab && sender.tab.id;
+  if (typeof tabId !== 'number') return { ok: false, error: 'No tab' };
+  const stats = tabStats.recordRemoved(tabId, message.platform, message.items);
+  await updateBadge(tabId, stats.count);
+  await tabStats.persistTabStats();
+  await storage.recordBlocked({ platform: message.platform, count: message.items.length });
+  return { ok: true, count: stats.count };
+}
+
+async function onPageStart(message, sender) {
+  const tabId = sender.tab && sender.tab.id;
+  if (message.topFrame && typeof tabId === 'number') {
+    tabStats.resetTab(tabId);
+    await updateBadge(tabId, 0);
+  }
+  return { ok: true };
+}
+
+async function onPopupState(message) {
+  const [settings, health, sessionDisabled, whitelisted, blacklisted] = await Promise.all([
+    storage.getSettings(), storage.getHealth(), storage.isSessionDisabled(),
+    storage.isWhitelisted(message.hostname), storage.isBlacklisted(message.hostname),
+  ]);
+  const stats = tabStats.getTabStats(message.tabId);
+  const labels = Object.entries(stats.byPlatform).map(([platform, count]) => ({
+    platform, count, text: tabStats.platformLabel(platform, count),
+  }));
+  return { ok: true, settings, health, sessionDisabled, whitelisted, blacklisted, stats, labels };
+}
+
+async function updateList(adder, remover, flag, domain) {
+  const result = await (flag ? adder(domain) : remover(domain));
+  if (result.ok) await syncDynamicRules();
+  return result;
+}
+
+async function onSetDisabled(message) {
+  if (message.scope === 'session') {
+    await storage.setSessionDisabled(message.disabled);
+  } else {
+    await storage.saveSettings({ enabled: !message.disabled });
+    if (!message.disabled) await storage.setSessionDisabled(false);
+  }
+  return { ok: true, enabled: await applyBlockingState() };
+}
+
+const HANDLERS = {
+  [MSG.PAGE_START]: onPageStart,
+  [MSG.AD_BLOCKED]: onAdBlocked,
+  [MSG.GET_BLOCKING_STATE]: async (m) => ({ ok: true, enabled: await storage.isBlockingEnabledFor(m.hostname) }),
+  [MSG.GET_TAB_STATS]: async (m) => ({ ok: true, stats: tabStats.getTabStats(m.tabId) }),
+  [MSG.GET_POPUP_STATE]: onPopupState,
+  [MSG.SET_WHITELIST]: (m) => updateList(storage.addToWhitelist, storage.removeFromWhitelist, m.whitelisted, m.domain),
+  [MSG.SET_BLACKLIST]: (m) => updateList(storage.addToBlacklist, storage.removeFromBlacklist, m.blacklisted, m.domain),
+  [MSG.SET_DISABLED]: onSetDisabled,
+};
+
+export async function handleMessage(message, sender = {}) {
+  const check = validateMessage(message);
+  if (!check.ok) return check;
+  try {
+    return await HANDLERS[message.type](message, sender);
+  } catch (error) {
+    console.error('Message handler failed:', error);
+    return { ok: false, error: String((error && error.message) || error) };
+  }
+}
+
+export async function bootstrap({ startup = false } = {}) {
+  if (startup) {
+    await storage.setSessionDisabled(false);
+    tabStats.clearAllTabs();
+    await tabStats.persistTabStats();
+  }
+  await initialize();
+  await syncDynamicRules();
+  await applyBlockingState();
+}
+
 export function registerListeners() {
-  chrome.runtime.onInstalled.addListener(() => initialize());
-  chrome.runtime.onStartup.addListener(() => initialize());
+  chrome.runtime.onInstalled.addListener(() => bootstrap());
+  chrome.runtime.onStartup.addListener(() => bootstrap({ startup: true }));
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    handleMessage(message, sender).then(sendResponse);
+    return true;
+  });
+  chrome.tabs.onRemoved.addListener((tabId) => {
+    tabStats.removeTab(tabId);
+    tabStats.persistTabStats();
+  });
 }
 
 registerListeners();
 // A terminated service worker restarts without firing onStartup, so re-check on every wake.
 initialize();
+tabStats.restoreTabStats();

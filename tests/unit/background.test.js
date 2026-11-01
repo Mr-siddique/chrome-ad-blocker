@@ -48,16 +48,20 @@ describe('background service worker', () => {
     expect(chrome.storage.local._data[HEALTH_KEY].ok).toBe(true);
     expect(chrome.declarativeNetRequest.updateEnabledRulesets).not.toHaveBeenCalled();
     expect(chrome.action.setBadgeText).not.toHaveBeenCalled();
+    expect(chrome.runtime.onMessage.addListener).toHaveBeenCalledTimes(1);
+    expect(chrome.tabs.onRemoved.addListener).toHaveBeenCalledTimes(1);
   });
 
   it('onInstalled and onStartup re-run initialization', async () => {
     loadBackground();
     await flushPromises();
-    chrome.storage.local.set.mockClear();
     chrome.runtime.onInstalled.emit();
     chrome.runtime.onStartup.emit();
     await flushPromises();
-    expect(chrome.storage.local.set).toHaveBeenCalledTimes(2);
+    expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenCalledTimes(2);
+    expect(chrome.declarativeNetRequest.updateEnabledRulesets).toHaveBeenCalledWith({
+      enableRulesetIds: ['streaming'],
+    });
   });
 
   it('disables blocking, warns on the badge and does not throw when the list is corrupted', async () => {
