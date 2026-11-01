@@ -11,7 +11,8 @@
     "benchmark": "node tests/performance/benchmarks.js",
     "lint": "eslint src tests",
     "dev": "webpack --mode=development --watch",
-    "build": "webpack --mode=production"
+    "build": "npm run build:rules && webpack --mode=production",
+    "build:rules": "node scripts/build-rules.js"
   },
   "keywords": [
     "chrome",

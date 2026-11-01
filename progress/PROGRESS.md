@@ -9,9 +9,9 @@
 - [x] T3: Prime Video filter list, ad corpus, block-rate test (STREAMING, FIRST) - Prime Video list (55 rules), 59 endpoint + 30 DOM fixture corpus (unconfirmed), AT-1 test (82 tests total, corpus rate 92.1%)
 - [x] T4: Jio Hotstar filter list, ad corpus, block-rate test (STREAMING) - Jio Hotstar list (40 rules), 43 endpoint + 30 DOM fixture corpus (unconfirmed), AT-2 test (102 tests total, corpus rate 91.8%)
 - [x] T5: VAST/VPAID detection and blocking - VAST/VPAID signatures, 48 wrapper fixtures, AT-3 test (136 tests total, 91.7% per group)
+- [x] T6: declarativeNetRequest rules generation and service worker (request-level blocking) - DNR rule generation (85 rules), service worker with fail-safe init, parity tests (165 tests total, 99.6% stmt coverage)
 
 ## Remaining Tasks
-- [ ] T6: declarativeNetRequest rules generation and service worker (request-level blocking)
 - [ ] T7: Player DOM handling (content script, dynamic injection, playback integrity)
 - [ ] T8: Streaming checkpoint (quality gate, no new features)
 - [ ] T9: Storage layer (sync whitelist, local stats, quotas, fallbacks)

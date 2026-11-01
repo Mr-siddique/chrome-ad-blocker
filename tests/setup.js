@@ -156,4 +156,4 @@ afterAll(() => {
   console.warn = originalWarn;
 });
 
-global.flushPromises = () => new Promise((resolve) => setImmediate(resolve));
+global.flushPromises = () => new Promise((resolve) => setTimeout(resolve, 0));

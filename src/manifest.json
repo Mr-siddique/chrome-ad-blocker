@@ -4,14 +4,22 @@
   "version": "0.1.0",
   "description": "Privacy-first ad blocker focused on Prime Video and Jio Hotstar streaming ads. No tracking, no network calls.",
   "minimum_chrome_version": "90",
-  "permissions": ["storage", "declarativeNetRequest", "activeTab"],
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "activeTab"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content-script.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content-script.js"
+      ],
       "run_at": "document_start",
       "all_frames": true
     }
@@ -23,5 +31,14 @@
   "options_page": "options.html",
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "streaming",
+        "enabled": true,
+        "path": "rules/streaming-rules.json"
+      }
+    ]
   }
 }

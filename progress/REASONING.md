@@ -497,3 +497,14 @@ For agents to use before making big decisions:
 - Signatures pair a strict JS regex (token boundaries) with a substring `urlFilter` for DNR; DNR is therefore a superset. Manifests/segments/subtitles are protected from these heuristics in JS; in DNR the same protection is done with higher-priority allow rules (T6).
 - src/utils/filters.js was NOT modified: vast-vpaid.js imports from it, so combining them there would create an import cycle. Combination happens in rules-loader (T6).
 - Fixtures: 12 per group (4 groups), each group has 1 deliberate unblockable wrapper on an unlisted domain with no signature (11/12 = 91.7%). Synthetic URLs, confirmed:false.
+
+### T6: DNR generation and service worker
+**Agent:** Build Agent | **Task:** T6 | **Risk:** MEDIUM
+- Extra file: `src/utils/dnr-rules.js` (rule converter). Jest cannot run `import()` of ESM from a CJS script, so the converter lives in an ES module that both scripts/build-rules.js and the tests import. The committed `src/rules/streaming-rules.json` is checked against freshly generated output in tests (stale file fails CI).
+- Priorities: heuristic VAST/VPAID blocks (1) < allow manifests/segments (2) < host blocks (3) < allow subtitles (4). This mirrors the JS guard: ad-host manifests are blocked, heuristic matches on content manifests are not, subtitles are never blocked.
+- Block rules exclude `main_frame` so navigation is never blocked. No `requestDomains`/`initiatorDomains` (Chrome 101) used, to respect the v90 floor, so streaming rules apply on all sites (ad-tech domains are blocked everywhere).
+- `urlFilter` for wildcard hosts is a superset of the JS regex (`*` crosses dots). The parity test only demands DNR coverage of every JS-blocked URL (met: 55/55 and 40/40) and that sample content URLs stay unblocked.
+- Extra test helper: `tests/harness/dnr-sim.js`, a minimal urlFilter interpreter (not Chrome's engine; real behaviour needs the manual load check in T18/T17).
+- Corrupted/missing list: `loadBundledFilters()` returns ok:false, background disables the `streaming` ruleset, sets a "!" badge and persists a `health` record. The popup warning is T13.
+- Service worker re-runs `initialize()` at every wake because a terminated worker restarts without onStartup.
+- Fixed in tests/setup.js: jsdom lacks setImmediate, flushPromises uses setTimeout.

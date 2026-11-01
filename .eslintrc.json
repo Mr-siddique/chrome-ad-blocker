@@ -15,6 +15,7 @@
     {
       "files": ["tests/**/*.js", "scripts/**/*.js", "*.config.js"],
       "env": { "jest": true, "node": true },
+      "globals": { "flushPromises": "readonly", "makeChromeMock": "readonly" },
       "parserOptions": { "sourceType": "script", "ecmaVersion": 2022 },
       "rules": { "max-lines-per-function": "off" }
     },

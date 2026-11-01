@@ -79,7 +79,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T3, T4, T5
 - **Satisfies:** AT-1/AT-2/AT-3 at the request level in the browser (parity with JS matcher), AT-10 (filter load <200 ms design), AT-17 (service worker half), edge cases: corrupted bundled list, service worker restart, offline
 - **Test Strategy:** Parity test: every corpus item blocked by the JS matcher is covered by a generated DNR rule (or documented as DOM-only, count reported); rules count within static-rule limits; background unit tests with mocked chrome (onInstalled init, onStartup, corrupted/missing list disables blocking and sets warning state); load-time timing test (30 cold-start simulations, p95 <200 ms).
-- **Status:** NOT STARTED
+- **Status:** DONE (165 tests total, 99.6% stmt coverage)
 
 ### T7: Player DOM handling (content script, dynamic injection, playback integrity)
 - **Scope:** Large
