@@ -589,3 +589,8 @@ For agents to use before making big decisions:
 ### T17: Manual protocols
 **Agent:** Build Agent | **Task:** T17 | **Risk:** LOW
 - Three blank templates under tests/manual/ (AT-5 playback + real block rate + live-capture confirmation of corpus endpoints; two-profile sync; real-page performance). Each states "STATUS: NOT RUN". Nothing manual has been executed by the Build Agent and AT-5, the sync check and the real-page metrics must not be reported as passed until a human fills these in. AT-5 template also includes a table for the real observed block rate, since the committed corpus is unconfirmed.
+
+### T18: Release gates
+**Agent:** Build Agent | **Task:** T18 | **Risk:** LOW
+- Added generated placeholder icons (src/icons, Web Store requires them); the manifest validator also demands a justification string per permission. The production build is exercised inside jest (webpack into a temp dir) and validated against the manifest. SPEC.md was intentionally NOT ticked: AT results rest on an unconfirmed corpus and synthetic harness, and AT-5/AT-17 (real Chrome) are manual; the honest per-AT status lives in progress/PROGRESS.md.
+- Deviations summary: single content-script entry on <all_urls>; extra files (src/package.json, dnr-rules.js, dynamic-rules.js, runner.js, tests/harness/*, content-script/dynamic-rules tests, icons); package.json `jest` key removed (conflicted with jest.config.js); jsdom not added to devDependencies (lock file not writable).
