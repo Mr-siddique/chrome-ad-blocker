@@ -60,3 +60,19 @@ describe('manifest.json', () => {
     expect(entry.run_at).toBe('document_start');
   });
 });
+
+describe('manifest YouTube scripts (Amendment A1)', () => {
+  const scripts = manifest.content_scripts;
+  const main = scripts.find((s) => s.world === 'MAIN');
+
+  it('registers a MAIN-world document_start script scoped to YouTube only', () => {
+    expect(main.js).toEqual(['youtube-main.js']);
+    expect(main.run_at).toBe('document_start');
+    expect(main.matches).toEqual(['*://www.youtube.com/*', '*://m.youtube.com/*']);
+  });
+
+  it('adds no permissions for YouTube support', () => {
+    expect(manifest.permissions).toEqual(['storage', 'declarativeNetRequest', 'declarativeNetRequestFeedback', 'activeTab']);
+    expect(manifest.host_permissions).toBeUndefined();
+  });
+});

@@ -39,6 +39,7 @@ module.exports = {
   entry: {
     background: './src/background.js',
     'content-script': './src/content-script.js',
+    'youtube-main': './src/youtube-main.js',
     popup: './src/popup.js',
     options: './src/options.js',
   },
