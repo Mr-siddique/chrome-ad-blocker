@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-08",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://pubads.g.doubleclick.net/gampad/ads?apiFramework=VPAID&output=vast",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

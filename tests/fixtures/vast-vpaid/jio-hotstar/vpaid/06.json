@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vpaid-06",
+  "type": "vpaid",
+  "platform": "jio-hotstar",
+  "url": "https://flashtalking.com/vpaid/ad_3.js",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

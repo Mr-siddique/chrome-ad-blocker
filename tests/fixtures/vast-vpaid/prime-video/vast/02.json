@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vast-02",
+  "type": "vast",
+  "platform": "prime-video",
+  "url": "https://securepubads.g.doubleclick.net/gampad/ads?iu=/1/pv&output=xml_vast4",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

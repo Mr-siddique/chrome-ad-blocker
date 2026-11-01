@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vast-05",
+  "type": "vast",
+  "platform": "prime-video",
+  "url": "https://2a7e9.v.fwmrm.net/ad/g/1?vast=1&resp=vast4",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

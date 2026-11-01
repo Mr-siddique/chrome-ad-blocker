@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vast-09",
+  "type": "vast",
+  "platform": "prime-video",
+  "url": "https://adnxs.com/vast_wrapper/12",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

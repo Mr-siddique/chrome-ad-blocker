@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vpaid-03",
+  "type": "vpaid",
+  "platform": "jio-hotstar",
+  "url": "https://cdn-2.hotstar.com/ads/vpaid/wrapper.js",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vast-03",
+  "type": "vast",
+  "platform": "prime-video",
+  "url": "https://ad-tier-3.prd.primevideo.com/vast.xml?slot=pre",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

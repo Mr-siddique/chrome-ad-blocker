@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vast-04",
+  "type": "vast",
+  "platform": "prime-video",
+  "url": "https://aiv-cdn.amazon.com/ads/vast/v4/preroll.xml",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

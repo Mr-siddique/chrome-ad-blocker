@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vast-11",
+  "type": "vast",
+  "platform": "prime-video",
+  "url": "https://innovid.com/vmap/session/55",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

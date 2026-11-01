@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vpaid-10",
+  "type": "vpaid",
+  "platform": "jio-hotstar",
+  "url": "https://tremorhub.com/vpaid/ad.js",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

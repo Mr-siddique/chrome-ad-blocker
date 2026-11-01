@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vpaid-08",
+  "type": "vpaid",
+  "platform": "jio-hotstar",
+  "url": "https://pubads.g.doubleclick.net/gampad/ads?apiFramework=VPAID&output=xml_vast3",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

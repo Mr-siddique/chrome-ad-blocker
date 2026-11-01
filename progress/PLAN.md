@@ -69,7 +69,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T3, T4
 - **Satisfies:** AT-3 (>=90% of wrapper requests per platform), spec 5 requirement "VAST/VPAID wrapper calls blocked"
 - **Test Strategy:** Fixture replay per platform asserts >=90% each (4 groups); unit tests on URL param/path signatures (`vast`, `vpaid`, `ad_type`, `.xml` wrapper heuristics) plus negative cases for content manifests.
-- **Status:** NOT STARTED
+- **Status:** DONE (136 tests total, 91.7% per group)
 
 ### T6: declarativeNetRequest rules generation and service worker (request-level blocking)
 - **Scope:** Large

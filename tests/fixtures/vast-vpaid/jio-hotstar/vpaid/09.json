@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vpaid-09",
+  "type": "vpaid",
+  "platform": "jio-hotstar",
+  "url": "https://fwmrm.net/p/vpaid/2/ad.js",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

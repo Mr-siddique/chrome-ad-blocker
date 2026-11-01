@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vast-08",
+  "type": "vast",
+  "platform": "jio-hotstar",
+  "url": "https://pubads.g.doubleclick.net/gampad/ads?iu=/3/jh&adtype=vast",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

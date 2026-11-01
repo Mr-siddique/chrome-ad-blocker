@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-09",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://fwmrm.net/p/vpaid/1/ad.js",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

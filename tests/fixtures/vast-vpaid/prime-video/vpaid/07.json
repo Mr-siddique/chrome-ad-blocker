@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-07",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://serving-sys.com/Serving/vpaid/loader.js",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

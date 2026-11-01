@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-10",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://spotxchange.com/vpaid/ad.js",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

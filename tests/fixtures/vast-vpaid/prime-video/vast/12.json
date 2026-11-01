@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vast-12",
+  "type": "vast",
+  "platform": "prime-video",
+  "url": "https://ads.unlisted-adtech-example.net/wrap/1?c=2",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

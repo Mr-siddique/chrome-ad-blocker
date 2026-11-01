@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-05",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://innovid.com/vpaid/player.js",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

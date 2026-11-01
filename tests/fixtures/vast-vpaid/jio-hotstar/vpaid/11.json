@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vpaid-11",
+  "type": "vpaid",
+  "platform": "jio-hotstar",
+  "url": "https://adsrvr.org/vpaid/loader2",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

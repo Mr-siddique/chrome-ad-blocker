@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vast-10",
+  "type": "vast",
+  "platform": "jio-hotstar",
+  "url": "https://tremorhub.com/vast4/ad?c=1",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

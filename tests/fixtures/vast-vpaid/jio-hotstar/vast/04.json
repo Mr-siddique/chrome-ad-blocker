@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vast-04",
+  "type": "vast",
+  "platform": "jio-hotstar",
+  "url": "https://cdn-2.hotstar.com/ads/vast/preroll.xml",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

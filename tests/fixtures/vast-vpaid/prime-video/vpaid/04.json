@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-04",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://moatads.com/vpaid/viewability.js",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

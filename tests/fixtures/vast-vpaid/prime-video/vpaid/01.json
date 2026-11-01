@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-01",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://s0.2mdn.net/instream/vpaid/creative_1.js",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

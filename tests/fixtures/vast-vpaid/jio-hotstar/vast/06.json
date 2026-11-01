@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vast-06",
+  "type": "vast",
+  "platform": "jio-hotstar",
+  "url": "https://spotxchange.com/vast/serve?id=9",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vast-05",
+  "type": "vast",
+  "platform": "jio-hotstar",
+  "url": "https://2b8f1.v.fwmrm.net/ad/g/1?vast=1",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

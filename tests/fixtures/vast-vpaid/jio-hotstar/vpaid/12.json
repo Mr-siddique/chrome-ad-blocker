@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vpaid-12",
+  "type": "vpaid",
+  "platform": "jio-hotstar",
+  "url": "https://promo.unlisted-adtech-example.in/creative/3.js",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

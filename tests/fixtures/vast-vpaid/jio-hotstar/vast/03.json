@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vast-03",
+  "type": "vast",
+  "platform": "jio-hotstar",
+  "url": "https://ads.jiohotstar.com/vast/v4?slot=pre",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

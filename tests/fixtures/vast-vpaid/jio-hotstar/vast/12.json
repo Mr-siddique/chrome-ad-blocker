@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vast-12",
+  "type": "vast",
+  "platform": "jio-hotstar",
+  "url": "https://promo.unlisted-adtech-example.in/wrap/9",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

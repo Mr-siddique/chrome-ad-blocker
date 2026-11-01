@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vpaid-04",
+  "type": "vpaid",
+  "platform": "jio-hotstar",
+  "url": "https://moatads.com/vpaid/viewability2.js",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

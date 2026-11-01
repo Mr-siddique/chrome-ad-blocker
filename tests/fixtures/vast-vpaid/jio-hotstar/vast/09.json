@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vast-09",
+  "type": "vast",
+  "platform": "jio-hotstar",
+  "url": "https://springserve.com/vast_wrapper/3",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vast-10",
+  "type": "vast",
+  "platform": "prime-video",
+  "url": "https://serving-sys.com/vast3/ad?c=1",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

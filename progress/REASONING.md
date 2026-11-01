@@ -491,3 +491,9 @@ For agents to use before making big decisions:
 - Player DOM class names (e.g. `atvwebplayersdk-adtimeindicator*`, `ad-overlay`) are unverified guesses and will not match a live player until confirmed.
 - Corpus URLs and DOM fixtures were generated from the same lists they test, so matched items are matched by construction. The only honest "misses" are deliberately included: server-side stitched segment URLs / DOM (video marked as the ad but untouchable), and ad domains not in the list / unknown DOM structure. This ~7% unblockable share is the author's assumption, not a measurement. The AT-1/AT-2 pass proves the machinery, not the real-world 90%. T17 live-capture confirmation is still required.
 - Corpus assembly: endpoints + DOM fixtures are combined for the 90% check, and each half is also asserted >=90% individually. Fixtures are marked with `data-corpus-ad`; a fixture counts as blocked only if every marked element is detected and no unmarked element (video, controls, subtitles) is flagged.
+
+### T5: VAST/VPAID signatures
+**Agent:** Build Agent | **Task:** T5 | **Risk:** LOW
+- Signatures pair a strict JS regex (token boundaries) with a substring `urlFilter` for DNR; DNR is therefore a superset. Manifests/segments/subtitles are protected from these heuristics in JS; in DNR the same protection is done with higher-priority allow rules (T6).
+- src/utils/filters.js was NOT modified: vast-vpaid.js imports from it, so combining them there would create an import cycle. Combination happens in rules-loader (T6).
+- Fixtures: 12 per group (4 groups), each group has 1 deliberate unblockable wrapper on an unlisted domain with no signature (11/12 = 91.7%). Synthetic URLs, confirmed:false.

@@ -1,0 +1,11 @@
+{
+  "id": "jio-hotstar-vast-11",
+  "type": "vast",
+  "platform": "jio-hotstar",
+  "url": "https://inmobi.com/vmap/session/12",
+  "initiator": "https://www.hotstar.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

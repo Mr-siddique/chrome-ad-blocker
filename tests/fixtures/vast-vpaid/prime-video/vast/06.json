@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vast-06",
+  "type": "vast",
+  "platform": "prime-video",
+  "url": "https://aax-us-east.amazon-adsystem.com/vast/serve?slot=mid",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "xmlhttprequest",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-06",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://flashtalking.com/vpaid/ad_8.js",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-03",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://aiv-cdn.amazon.com/ads/vpaid/wrapper.js",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}

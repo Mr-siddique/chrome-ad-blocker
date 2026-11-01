@@ -1,0 +1,11 @@
+{
+  "id": "prime-video-vpaid-12",
+  "type": "vpaid",
+  "platform": "prime-video",
+  "url": "https://ads.unlisted-adtech-example.net/creative/1.js",
+  "initiator": "https://www.primevideo.com",
+  "method": "GET",
+  "resourceType": "script",
+  "confirmed": false,
+  "confidence": "synthetic"
+}
