@@ -89,7 +89,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T3, T4 (selectors), T6 (service worker messaging contract defined in T9; this task uses a thin stub interface)
 - **Satisfies:** AT-4 (0 blank frames >500 ms, progress within 1 s, subtitles, controls), AT-6 (static plus injected up to 60 s later at AT-1/AT-2 rates), AT-11 (detection latency <100 ms p95 over >=100 injections), AT-9 (content script overhead design)
 - **Test Strategy:** Harness-driven: inject ad containers at t=0 and at random times up to 60 s (fake timers), assert removal rate >=90% per platform, assert harness invariants (progress delta <=1 s, subtitle node intact, controls respond, blank-frame duration <=500 ms using the harness's frame model). Latency test over >=100 injections, p95 <100 ms. Unknown/changed DOM test: no crash, no content removed.
-- **Status:** NOT STARTED
+- **Status:** DONE (227 tests total)
 
 ### T8: Streaming checkpoint (quality gate, no new features)
 - **Scope:** Small

@@ -508,3 +508,13 @@ For agents to use before making big decisions:
 - Corrupted/missing list: `loadBundledFilters()` returns ok:false, background disables the `streaming` ruleset, sets a "!" badge and persists a `health` record. The popup warning is T13.
 - Service worker re-runs `initialize()` at every wake because a terminated worker restarts without onStartup.
 - Fixed in tests/setup.js: jsdom lacks setImmediate, flushPromises uses setTimeout.
+
+### T7: Player DOM handling
+**Agent:** Build Agent | **Task:** T7 | **Risk:** MEDIUM
+- Protection model: content `<video>`, buttons/inputs, sliders, progress, aria-live, and subtitle/caption/control/progress/seek/volume classes are never removed; a container that wraps a content video, slider, or subtitle is also skipped. A `<video>` is removable only if it is itself identified as an ad (ad src or ad class).
+- Detection uses candidate selectors (cheap `querySelectorAll`) then `matchElement`; no full-tree walks. MutationObserver watches added nodes and attribute changes (`src`, `class`, `id`, `data-ad-type`).
+- Added: `tests/unit/content-script.test.js` (platform detect + content script start; not in PLAN), `getPlatformContext` registry lives in platform-detect.js instead of filters.js (avoids import cycles).
+- tests/harness/corpus.js `scanFixture` now uses the real `findAdElements`, so AT-1/AT-2 exercise production detection (rates unchanged: 92.1% / 91.8%).
+- AT-4/AT-6/AT-11 are on a synthetic mock player. AT-11 latency (p95 ~2 ms) measures MutationObserver-to-removal in jsdom, not a real browser. AT-9 content-script overhead design: one observer, targeted queries; measured in T16 synthetically. None of this replaces AT-5 (manual, NOT run).
+- Server-side stitched ads (same `<video>`) are untouchable by design; the content video is protected.
+- Content script still reports via a stub `AD_BLOCKED` message; T10 replaces it with the typed messaging module.
