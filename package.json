@@ -13,7 +13,8 @@
     "dev": "webpack --mode=development --watch",
     "build": "npm run build:rules && webpack --mode=production",
     "build:rules": "node scripts/build-rules.js",
-    "test:perf": "jest tests/performance --coverage=false"
+    "test:perf": "jest tests/performance --coverage=false",
+    "validate": "node scripts/validate-manifest.js"
   },
   "keywords": [
     "chrome",

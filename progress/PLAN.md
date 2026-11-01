@@ -199,7 +199,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T15, T16, T17
 - **Satisfies:** AT-12 (>80% line coverage, reported by the coverage tool), AT-17 (0 errors in service worker and error console, manifest valid for Chrome Web Store; the real Chrome load is a documented manual check), final re-run of AT-1 to AT-16 as the Definition of Done regression
 - **Test Strategy:** `npm test -- --coverage` meets thresholds; manifest validator checks required Web Store fields (name, version, description, icons, permissions justification, MV3 CSP); full suite plus benchmark in CI; tick every AT in the SPEC checklist with evidence links.
-- **Status:** NOT STARTED
+- **Status:** DONE (620 tests total, ~99% line coverage)
 
 ## Dependency Graph
 ```

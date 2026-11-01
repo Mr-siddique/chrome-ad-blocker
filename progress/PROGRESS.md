@@ -21,9 +21,9 @@
 - [x] T15: Error handling and edge-case hardening - one test per spec edge-case row; hardening of corrupted-list DOM path, unhandled rejections, observer exceptions (586 tests total)
 - [x] T16: Performance benchmarks and CI regression checks - synthetic p95 benchmarks (AT-9/10/11, storage), thresholds file, perf test, CI workflow (592 tests total, all p95 under targets)
 - [x] T17: Manual test protocol and log templates - blank manual protocol templates (AT-5 + live capture confirmation, whitelist sync, real-page perf); NOT RUN (templates only; 592 tests total)
+- [x] T18: Release gates (coverage, manifest validation, clean load, final regression) - release gates: manifest validator, build and load tests, icons, README load instructions, AT status table (620 tests total, ~99% line coverage)
 
 ## Remaining Tasks
-- [ ] T18: Release gates (coverage, manifest validation, clean load, final regression)
 
 ## Blocked Items
 See progress/blockers.md (if present).
@@ -31,3 +31,29 @@ See progress/blockers.md (if present).
 ## Notes
 - Corpora are author-generated and marked confirmed:false; see tests/fixtures/README.md.
 - AT-5 and other MANUAL tests have NOT been run.
+
+
+## Acceptance test status (evidence is automated unless noted)
+"Automated pass" means the test passes on the author-built, UNCONFIRMED corpus or the synthetic harness. It is not evidence of the real-world rate. Nothing manual has been run.
+
+| AT | Status | Evidence |
+|----|--------|----------|
+| AT-1 Prime Video >=90% | Automated pass (corpus 92.1%) | tests/integration/at1-prime-video-blockrate.test.js |
+| AT-2 Jio Hotstar >=90% | Automated pass (corpus 91.8%) | tests/integration/at2-jio-hotstar-blockrate.test.js |
+| AT-3 VAST/VPAID >=90% | Automated pass (91.7% per group, synthetic fixtures) | tests/integration/at3-vast-vpaid.test.js |
+| AT-4 Playback integrity (mock) | Automated pass on mock player | tests/integration/at4-playback-integrity.test.js |
+| AT-5 Playback integrity (real sites) | NOT RUN (manual) | tests/manual/AT-5-playback-log.md |
+| AT-6 Dynamic injection | Automated pass on mock player | tests/integration/at6-dynamic-injection.test.js |
+| AT-7 Banner >=95% | Automated pass (corpus 97.4%) | tests/integration/at7-banner-blockrate.test.js |
+| AT-8 False positives <2% | Automated pass (3/1414 = 0.21%, 0 subtitle/control altered) | tests/integration/at8-false-positives.test.js |
+| AT-9 Content script <50 ms | Automated pass (synthetic jsdom ~33-39 ms p95); real pages NOT RUN | tests/performance, tests/manual/real-page-perf-log.md |
+| AT-10 Filter load <200 ms | Automated pass (synthetic ~1 ms p95); real cold starts NOT RUN | tests/performance |
+| AT-11 Detection <100 ms | Automated pass (synthetic ~0.2 ms p95); real pages NOT RUN | tests/performance, at6 |
+| AT-12 Coverage >80% | Pass (see npm test coverage table, ~99% lines) | jest coverage |
+| AT-13 Whitelist/blacklist | Automated pass | message-flow, popup tests |
+| AT-14 Settings persistence | Automated pass (simulated reload); browser-restart check NOT RUN | options.test.js, storage tests |
+| AT-15 Popup rendering | Automated pass | tests/integration/popup.test.js |
+| AT-16 Options page | Automated pass | tests/integration/options.test.js |
+| AT-17 Loads cleanly | Manifest, build output and module loading automated; real Chrome load NOT RUN (manual) | tests/integration/extension-load.test.js, README |
+
+Other unverified items: corpus endpoints and player DOM class names are not confirmed against live traffic; two-profile whitelist sync, service worker memory, rebuffer/dropped-frame impact are NOT RUN.

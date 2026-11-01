@@ -102,6 +102,24 @@ chrome-ad-blocker/
 - Creates `progress/review-report.md`
 - BLOCKS if requirements unmet
 
+## Loading the Unpacked Extension
+
+```bash
+npm install
+npm run build          # regenerates src/rules/*.json, then bundles into dist/
+npm run validate -- --dist dist   # manifest checks against the built files
+```
+
+1. Open `chrome://extensions` and turn on Developer mode.
+2. Click "Load unpacked" and select the `dist/` folder.
+3. Confirm there are no entries under "Errors" for the extension and open the service worker console ("service worker" link) to confirm it is clean. This real-Chrome check is MANUAL: the automated tests cover the manifest, the build output and module loading, not a real browser load (AT-17).
+4. Open Prime Video or Jio Hotstar with an ad-supported account to try it. Manual protocols and blank logs are in `tests/manual/` (AT-5, whitelist sync, real-page performance); none of them has been run yet.
+
+Notes:
+- The bundled ad lists are author-built from the spec and public ad-tech knowledge. They have NOT been confirmed against live Prime Video / Jio Hotstar traffic (`confirmed: false`), so the corpus block rates reported by the tests are not real-world rates.
+- Permissions: `storage` (settings, whitelist, local stats), `declarativeNetRequest` (static and dynamic block rules), `activeTab` (popup reads the current hostname). No host permissions; the extension makes no network requests.
+- Edit filter lists in `src/filters/`, then run `npm run build:rules` to regenerate `src/rules/*.json` (the tests fail if they are stale).
+
 ## Commands
 
 ```bash
