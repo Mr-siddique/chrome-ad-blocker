@@ -1,0 +1,15 @@
+{
+  "note": "p95 targets from SPEC.md Performance Targets. Samples are synthetic (Node + jsdom); real-page metrics are manual (tests/manual/real-page-perf-log.md).",
+  "filterLoadP95Ms": 200,
+  "contentOverheadP95Ms": 50,
+  "detectionLatencyP95Ms": 100,
+  "storageP95Ms": 20,
+  "matchP95Ms": 10,
+  "minSamples": {
+    "filterLoad": 30,
+    "contentOverhead": 50,
+    "detectionLatency": 100,
+    "storage": 100,
+    "match": 1000
+  }
+}

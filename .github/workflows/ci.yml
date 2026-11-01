@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      CI: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - name: Unit and integration tests with coverage (fails below the 80% gate)
+        run: npm test
+      - name: Performance benchmarks (fails if any p95 exceeds its target)
+        run: npm run benchmark
+      - name: Build extension
+        run: npm run build
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reports
+          path: |
+            progress/perf-report.json
+            progress/streaming-gate-report.json
+            progress/coverage
+          if-no-files-found: warn

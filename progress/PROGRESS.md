@@ -19,9 +19,9 @@
 - [x] T13: Popup UI - popup UI (counts, platform labels, domain list, whitelist/session/permanent toggles, settings, warning/error states, light/dark CSS) (510 tests total)
 - [x] T14: Options page - options page (categories, custom patterns, whitelist, import/export with rollback, reset), dynamic rules from storage changes (558 tests total)
 - [x] T15: Error handling and edge-case hardening - one test per spec edge-case row; hardening of corrupted-list DOM path, unhandled rejections, observer exceptions (586 tests total)
+- [x] T16: Performance benchmarks and CI regression checks - synthetic p95 benchmarks (AT-9/10/11, storage), thresholds file, perf test, CI workflow (592 tests total, all p95 under targets)
 
 ## Remaining Tasks
-- [ ] T16: Performance benchmarks and CI regression checks
 - [ ] T17: Manual test protocol and log templates
 - [ ] T18: Release gates (coverage, manifest validation, clean load, final regression)
 

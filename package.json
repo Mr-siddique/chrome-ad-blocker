@@ -9,10 +9,11 @@
     "test:unit": "jest tests/unit",
     "test:integration": "jest tests/integration",
     "benchmark": "node tests/performance/benchmarks.js",
-    "lint": "eslint src tests",
+    "lint": "eslint src tests scripts --ext .js",
     "dev": "webpack --mode=development --watch",
     "build": "npm run build:rules && webpack --mode=production",
-    "build:rules": "node scripts/build-rules.js"
+    "build:rules": "node scripts/build-rules.js",
+    "test:perf": "jest tests/performance --coverage=false"
   },
   "keywords": [
     "chrome",

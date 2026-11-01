@@ -179,7 +179,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T6, T7, T9, T12
 - **Satisfies:** AT-9 (<50 ms overhead p95, synthetic page-load comparison with and without content script over >=50 loads), AT-10 (<200 ms p95 over >=30 cold starts), AT-11 (<100 ms p95 over >=100 injections), storage <20 ms p95 (>=100 ops), spec "regressions fail CI"
 - **Test Strategy:** Automated synthetic benchmarks in Node/jsdom with p95 computed and compared with thresholds; the report is saved as JSON. Real-site metrics (50 sessions, service worker memory <=50 MB after 1 h, rebuffer/dropped frames) are MANUAL and recorded in T17.
-- **Status:** NOT STARTED
+- **Status:** DONE (592 tests total, all p95 under targets)
 
 ### T17: Manual test protocol and log templates
 - **Scope:** Small
