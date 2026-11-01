@@ -10,6 +10,8 @@ describe('classifyAdProtocolRequest', () => {
     ['https://x.com/ads/vast/v4/a', 'vast'],
     ['https://x.com/vast3/ad', 'vast'],
     ['https://x.com/a/vast_wrapper/1', 'vast'],
+    ['https://x.com/vast', 'vast'],
+    ['https://x.com/vast?x=1', 'vast'],
     ['https://x.com/vmap/1', 'vast'],
     ['https://x.com/gampad/ads?output=vast', 'vast'],
     ['https://x.com/gampad/ads?iu=1&output=xml_vast4', 'vast'],
@@ -26,6 +28,8 @@ describe('classifyAdProtocolRequest', () => {
 
   it.each([
     ['https://x.com/vastness/page'],
+    ['https://x.com/vastu-shastra/home'],
+    ['https://x.com/a-vast/page'],
     ['https://x.com/broadcast/live'],
     ['https://x.com/movies/title?id=1'],
     ['https://x.com/a/master.m3u8?vast=1'],

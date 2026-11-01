@@ -129,7 +129,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T3, T4, T5, T7 (run against streaming lists now; re-run after T12 with banner rules)
 - **Satisfies:** AT-8 (<2%, i.e. <20 of 1000, and 0 subtitle/control elements blocked or altered)
 - **Test Strategy:** Corpus replay through URL matcher, DNR parity rules and DOM handler; hard assertion of zero subtitle/control elements touched; reports each false positive for triage. Re-run in T12 and T18.
-- **Status:** NOT STARTED
+- **Status:** DONE (388 tests total, 0.21% FP)
 
 ### T12: General banner ad blocking (secondary)
 - **Scope:** Medium

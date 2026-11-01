@@ -1,0 +1,7080 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "confirmed": false,
+    "source": "Author-built clean corpus: real well-known domains with synthetic paths, streaming content/subtitle/artwork URL shapes, lookalikes, and heuristic-edge URLs. Not crawled from live traffic.",
+    "count": 1414
+  },
+  "items": [
+    {
+      "id": "clean-0001",
+      "url": "https://wikipedia.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0002",
+      "url": "https://www.wikipedia.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0003",
+      "url": "https://wikipedia.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0004",
+      "url": "https://static.wikipedia.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0005",
+      "url": "https://github.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0006",
+      "url": "https://www.github.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0007",
+      "url": "https://github.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0008",
+      "url": "https://static.github.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0009",
+      "url": "https://stackoverflow.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0010",
+      "url": "https://www.stackoverflow.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0011",
+      "url": "https://stackoverflow.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0012",
+      "url": "https://static.stackoverflow.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0013",
+      "url": "https://mozilla.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0014",
+      "url": "https://www.mozilla.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0015",
+      "url": "https://mozilla.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0016",
+      "url": "https://static.mozilla.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0017",
+      "url": "https://python.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0018",
+      "url": "https://www.python.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0019",
+      "url": "https://python.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0020",
+      "url": "https://static.python.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0021",
+      "url": "https://nodejs.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0022",
+      "url": "https://www.nodejs.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0023",
+      "url": "https://nodejs.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0024",
+      "url": "https://static.nodejs.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0025",
+      "url": "https://npmjs.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0026",
+      "url": "https://www.npmjs.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0027",
+      "url": "https://npmjs.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0028",
+      "url": "https://static.npmjs.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0029",
+      "url": "https://reactjs.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0030",
+      "url": "https://www.reactjs.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0031",
+      "url": "https://reactjs.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0032",
+      "url": "https://static.reactjs.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0033",
+      "url": "https://vuejs.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0034",
+      "url": "https://www.vuejs.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0035",
+      "url": "https://vuejs.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0036",
+      "url": "https://static.vuejs.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0037",
+      "url": "https://angular.io/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0038",
+      "url": "https://www.angular.io/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0039",
+      "url": "https://angular.io/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0040",
+      "url": "https://static.angular.io/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0041",
+      "url": "https://kubernetes.io/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0042",
+      "url": "https://www.kubernetes.io/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0043",
+      "url": "https://kubernetes.io/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0044",
+      "url": "https://static.kubernetes.io/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0045",
+      "url": "https://docker.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0046",
+      "url": "https://www.docker.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0047",
+      "url": "https://docker.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0048",
+      "url": "https://static.docker.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0049",
+      "url": "https://apache.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0050",
+      "url": "https://www.apache.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0051",
+      "url": "https://apache.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0052",
+      "url": "https://static.apache.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0053",
+      "url": "https://gnu.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0054",
+      "url": "https://www.gnu.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0055",
+      "url": "https://gnu.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0056",
+      "url": "https://static.gnu.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0057",
+      "url": "https://kernel.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0058",
+      "url": "https://www.kernel.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0059",
+      "url": "https://kernel.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0060",
+      "url": "https://static.kernel.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0061",
+      "url": "https://linuxfoundation.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0062",
+      "url": "https://www.linuxfoundation.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0063",
+      "url": "https://linuxfoundation.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0064",
+      "url": "https://static.linuxfoundation.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0065",
+      "url": "https://eff.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0066",
+      "url": "https://www.eff.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0067",
+      "url": "https://eff.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0068",
+      "url": "https://static.eff.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0069",
+      "url": "https://archive.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0070",
+      "url": "https://www.archive.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0071",
+      "url": "https://archive.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0072",
+      "url": "https://static.archive.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0073",
+      "url": "https://nytimes.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0074",
+      "url": "https://www.nytimes.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0075",
+      "url": "https://nytimes.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0076",
+      "url": "https://static.nytimes.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0077",
+      "url": "https://bbc.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0078",
+      "url": "https://www.bbc.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0079",
+      "url": "https://bbc.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0080",
+      "url": "https://static.bbc.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0081",
+      "url": "https://bbc.co.uk/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0082",
+      "url": "https://www.bbc.co.uk/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0083",
+      "url": "https://bbc.co.uk/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0084",
+      "url": "https://static.bbc.co.uk/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0085",
+      "url": "https://theguardian.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0086",
+      "url": "https://www.theguardian.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0087",
+      "url": "https://theguardian.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0088",
+      "url": "https://static.theguardian.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0089",
+      "url": "https://reuters.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0090",
+      "url": "https://www.reuters.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0091",
+      "url": "https://reuters.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0092",
+      "url": "https://static.reuters.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0093",
+      "url": "https://apnews.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0094",
+      "url": "https://www.apnews.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0095",
+      "url": "https://apnews.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0096",
+      "url": "https://static.apnews.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0097",
+      "url": "https://npr.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0098",
+      "url": "https://www.npr.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0099",
+      "url": "https://npr.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0100",
+      "url": "https://static.npr.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0101",
+      "url": "https://cnn.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0102",
+      "url": "https://www.cnn.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0103",
+      "url": "https://cnn.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0104",
+      "url": "https://static.cnn.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0105",
+      "url": "https://washingtonpost.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0106",
+      "url": "https://www.washingtonpost.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0107",
+      "url": "https://washingtonpost.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0108",
+      "url": "https://static.washingtonpost.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0109",
+      "url": "https://bloomberg.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0110",
+      "url": "https://www.bloomberg.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0111",
+      "url": "https://bloomberg.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0112",
+      "url": "https://static.bloomberg.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0113",
+      "url": "https://ft.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0114",
+      "url": "https://www.ft.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0115",
+      "url": "https://ft.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0116",
+      "url": "https://static.ft.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0117",
+      "url": "https://economist.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0118",
+      "url": "https://www.economist.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0119",
+      "url": "https://economist.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0120",
+      "url": "https://static.economist.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0121",
+      "url": "https://wsj.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0122",
+      "url": "https://www.wsj.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0123",
+      "url": "https://wsj.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0124",
+      "url": "https://static.wsj.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0125",
+      "url": "https://forbes.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0126",
+      "url": "https://www.forbes.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0127",
+      "url": "https://forbes.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0128",
+      "url": "https://static.forbes.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0129",
+      "url": "https://time.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0130",
+      "url": "https://www.time.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0131",
+      "url": "https://time.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0132",
+      "url": "https://static.time.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0133",
+      "url": "https://nature.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0134",
+      "url": "https://www.nature.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0135",
+      "url": "https://nature.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0136",
+      "url": "https://static.nature.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0137",
+      "url": "https://science.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0138",
+      "url": "https://www.science.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0139",
+      "url": "https://science.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0140",
+      "url": "https://static.science.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0141",
+      "url": "https://sciencedirect.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0142",
+      "url": "https://www.sciencedirect.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0143",
+      "url": "https://sciencedirect.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0144",
+      "url": "https://static.sciencedirect.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0145",
+      "url": "https://arxiv.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0146",
+      "url": "https://www.arxiv.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0147",
+      "url": "https://arxiv.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0148",
+      "url": "https://static.arxiv.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0149",
+      "url": "https://ieee.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0150",
+      "url": "https://www.ieee.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0151",
+      "url": "https://ieee.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0152",
+      "url": "https://static.ieee.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0153",
+      "url": "https://acm.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0154",
+      "url": "https://www.acm.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0155",
+      "url": "https://acm.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0156",
+      "url": "https://static.acm.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0157",
+      "url": "https://mit.edu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0158",
+      "url": "https://www.mit.edu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0159",
+      "url": "https://mit.edu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0160",
+      "url": "https://static.mit.edu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0161",
+      "url": "https://stanford.edu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0162",
+      "url": "https://www.stanford.edu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0163",
+      "url": "https://stanford.edu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0164",
+      "url": "https://static.stanford.edu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0165",
+      "url": "https://harvard.edu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0166",
+      "url": "https://www.harvard.edu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0167",
+      "url": "https://harvard.edu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0168",
+      "url": "https://static.harvard.edu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0169",
+      "url": "https://ox.ac.uk/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0170",
+      "url": "https://www.ox.ac.uk/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0171",
+      "url": "https://ox.ac.uk/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0172",
+      "url": "https://static.ox.ac.uk/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0173",
+      "url": "https://cam.ac.uk/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0174",
+      "url": "https://www.cam.ac.uk/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0175",
+      "url": "https://cam.ac.uk/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0176",
+      "url": "https://static.cam.ac.uk/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0177",
+      "url": "https://berkeley.edu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0178",
+      "url": "https://www.berkeley.edu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0179",
+      "url": "https://berkeley.edu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0180",
+      "url": "https://static.berkeley.edu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0181",
+      "url": "https://cmu.edu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0182",
+      "url": "https://www.cmu.edu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0183",
+      "url": "https://cmu.edu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0184",
+      "url": "https://static.cmu.edu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0185",
+      "url": "https://princeton.edu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0186",
+      "url": "https://www.princeton.edu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0187",
+      "url": "https://princeton.edu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0188",
+      "url": "https://static.princeton.edu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0189",
+      "url": "https://yale.edu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0190",
+      "url": "https://www.yale.edu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0191",
+      "url": "https://yale.edu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0192",
+      "url": "https://static.yale.edu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0193",
+      "url": "https://cornell.edu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0194",
+      "url": "https://www.cornell.edu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0195",
+      "url": "https://cornell.edu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0196",
+      "url": "https://static.cornell.edu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0197",
+      "url": "https://ucla.edu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0198",
+      "url": "https://www.ucla.edu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0199",
+      "url": "https://ucla.edu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0200",
+      "url": "https://static.ucla.edu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0201",
+      "url": "https://nasa.gov/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0202",
+      "url": "https://www.nasa.gov/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0203",
+      "url": "https://nasa.gov/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0204",
+      "url": "https://static.nasa.gov/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0205",
+      "url": "https://nih.gov/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0206",
+      "url": "https://www.nih.gov/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0207",
+      "url": "https://nih.gov/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0208",
+      "url": "https://static.nih.gov/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0209",
+      "url": "https://cdc.gov/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0210",
+      "url": "https://www.cdc.gov/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0211",
+      "url": "https://cdc.gov/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0212",
+      "url": "https://static.cdc.gov/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0213",
+      "url": "https://who.int/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0214",
+      "url": "https://www.who.int/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0215",
+      "url": "https://who.int/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0216",
+      "url": "https://static.who.int/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0217",
+      "url": "https://un.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0218",
+      "url": "https://www.un.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0219",
+      "url": "https://un.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0220",
+      "url": "https://static.un.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0221",
+      "url": "https://europa.eu/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0222",
+      "url": "https://www.europa.eu/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0223",
+      "url": "https://europa.eu/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0224",
+      "url": "https://static.europa.eu/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0225",
+      "url": "https://gov.uk/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0226",
+      "url": "https://www.gov.uk/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0227",
+      "url": "https://gov.uk/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0228",
+      "url": "https://static.gov.uk/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0229",
+      "url": "https://usa.gov/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0230",
+      "url": "https://www.usa.gov/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0231",
+      "url": "https://usa.gov/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0232",
+      "url": "https://static.usa.gov/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0233",
+      "url": "https://irs.gov/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0234",
+      "url": "https://www.irs.gov/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0235",
+      "url": "https://irs.gov/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0236",
+      "url": "https://static.irs.gov/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0237",
+      "url": "https://nps.gov/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0238",
+      "url": "https://www.nps.gov/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0239",
+      "url": "https://nps.gov/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0240",
+      "url": "https://static.nps.gov/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0241",
+      "url": "https://noaa.gov/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0242",
+      "url": "https://www.noaa.gov/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0243",
+      "url": "https://noaa.gov/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0244",
+      "url": "https://static.noaa.gov/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0245",
+      "url": "https://weather.gov/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0246",
+      "url": "https://www.weather.gov/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0247",
+      "url": "https://weather.gov/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0248",
+      "url": "https://static.weather.gov/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0249",
+      "url": "https://amazon.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0250",
+      "url": "https://www.amazon.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0251",
+      "url": "https://amazon.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0252",
+      "url": "https://static.amazon.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0253",
+      "url": "https://amazon.in/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0254",
+      "url": "https://www.amazon.in/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0255",
+      "url": "https://amazon.in/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0256",
+      "url": "https://static.amazon.in/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0257",
+      "url": "https://amazon.co.uk/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0258",
+      "url": "https://www.amazon.co.uk/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0259",
+      "url": "https://amazon.co.uk/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0260",
+      "url": "https://static.amazon.co.uk/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0261",
+      "url": "https://amazon.de/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0262",
+      "url": "https://www.amazon.de/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0263",
+      "url": "https://amazon.de/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0264",
+      "url": "https://static.amazon.de/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0265",
+      "url": "https://primevideo.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0266",
+      "url": "https://www.primevideo.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0267",
+      "url": "https://primevideo.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0268",
+      "url": "https://static.primevideo.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0269",
+      "url": "https://imdb.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0270",
+      "url": "https://www.imdb.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0271",
+      "url": "https://imdb.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0272",
+      "url": "https://static.imdb.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0273",
+      "url": "https://audible.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0274",
+      "url": "https://www.audible.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0275",
+      "url": "https://audible.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0276",
+      "url": "https://static.audible.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0277",
+      "url": "https://goodreads.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0278",
+      "url": "https://www.goodreads.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0279",
+      "url": "https://goodreads.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0280",
+      "url": "https://static.goodreads.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0281",
+      "url": "https://twitch.tv/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0282",
+      "url": "https://www.twitch.tv/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0283",
+      "url": "https://twitch.tv/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0284",
+      "url": "https://static.twitch.tv/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0285",
+      "url": "https://netflix.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0286",
+      "url": "https://www.netflix.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0287",
+      "url": "https://netflix.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0288",
+      "url": "https://static.netflix.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0289",
+      "url": "https://disneyplus.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0290",
+      "url": "https://www.disneyplus.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0291",
+      "url": "https://disneyplus.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0292",
+      "url": "https://static.disneyplus.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0293",
+      "url": "https://hulu.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0294",
+      "url": "https://www.hulu.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0295",
+      "url": "https://hulu.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0296",
+      "url": "https://static.hulu.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0297",
+      "url": "https://spotify.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0298",
+      "url": "https://www.spotify.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0299",
+      "url": "https://spotify.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0300",
+      "url": "https://static.spotify.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0301",
+      "url": "https://soundcloud.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0302",
+      "url": "https://www.soundcloud.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0303",
+      "url": "https://soundcloud.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0304",
+      "url": "https://static.soundcloud.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0305",
+      "url": "https://vimeo.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0306",
+      "url": "https://www.vimeo.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0307",
+      "url": "https://vimeo.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0308",
+      "url": "https://static.vimeo.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0309",
+      "url": "https://dailymotion.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0310",
+      "url": "https://www.dailymotion.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0311",
+      "url": "https://dailymotion.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0312",
+      "url": "https://static.dailymotion.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0313",
+      "url": "https://hotstar.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0314",
+      "url": "https://www.hotstar.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0315",
+      "url": "https://hotstar.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0316",
+      "url": "https://static.hotstar.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0317",
+      "url": "https://jiohotstar.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0318",
+      "url": "https://www.jiohotstar.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0319",
+      "url": "https://jiohotstar.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0320",
+      "url": "https://static.jiohotstar.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0321",
+      "url": "https://jio.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0322",
+      "url": "https://www.jio.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0323",
+      "url": "https://jio.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0324",
+      "url": "https://static.jio.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0325",
+      "url": "https://jiocinema.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0326",
+      "url": "https://www.jiocinema.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0327",
+      "url": "https://jiocinema.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0328",
+      "url": "https://static.jiocinema.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0329",
+      "url": "https://sonyliv.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0330",
+      "url": "https://www.sonyliv.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0331",
+      "url": "https://sonyliv.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0332",
+      "url": "https://static.sonyliv.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0333",
+      "url": "https://zee5.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0334",
+      "url": "https://www.zee5.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0335",
+      "url": "https://zee5.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0336",
+      "url": "https://static.zee5.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0337",
+      "url": "https://mxplayer.in/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0338",
+      "url": "https://www.mxplayer.in/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0339",
+      "url": "https://mxplayer.in/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0340",
+      "url": "https://static.mxplayer.in/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0341",
+      "url": "https://voot.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0342",
+      "url": "https://www.voot.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0343",
+      "url": "https://voot.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0344",
+      "url": "https://static.voot.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0345",
+      "url": "https://altbalaji.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0346",
+      "url": "https://www.altbalaji.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0347",
+      "url": "https://altbalaji.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0348",
+      "url": "https://static.altbalaji.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0349",
+      "url": "https://hungama.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0350",
+      "url": "https://www.hungama.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0351",
+      "url": "https://hungama.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0352",
+      "url": "https://static.hungama.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0353",
+      "url": "https://gaana.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0354",
+      "url": "https://www.gaana.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0355",
+      "url": "https://gaana.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0356",
+      "url": "https://static.gaana.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0357",
+      "url": "https://wynk.in/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0358",
+      "url": "https://www.wynk.in/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0359",
+      "url": "https://wynk.in/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0360",
+      "url": "https://static.wynk.in/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0361",
+      "url": "https://google.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0362",
+      "url": "https://www.google.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0363",
+      "url": "https://google.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0364",
+      "url": "https://static.google.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0365",
+      "url": "https://google.co.in/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0366",
+      "url": "https://www.google.co.in/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0367",
+      "url": "https://google.co.in/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0368",
+      "url": "https://static.google.co.in/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0369",
+      "url": "https://youtube.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0370",
+      "url": "https://www.youtube.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0371",
+      "url": "https://youtube.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0372",
+      "url": "https://static.youtube.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0373",
+      "url": "https://gmail.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0374",
+      "url": "https://www.gmail.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0375",
+      "url": "https://gmail.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0376",
+      "url": "https://static.gmail.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0377",
+      "url": "https://maps.google.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0378",
+      "url": "https://www.maps.google.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0379",
+      "url": "https://maps.google.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0380",
+      "url": "https://static.maps.google.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0381",
+      "url": "https://drive.google.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0382",
+      "url": "https://www.drive.google.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0383",
+      "url": "https://drive.google.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0384",
+      "url": "https://static.drive.google.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0385",
+      "url": "https://docs.google.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0386",
+      "url": "https://www.docs.google.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0387",
+      "url": "https://docs.google.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0388",
+      "url": "https://static.docs.google.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0389",
+      "url": "https://fonts.googleapis.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0390",
+      "url": "https://www.fonts.googleapis.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0391",
+      "url": "https://fonts.googleapis.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0392",
+      "url": "https://static.fonts.googleapis.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0393",
+      "url": "https://fonts.gstatic.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0394",
+      "url": "https://www.fonts.gstatic.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0395",
+      "url": "https://fonts.gstatic.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0396",
+      "url": "https://static.fonts.gstatic.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0397",
+      "url": "https://gstatic.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0398",
+      "url": "https://www.gstatic.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0399",
+      "url": "https://gstatic.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0400",
+      "url": "https://static.gstatic.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0401",
+      "url": "https://ajax.googleapis.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0402",
+      "url": "https://www.ajax.googleapis.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0403",
+      "url": "https://ajax.googleapis.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0404",
+      "url": "https://static.ajax.googleapis.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0405",
+      "url": "https://microsoft.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0406",
+      "url": "https://www.microsoft.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0407",
+      "url": "https://microsoft.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0408",
+      "url": "https://static.microsoft.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0409",
+      "url": "https://office.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0410",
+      "url": "https://www.office.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0411",
+      "url": "https://office.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0412",
+      "url": "https://static.office.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0413",
+      "url": "https://outlook.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0414",
+      "url": "https://www.outlook.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0415",
+      "url": "https://outlook.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0416",
+      "url": "https://static.outlook.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0417",
+      "url": "https://live.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0418",
+      "url": "https://www.live.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0419",
+      "url": "https://live.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0420",
+      "url": "https://static.live.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0421",
+      "url": "https://bing.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0422",
+      "url": "https://www.bing.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0423",
+      "url": "https://bing.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0424",
+      "url": "https://static.bing.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0425",
+      "url": "https://azure.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0426",
+      "url": "https://www.azure.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0427",
+      "url": "https://azure.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0428",
+      "url": "https://static.azure.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0429",
+      "url": "https://linkedin.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0430",
+      "url": "https://www.linkedin.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0431",
+      "url": "https://linkedin.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0432",
+      "url": "https://static.linkedin.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0433",
+      "url": "https://apple.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0434",
+      "url": "https://www.apple.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0435",
+      "url": "https://apple.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0436",
+      "url": "https://static.apple.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0437",
+      "url": "https://icloud.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0438",
+      "url": "https://www.icloud.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0439",
+      "url": "https://icloud.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0440",
+      "url": "https://static.icloud.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0441",
+      "url": "https://adobe.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0442",
+      "url": "https://www.adobe.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0443",
+      "url": "https://adobe.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0444",
+      "url": "https://static.adobe.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0445",
+      "url": "https://oracle.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0446",
+      "url": "https://www.oracle.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0447",
+      "url": "https://oracle.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0448",
+      "url": "https://static.oracle.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0449",
+      "url": "https://ibm.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0450",
+      "url": "https://www.ibm.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0451",
+      "url": "https://ibm.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0452",
+      "url": "https://static.ibm.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0453",
+      "url": "https://intel.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0454",
+      "url": "https://www.intel.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0455",
+      "url": "https://intel.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0456",
+      "url": "https://static.intel.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0457",
+      "url": "https://amd.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0458",
+      "url": "https://www.amd.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0459",
+      "url": "https://amd.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0460",
+      "url": "https://static.amd.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0461",
+      "url": "https://nvidia.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0462",
+      "url": "https://www.nvidia.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0463",
+      "url": "https://nvidia.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0464",
+      "url": "https://static.nvidia.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0465",
+      "url": "https://cisco.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0466",
+      "url": "https://www.cisco.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0467",
+      "url": "https://cisco.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0468",
+      "url": "https://static.cisco.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0469",
+      "url": "https://salesforce.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0470",
+      "url": "https://www.salesforce.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0471",
+      "url": "https://salesforce.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0472",
+      "url": "https://static.salesforce.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0473",
+      "url": "https://sap.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0474",
+      "url": "https://www.sap.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0475",
+      "url": "https://sap.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0476",
+      "url": "https://static.sap.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0477",
+      "url": "https://vmware.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0478",
+      "url": "https://www.vmware.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0479",
+      "url": "https://vmware.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0480",
+      "url": "https://static.vmware.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0481",
+      "url": "https://redhat.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0482",
+      "url": "https://www.redhat.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0483",
+      "url": "https://redhat.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0484",
+      "url": "https://static.redhat.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0485",
+      "url": "https://ubuntu.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0486",
+      "url": "https://www.ubuntu.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0487",
+      "url": "https://ubuntu.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0488",
+      "url": "https://static.ubuntu.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0489",
+      "url": "https://debian.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0490",
+      "url": "https://www.debian.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0491",
+      "url": "https://debian.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0492",
+      "url": "https://static.debian.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0493",
+      "url": "https://fedoraproject.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0494",
+      "url": "https://www.fedoraproject.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0495",
+      "url": "https://fedoraproject.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0496",
+      "url": "https://static.fedoraproject.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0497",
+      "url": "https://archlinux.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0498",
+      "url": "https://www.archlinux.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0499",
+      "url": "https://archlinux.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0500",
+      "url": "https://static.archlinux.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0501",
+      "url": "https://gentoo.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0502",
+      "url": "https://www.gentoo.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0503",
+      "url": "https://gentoo.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0504",
+      "url": "https://static.gentoo.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0505",
+      "url": "https://freebsd.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0506",
+      "url": "https://www.freebsd.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0507",
+      "url": "https://freebsd.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0508",
+      "url": "https://static.freebsd.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0509",
+      "url": "https://openbsd.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0510",
+      "url": "https://www.openbsd.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0511",
+      "url": "https://openbsd.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0512",
+      "url": "https://static.openbsd.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0513",
+      "url": "https://netbsd.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0514",
+      "url": "https://www.netbsd.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0515",
+      "url": "https://netbsd.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0516",
+      "url": "https://static.netbsd.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0517",
+      "url": "https://facebook.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0518",
+      "url": "https://www.facebook.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0519",
+      "url": "https://facebook.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0520",
+      "url": "https://static.facebook.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0521",
+      "url": "https://instagram.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0522",
+      "url": "https://www.instagram.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0523",
+      "url": "https://instagram.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0524",
+      "url": "https://static.instagram.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0525",
+      "url": "https://whatsapp.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0526",
+      "url": "https://www.whatsapp.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0527",
+      "url": "https://whatsapp.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0528",
+      "url": "https://static.whatsapp.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0529",
+      "url": "https://twitter.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0530",
+      "url": "https://www.twitter.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0531",
+      "url": "https://twitter.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0532",
+      "url": "https://static.twitter.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0533",
+      "url": "https://x.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0534",
+      "url": "https://www.x.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0535",
+      "url": "https://x.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0536",
+      "url": "https://static.x.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0537",
+      "url": "https://reddit.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0538",
+      "url": "https://www.reddit.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0539",
+      "url": "https://reddit.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0540",
+      "url": "https://static.reddit.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0541",
+      "url": "https://pinterest.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0542",
+      "url": "https://www.pinterest.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0543",
+      "url": "https://pinterest.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0544",
+      "url": "https://static.pinterest.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0545",
+      "url": "https://tumblr.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0546",
+      "url": "https://www.tumblr.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0547",
+      "url": "https://tumblr.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0548",
+      "url": "https://static.tumblr.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0549",
+      "url": "https://medium.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0550",
+      "url": "https://www.medium.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0551",
+      "url": "https://medium.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0552",
+      "url": "https://static.medium.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0553",
+      "url": "https://substack.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0554",
+      "url": "https://www.substack.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0555",
+      "url": "https://substack.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0556",
+      "url": "https://static.substack.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0557",
+      "url": "https://quora.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0558",
+      "url": "https://www.quora.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0559",
+      "url": "https://quora.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0560",
+      "url": "https://static.quora.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0561",
+      "url": "https://discord.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0562",
+      "url": "https://www.discord.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0563",
+      "url": "https://discord.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0564",
+      "url": "https://static.discord.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0565",
+      "url": "https://slack.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0566",
+      "url": "https://www.slack.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0567",
+      "url": "https://slack.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0568",
+      "url": "https://static.slack.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0569",
+      "url": "https://zoom.us/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0570",
+      "url": "https://www.zoom.us/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0571",
+      "url": "https://zoom.us/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0572",
+      "url": "https://static.zoom.us/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0573",
+      "url": "https://telegram.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0574",
+      "url": "https://www.telegram.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0575",
+      "url": "https://telegram.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0576",
+      "url": "https://static.telegram.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0577",
+      "url": "https://signal.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0578",
+      "url": "https://www.signal.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0579",
+      "url": "https://signal.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0580",
+      "url": "https://static.signal.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0581",
+      "url": "https://paypal.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0582",
+      "url": "https://www.paypal.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0583",
+      "url": "https://paypal.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0584",
+      "url": "https://static.paypal.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0585",
+      "url": "https://stripe.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0586",
+      "url": "https://www.stripe.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0587",
+      "url": "https://stripe.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0588",
+      "url": "https://static.stripe.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0589",
+      "url": "https://squareup.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0590",
+      "url": "https://www.squareup.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0591",
+      "url": "https://squareup.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0592",
+      "url": "https://static.squareup.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0593",
+      "url": "https://shopify.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0594",
+      "url": "https://www.shopify.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0595",
+      "url": "https://shopify.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0596",
+      "url": "https://static.shopify.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0597",
+      "url": "https://etsy.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0598",
+      "url": "https://www.etsy.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0599",
+      "url": "https://etsy.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0600",
+      "url": "https://static.etsy.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0601",
+      "url": "https://ebay.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0602",
+      "url": "https://www.ebay.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0603",
+      "url": "https://ebay.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0604",
+      "url": "https://static.ebay.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0605",
+      "url": "https://walmart.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0606",
+      "url": "https://www.walmart.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0607",
+      "url": "https://walmart.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0608",
+      "url": "https://static.walmart.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0609",
+      "url": "https://target.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0610",
+      "url": "https://www.target.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0611",
+      "url": "https://target.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0612",
+      "url": "https://static.target.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0613",
+      "url": "https://bestbuy.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0614",
+      "url": "https://www.bestbuy.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0615",
+      "url": "https://bestbuy.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0616",
+      "url": "https://static.bestbuy.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0617",
+      "url": "https://costco.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0618",
+      "url": "https://www.costco.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0619",
+      "url": "https://costco.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0620",
+      "url": "https://static.costco.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0621",
+      "url": "https://ikea.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0622",
+      "url": "https://www.ikea.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0623",
+      "url": "https://ikea.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0624",
+      "url": "https://static.ikea.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0625",
+      "url": "https://flipkart.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0626",
+      "url": "https://www.flipkart.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0627",
+      "url": "https://flipkart.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0628",
+      "url": "https://static.flipkart.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0629",
+      "url": "https://myntra.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0630",
+      "url": "https://www.myntra.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0631",
+      "url": "https://myntra.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0632",
+      "url": "https://static.myntra.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0633",
+      "url": "https://snapdeal.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0634",
+      "url": "https://www.snapdeal.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0635",
+      "url": "https://snapdeal.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0636",
+      "url": "https://static.snapdeal.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0637",
+      "url": "https://paytm.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0638",
+      "url": "https://www.paytm.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0639",
+      "url": "https://paytm.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0640",
+      "url": "https://static.paytm.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0641",
+      "url": "https://phonepe.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0642",
+      "url": "https://www.phonepe.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0643",
+      "url": "https://phonepe.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0644",
+      "url": "https://static.phonepe.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0645",
+      "url": "https://swiggy.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0646",
+      "url": "https://www.swiggy.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0647",
+      "url": "https://swiggy.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0648",
+      "url": "https://static.swiggy.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0649",
+      "url": "https://zomato.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0650",
+      "url": "https://www.zomato.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0651",
+      "url": "https://zomato.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0652",
+      "url": "https://static.zomato.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0653",
+      "url": "https://ola.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0654",
+      "url": "https://www.ola.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0655",
+      "url": "https://ola.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0656",
+      "url": "https://static.ola.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0657",
+      "url": "https://uber.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0658",
+      "url": "https://www.uber.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0659",
+      "url": "https://uber.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0660",
+      "url": "https://static.uber.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0661",
+      "url": "https://lyft.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0662",
+      "url": "https://www.lyft.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0663",
+      "url": "https://lyft.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0664",
+      "url": "https://static.lyft.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0665",
+      "url": "https://airbnb.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0666",
+      "url": "https://www.airbnb.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0667",
+      "url": "https://airbnb.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0668",
+      "url": "https://static.airbnb.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0669",
+      "url": "https://booking.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0670",
+      "url": "https://www.booking.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0671",
+      "url": "https://booking.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0672",
+      "url": "https://static.booking.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0673",
+      "url": "https://expedia.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0674",
+      "url": "https://www.expedia.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0675",
+      "url": "https://expedia.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0676",
+      "url": "https://static.expedia.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0677",
+      "url": "https://tripadvisor.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0678",
+      "url": "https://www.tripadvisor.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0679",
+      "url": "https://tripadvisor.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0680",
+      "url": "https://static.tripadvisor.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0681",
+      "url": "https://makemytrip.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0682",
+      "url": "https://www.makemytrip.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0683",
+      "url": "https://makemytrip.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0684",
+      "url": "https://static.makemytrip.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0685",
+      "url": "https://irctc.co.in/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0686",
+      "url": "https://www.irctc.co.in/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0687",
+      "url": "https://irctc.co.in/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0688",
+      "url": "https://static.irctc.co.in/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0689",
+      "url": "https://cloudflare.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0690",
+      "url": "https://www.cloudflare.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0691",
+      "url": "https://cloudflare.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0692",
+      "url": "https://static.cloudflare.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0693",
+      "url": "https://fastly.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0694",
+      "url": "https://www.fastly.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0695",
+      "url": "https://fastly.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0696",
+      "url": "https://static.fastly.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0697",
+      "url": "https://akamai.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0698",
+      "url": "https://www.akamai.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0699",
+      "url": "https://akamai.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0700",
+      "url": "https://static.akamai.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0701",
+      "url": "https://digitalocean.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0702",
+      "url": "https://www.digitalocean.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0703",
+      "url": "https://digitalocean.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0704",
+      "url": "https://static.digitalocean.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0705",
+      "url": "https://heroku.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0706",
+      "url": "https://www.heroku.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0707",
+      "url": "https://heroku.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0708",
+      "url": "https://static.heroku.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0709",
+      "url": "https://netlify.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0710",
+      "url": "https://www.netlify.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0711",
+      "url": "https://netlify.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0712",
+      "url": "https://static.netlify.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0713",
+      "url": "https://vercel.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0714",
+      "url": "https://www.vercel.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0715",
+      "url": "https://vercel.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0716",
+      "url": "https://static.vercel.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0717",
+      "url": "https://gitlab.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0718",
+      "url": "https://www.gitlab.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0719",
+      "url": "https://gitlab.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0720",
+      "url": "https://static.gitlab.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0721",
+      "url": "https://bitbucket.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0722",
+      "url": "https://www.bitbucket.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0723",
+      "url": "https://bitbucket.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0724",
+      "url": "https://static.bitbucket.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0725",
+      "url": "https://atlassian.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0726",
+      "url": "https://www.atlassian.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0727",
+      "url": "https://atlassian.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0728",
+      "url": "https://static.atlassian.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0729",
+      "url": "https://jetbrains.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0730",
+      "url": "https://www.jetbrains.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0731",
+      "url": "https://jetbrains.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0732",
+      "url": "https://static.jetbrains.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0733",
+      "url": "https://visualstudio.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0734",
+      "url": "https://www.visualstudio.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0735",
+      "url": "https://visualstudio.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0736",
+      "url": "https://static.visualstudio.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0737",
+      "url": "https://eclipse.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0738",
+      "url": "https://www.eclipse.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0739",
+      "url": "https://eclipse.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0740",
+      "url": "https://static.eclipse.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0741",
+      "url": "https://wordpress.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0742",
+      "url": "https://www.wordpress.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0743",
+      "url": "https://wordpress.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0744",
+      "url": "https://static.wordpress.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0745",
+      "url": "https://wordpress.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0746",
+      "url": "https://www.wordpress.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0747",
+      "url": "https://wordpress.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0748",
+      "url": "https://static.wordpress.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0749",
+      "url": "https://wix.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0750",
+      "url": "https://www.wix.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0751",
+      "url": "https://wix.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0752",
+      "url": "https://static.wix.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0753",
+      "url": "https://squarespace.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0754",
+      "url": "https://www.squarespace.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0755",
+      "url": "https://squarespace.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0756",
+      "url": "https://static.squarespace.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0757",
+      "url": "https://weebly.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0758",
+      "url": "https://www.weebly.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0759",
+      "url": "https://weebly.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0760",
+      "url": "https://static.weebly.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0761",
+      "url": "https://godaddy.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0762",
+      "url": "https://www.godaddy.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0763",
+      "url": "https://godaddy.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0764",
+      "url": "https://static.godaddy.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0765",
+      "url": "https://namecheap.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0766",
+      "url": "https://www.namecheap.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0767",
+      "url": "https://namecheap.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0768",
+      "url": "https://static.namecheap.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0769",
+      "url": "https://hostgator.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0770",
+      "url": "https://www.hostgator.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0771",
+      "url": "https://hostgator.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0772",
+      "url": "https://static.hostgator.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0773",
+      "url": "https://bluehost.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0774",
+      "url": "https://www.bluehost.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0775",
+      "url": "https://bluehost.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0776",
+      "url": "https://static.bluehost.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0777",
+      "url": "https://coursera.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0778",
+      "url": "https://www.coursera.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0779",
+      "url": "https://coursera.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0780",
+      "url": "https://static.coursera.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0781",
+      "url": "https://edx.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0782",
+      "url": "https://www.edx.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0783",
+      "url": "https://edx.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0784",
+      "url": "https://static.edx.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0785",
+      "url": "https://udemy.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0786",
+      "url": "https://www.udemy.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0787",
+      "url": "https://udemy.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0788",
+      "url": "https://static.udemy.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0789",
+      "url": "https://khanacademy.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0790",
+      "url": "https://www.khanacademy.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0791",
+      "url": "https://khanacademy.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0792",
+      "url": "https://static.khanacademy.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0793",
+      "url": "https://duolingo.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0794",
+      "url": "https://www.duolingo.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0795",
+      "url": "https://duolingo.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0796",
+      "url": "https://static.duolingo.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0797",
+      "url": "https://codecademy.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0798",
+      "url": "https://www.codecademy.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0799",
+      "url": "https://codecademy.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0800",
+      "url": "https://static.codecademy.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0801",
+      "url": "https://freecodecamp.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0802",
+      "url": "https://www.freecodecamp.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0803",
+      "url": "https://freecodecamp.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0804",
+      "url": "https://static.freecodecamp.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0805",
+      "url": "https://w3schools.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0806",
+      "url": "https://www.w3schools.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0807",
+      "url": "https://w3schools.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0808",
+      "url": "https://static.w3schools.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0809",
+      "url": "https://mdn.dev/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0810",
+      "url": "https://www.mdn.dev/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0811",
+      "url": "https://mdn.dev/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0812",
+      "url": "https://static.mdn.dev/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0813",
+      "url": "https://developer.mozilla.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0814",
+      "url": "https://www.developer.mozilla.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0815",
+      "url": "https://developer.mozilla.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0816",
+      "url": "https://static.developer.mozilla.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0817",
+      "url": "https://espn.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0818",
+      "url": "https://www.espn.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0819",
+      "url": "https://espn.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0820",
+      "url": "https://static.espn.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0821",
+      "url": "https://nba.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0822",
+      "url": "https://www.nba.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0823",
+      "url": "https://nba.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0824",
+      "url": "https://static.nba.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0825",
+      "url": "https://nfl.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0826",
+      "url": "https://www.nfl.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0827",
+      "url": "https://nfl.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0828",
+      "url": "https://static.nfl.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0829",
+      "url": "https://mlb.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0830",
+      "url": "https://www.mlb.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0831",
+      "url": "https://mlb.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0832",
+      "url": "https://static.mlb.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0833",
+      "url": "https://fifa.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0834",
+      "url": "https://www.fifa.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0835",
+      "url": "https://fifa.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0836",
+      "url": "https://static.fifa.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0837",
+      "url": "https://uefa.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0838",
+      "url": "https://www.uefa.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0839",
+      "url": "https://uefa.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0840",
+      "url": "https://static.uefa.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0841",
+      "url": "https://icc-cricket.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0842",
+      "url": "https://www.icc-cricket.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0843",
+      "url": "https://icc-cricket.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0844",
+      "url": "https://static.icc-cricket.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0845",
+      "url": "https://espncricinfo.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0846",
+      "url": "https://www.espncricinfo.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0847",
+      "url": "https://espncricinfo.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0848",
+      "url": "https://static.espncricinfo.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0849",
+      "url": "https://cricbuzz.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0850",
+      "url": "https://www.cricbuzz.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0851",
+      "url": "https://cricbuzz.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0852",
+      "url": "https://static.cricbuzz.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0853",
+      "url": "https://bcci.tv/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0854",
+      "url": "https://www.bcci.tv/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0855",
+      "url": "https://bcci.tv/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0856",
+      "url": "https://static.bcci.tv/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0857",
+      "url": "https://olympics.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0858",
+      "url": "https://www.olympics.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0859",
+      "url": "https://olympics.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0860",
+      "url": "https://static.olympics.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0861",
+      "url": "https://nationalgeographic.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0862",
+      "url": "https://www.nationalgeographic.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0863",
+      "url": "https://nationalgeographic.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0864",
+      "url": "https://static.nationalgeographic.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0865",
+      "url": "https://smithsonianmag.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0866",
+      "url": "https://www.smithsonianmag.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0867",
+      "url": "https://smithsonianmag.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0868",
+      "url": "https://static.smithsonianmag.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0869",
+      "url": "https://history.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0870",
+      "url": "https://www.history.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0871",
+      "url": "https://history.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0872",
+      "url": "https://static.history.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0873",
+      "url": "https://discovery.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0874",
+      "url": "https://www.discovery.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0875",
+      "url": "https://discovery.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0876",
+      "url": "https://static.discovery.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0877",
+      "url": "https://pbs.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0878",
+      "url": "https://www.pbs.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0879",
+      "url": "https://pbs.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0880",
+      "url": "https://static.pbs.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0881",
+      "url": "https://ted.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0882",
+      "url": "https://www.ted.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0883",
+      "url": "https://ted.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0884",
+      "url": "https://static.ted.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0885",
+      "url": "https://bankofamerica.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0886",
+      "url": "https://www.bankofamerica.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0887",
+      "url": "https://bankofamerica.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0888",
+      "url": "https://static.bankofamerica.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0889",
+      "url": "https://chase.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0890",
+      "url": "https://www.chase.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0891",
+      "url": "https://chase.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0892",
+      "url": "https://static.chase.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0893",
+      "url": "https://wellsfargo.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0894",
+      "url": "https://www.wellsfargo.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0895",
+      "url": "https://wellsfargo.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0896",
+      "url": "https://static.wellsfargo.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0897",
+      "url": "https://hdfcbank.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0898",
+      "url": "https://www.hdfcbank.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0899",
+      "url": "https://hdfcbank.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0900",
+      "url": "https://static.hdfcbank.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0901",
+      "url": "https://icicibank.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0902",
+      "url": "https://www.icicibank.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0903",
+      "url": "https://icicibank.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0904",
+      "url": "https://static.icicibank.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0905",
+      "url": "https://sbi.co.in/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0906",
+      "url": "https://www.sbi.co.in/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0907",
+      "url": "https://sbi.co.in/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0908",
+      "url": "https://static.sbi.co.in/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0909",
+      "url": "https://axisbank.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0910",
+      "url": "https://www.axisbank.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0911",
+      "url": "https://axisbank.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0912",
+      "url": "https://static.axisbank.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0913",
+      "url": "https://whatsapp.net/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0914",
+      "url": "https://www.whatsapp.net/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0915",
+      "url": "https://whatsapp.net/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0916",
+      "url": "https://static.whatsapp.net/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0917",
+      "url": "https://fb.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0918",
+      "url": "https://www.fb.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0919",
+      "url": "https://fb.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0920",
+      "url": "https://static.fb.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0921",
+      "url": "https://instagr.am/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0922",
+      "url": "https://www.instagr.am/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0923",
+      "url": "https://instagr.am/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0924",
+      "url": "https://static.instagr.am/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0925",
+      "url": "https://youtu.be/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0926",
+      "url": "https://www.youtu.be/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0927",
+      "url": "https://youtu.be/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0928",
+      "url": "https://static.youtu.be/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0929",
+      "url": "https://redd.it/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0930",
+      "url": "https://www.redd.it/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0931",
+      "url": "https://redd.it/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0932",
+      "url": "https://static.redd.it/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0933",
+      "url": "https://t.co/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0934",
+      "url": "https://www.t.co/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0935",
+      "url": "https://t.co/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0936",
+      "url": "https://static.t.co/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0937",
+      "url": "https://bit.ly/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0938",
+      "url": "https://www.bit.ly/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0939",
+      "url": "https://bit.ly/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0940",
+      "url": "https://static.bit.ly/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0941",
+      "url": "https://goo.gl/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0942",
+      "url": "https://www.goo.gl/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0943",
+      "url": "https://goo.gl/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0944",
+      "url": "https://static.goo.gl/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0945",
+      "url": "https://openai.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0946",
+      "url": "https://www.openai.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0947",
+      "url": "https://openai.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0948",
+      "url": "https://static.openai.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0949",
+      "url": "https://anthropic.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0950",
+      "url": "https://www.anthropic.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0951",
+      "url": "https://anthropic.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0952",
+      "url": "https://static.anthropic.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0953",
+      "url": "https://huggingface.co/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0954",
+      "url": "https://www.huggingface.co/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0955",
+      "url": "https://huggingface.co/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0956",
+      "url": "https://static.huggingface.co/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0957",
+      "url": "https://kaggle.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0958",
+      "url": "https://www.kaggle.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0959",
+      "url": "https://kaggle.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0960",
+      "url": "https://static.kaggle.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0961",
+      "url": "https://pytorch.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0962",
+      "url": "https://www.pytorch.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0963",
+      "url": "https://pytorch.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0964",
+      "url": "https://static.pytorch.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0965",
+      "url": "https://tensorflow.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0966",
+      "url": "https://www.tensorflow.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0967",
+      "url": "https://tensorflow.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0968",
+      "url": "https://static.tensorflow.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0969",
+      "url": "https://scikit-learn.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0970",
+      "url": "https://www.scikit-learn.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0971",
+      "url": "https://scikit-learn.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0972",
+      "url": "https://static.scikit-learn.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0973",
+      "url": "https://numpy.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0974",
+      "url": "https://www.numpy.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0975",
+      "url": "https://numpy.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0976",
+      "url": "https://static.numpy.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0977",
+      "url": "https://pandas.pydata.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0978",
+      "url": "https://www.pandas.pydata.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0979",
+      "url": "https://pandas.pydata.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0980",
+      "url": "https://static.pandas.pydata.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0981",
+      "url": "https://rust-lang.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0982",
+      "url": "https://www.rust-lang.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0983",
+      "url": "https://rust-lang.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0984",
+      "url": "https://static.rust-lang.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0985",
+      "url": "https://golang.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0986",
+      "url": "https://www.golang.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0987",
+      "url": "https://golang.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0988",
+      "url": "https://static.golang.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0989",
+      "url": "https://kotlinlang.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0990",
+      "url": "https://www.kotlinlang.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0991",
+      "url": "https://kotlinlang.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0992",
+      "url": "https://static.kotlinlang.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0993",
+      "url": "https://swift.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0994",
+      "url": "https://www.swift.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0995",
+      "url": "https://swift.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0996",
+      "url": "https://static.swift.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0997",
+      "url": "https://ruby-lang.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-0998",
+      "url": "https://www.ruby-lang.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-0999",
+      "url": "https://ruby-lang.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1000",
+      "url": "https://static.ruby-lang.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1001",
+      "url": "https://php.net/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1002",
+      "url": "https://www.php.net/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1003",
+      "url": "https://php.net/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1004",
+      "url": "https://static.php.net/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1005",
+      "url": "https://perl.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1006",
+      "url": "https://www.perl.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1007",
+      "url": "https://perl.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1008",
+      "url": "https://static.perl.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1009",
+      "url": "https://haskell.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1010",
+      "url": "https://www.haskell.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1011",
+      "url": "https://haskell.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1012",
+      "url": "https://static.haskell.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1013",
+      "url": "https://scala-lang.org/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1014",
+      "url": "https://www.scala-lang.org/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1015",
+      "url": "https://scala-lang.org/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1016",
+      "url": "https://static.scala-lang.org/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1017",
+      "url": "https://unity.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1018",
+      "url": "https://www.unity.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1019",
+      "url": "https://unity.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1020",
+      "url": "https://static.unity.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1021",
+      "url": "https://unrealengine.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1022",
+      "url": "https://www.unrealengine.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1023",
+      "url": "https://unrealengine.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1024",
+      "url": "https://static.unrealengine.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1025",
+      "url": "https://steampowered.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1026",
+      "url": "https://www.steampowered.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1027",
+      "url": "https://steampowered.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1028",
+      "url": "https://static.steampowered.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1029",
+      "url": "https://epicgames.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1030",
+      "url": "https://www.epicgames.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1031",
+      "url": "https://epicgames.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1032",
+      "url": "https://static.epicgames.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1033",
+      "url": "https://playstation.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1034",
+      "url": "https://www.playstation.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1035",
+      "url": "https://playstation.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1036",
+      "url": "https://static.playstation.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1037",
+      "url": "https://xbox.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1038",
+      "url": "https://www.xbox.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1039",
+      "url": "https://xbox.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1040",
+      "url": "https://static.xbox.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1041",
+      "url": "https://nintendo.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1042",
+      "url": "https://www.nintendo.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1043",
+      "url": "https://nintendo.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1044",
+      "url": "https://static.nintendo.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1045",
+      "url": "https://dropbox.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1046",
+      "url": "https://www.dropbox.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1047",
+      "url": "https://dropbox.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1048",
+      "url": "https://static.dropbox.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1049",
+      "url": "https://box.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1050",
+      "url": "https://www.box.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1051",
+      "url": "https://box.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1052",
+      "url": "https://static.box.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1053",
+      "url": "https://evernote.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1054",
+      "url": "https://www.evernote.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1055",
+      "url": "https://evernote.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1056",
+      "url": "https://static.evernote.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1057",
+      "url": "https://notion.so/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1058",
+      "url": "https://www.notion.so/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1059",
+      "url": "https://notion.so/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1060",
+      "url": "https://static.notion.so/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1061",
+      "url": "https://trello.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1062",
+      "url": "https://www.trello.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1063",
+      "url": "https://trello.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1064",
+      "url": "https://static.trello.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1065",
+      "url": "https://asana.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1066",
+      "url": "https://www.asana.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1067",
+      "url": "https://asana.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1068",
+      "url": "https://static.asana.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1069",
+      "url": "https://figma.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1070",
+      "url": "https://www.figma.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1071",
+      "url": "https://figma.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1072",
+      "url": "https://static.figma.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1073",
+      "url": "https://canva.com/",
+      "category": "real-domain"
+    },
+    {
+      "id": "clean-1074",
+      "url": "https://www.canva.com/about",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1075",
+      "url": "https://canva.com/search?q=movies+and+shows",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1076",
+      "url": "https://static.canva.com/assets/main.js",
+      "category": "real-domain-synthetic-path"
+    },
+    {
+      "id": "clean-1077",
+      "url": "https://aiv-cdn.amazon.com/dm/B0RSXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1078",
+      "url": "https://aiv-cdn.amazon.com/dm/B0RSXYZ/video_0_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1079",
+      "url": "https://aiv-cdn.amazon.com/dm/B0RSXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1080",
+      "url": "https://www.primevideo.com/detail/B0RSXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1081",
+      "url": "https://m.media-amazon.com/images/I/B0RSXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1082",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0RSXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1083",
+      "url": "https://cdn-1.hotstar.com/video/vod/B0RSXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1084",
+      "url": "https://cdn-1.hotstar.com/video/vod/B0RSXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1085",
+      "url": "https://cdn-1.hotstar.com/subtitles/B0RSXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1086",
+      "url": "https://www.hotstar.com/in/movies/title-0/B0RSXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1087",
+      "url": "https://img1.hotstar.com/image/upload/B0RSXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1088",
+      "url": "https://www.jiohotstar.com/shows/show-0/B0RSXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1089",
+      "url": "https://aiv-cdn.amazon.com/dm/B0STXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1090",
+      "url": "https://aiv-cdn.amazon.com/dm/B0STXYZ/video_1_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1091",
+      "url": "https://aiv-cdn.amazon.com/dm/B0STXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1092",
+      "url": "https://www.primevideo.com/detail/B0STXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1093",
+      "url": "https://m.media-amazon.com/images/I/B0STXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1094",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0STXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1095",
+      "url": "https://cdn-2.hotstar.com/video/vod/B0STXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1096",
+      "url": "https://cdn-2.hotstar.com/video/vod/B0STXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1097",
+      "url": "https://cdn-2.hotstar.com/subtitles/B0STXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1098",
+      "url": "https://www.hotstar.com/in/movies/title-1/B0STXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1099",
+      "url": "https://img1.hotstar.com/image/upload/B0STXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1100",
+      "url": "https://www.jiohotstar.com/shows/show-1/B0STXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1101",
+      "url": "https://aiv-cdn.amazon.com/dm/B0TUXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1102",
+      "url": "https://aiv-cdn.amazon.com/dm/B0TUXYZ/video_2_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1103",
+      "url": "https://aiv-cdn.amazon.com/dm/B0TUXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1104",
+      "url": "https://www.primevideo.com/detail/B0TUXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1105",
+      "url": "https://m.media-amazon.com/images/I/B0TUXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1106",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0TUXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1107",
+      "url": "https://cdn-3.hotstar.com/video/vod/B0TUXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1108",
+      "url": "https://cdn-3.hotstar.com/video/vod/B0TUXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1109",
+      "url": "https://cdn-3.hotstar.com/subtitles/B0TUXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1110",
+      "url": "https://www.hotstar.com/in/movies/title-2/B0TUXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1111",
+      "url": "https://img1.hotstar.com/image/upload/B0TUXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1112",
+      "url": "https://www.jiohotstar.com/shows/show-2/B0TUXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1113",
+      "url": "https://aiv-cdn.amazon.com/dm/B0UVXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1114",
+      "url": "https://aiv-cdn.amazon.com/dm/B0UVXYZ/video_3_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1115",
+      "url": "https://aiv-cdn.amazon.com/dm/B0UVXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1116",
+      "url": "https://www.primevideo.com/detail/B0UVXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1117",
+      "url": "https://m.media-amazon.com/images/I/B0UVXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1118",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0UVXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1119",
+      "url": "https://cdn-4.hotstar.com/video/vod/B0UVXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1120",
+      "url": "https://cdn-4.hotstar.com/video/vod/B0UVXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1121",
+      "url": "https://cdn-4.hotstar.com/subtitles/B0UVXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1122",
+      "url": "https://www.hotstar.com/in/movies/title-3/B0UVXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1123",
+      "url": "https://img1.hotstar.com/image/upload/B0UVXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1124",
+      "url": "https://www.jiohotstar.com/shows/show-3/B0UVXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1125",
+      "url": "https://aiv-cdn.amazon.com/dm/B0VWXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1126",
+      "url": "https://aiv-cdn.amazon.com/dm/B0VWXYZ/video_4_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1127",
+      "url": "https://aiv-cdn.amazon.com/dm/B0VWXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1128",
+      "url": "https://www.primevideo.com/detail/B0VWXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1129",
+      "url": "https://m.media-amazon.com/images/I/B0VWXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1130",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0VWXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1131",
+      "url": "https://cdn-5.hotstar.com/video/vod/B0VWXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1132",
+      "url": "https://cdn-5.hotstar.com/video/vod/B0VWXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1133",
+      "url": "https://cdn-5.hotstar.com/subtitles/B0VWXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1134",
+      "url": "https://www.hotstar.com/in/movies/title-4/B0VWXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1135",
+      "url": "https://img1.hotstar.com/image/upload/B0VWXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1136",
+      "url": "https://www.jiohotstar.com/shows/show-4/B0VWXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1137",
+      "url": "https://aiv-cdn.amazon.com/dm/B0WXXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1138",
+      "url": "https://aiv-cdn.amazon.com/dm/B0WXXYZ/video_5_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1139",
+      "url": "https://aiv-cdn.amazon.com/dm/B0WXXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1140",
+      "url": "https://www.primevideo.com/detail/B0WXXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1141",
+      "url": "https://m.media-amazon.com/images/I/B0WXXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1142",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0WXXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1143",
+      "url": "https://cdn-1.hotstar.com/video/vod/B0WXXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1144",
+      "url": "https://cdn-1.hotstar.com/video/vod/B0WXXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1145",
+      "url": "https://cdn-1.hotstar.com/subtitles/B0WXXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1146",
+      "url": "https://www.hotstar.com/in/movies/title-5/B0WXXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1147",
+      "url": "https://img1.hotstar.com/image/upload/B0WXXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1148",
+      "url": "https://www.jiohotstar.com/shows/show-5/B0WXXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1149",
+      "url": "https://aiv-cdn.amazon.com/dm/B0XYXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1150",
+      "url": "https://aiv-cdn.amazon.com/dm/B0XYXYZ/video_6_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1151",
+      "url": "https://aiv-cdn.amazon.com/dm/B0XYXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1152",
+      "url": "https://www.primevideo.com/detail/B0XYXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1153",
+      "url": "https://m.media-amazon.com/images/I/B0XYXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1154",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0XYXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1155",
+      "url": "https://cdn-2.hotstar.com/video/vod/B0XYXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1156",
+      "url": "https://cdn-2.hotstar.com/video/vod/B0XYXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1157",
+      "url": "https://cdn-2.hotstar.com/subtitles/B0XYXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1158",
+      "url": "https://www.hotstar.com/in/movies/title-6/B0XYXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1159",
+      "url": "https://img1.hotstar.com/image/upload/B0XYXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1160",
+      "url": "https://www.jiohotstar.com/shows/show-6/B0XYXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1161",
+      "url": "https://aiv-cdn.amazon.com/dm/B0YZXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1162",
+      "url": "https://aiv-cdn.amazon.com/dm/B0YZXYZ/video_7_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1163",
+      "url": "https://aiv-cdn.amazon.com/dm/B0YZXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1164",
+      "url": "https://www.primevideo.com/detail/B0YZXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1165",
+      "url": "https://m.media-amazon.com/images/I/B0YZXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1166",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0YZXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1167",
+      "url": "https://cdn-3.hotstar.com/video/vod/B0YZXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1168",
+      "url": "https://cdn-3.hotstar.com/video/vod/B0YZXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1169",
+      "url": "https://cdn-3.hotstar.com/subtitles/B0YZXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1170",
+      "url": "https://www.hotstar.com/in/movies/title-7/B0YZXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1171",
+      "url": "https://img1.hotstar.com/image/upload/B0YZXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1172",
+      "url": "https://www.jiohotstar.com/shows/show-7/B0YZXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1173",
+      "url": "https://aiv-cdn.amazon.com/dm/B0100XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1174",
+      "url": "https://aiv-cdn.amazon.com/dm/B0100XYZ/video_8_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1175",
+      "url": "https://aiv-cdn.amazon.com/dm/B0100XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1176",
+      "url": "https://www.primevideo.com/detail/B0100XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1177",
+      "url": "https://m.media-amazon.com/images/I/B0100XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1178",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0100XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1179",
+      "url": "https://cdn-4.hotstar.com/video/vod/B0100XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1180",
+      "url": "https://cdn-4.hotstar.com/video/vod/B0100XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1181",
+      "url": "https://cdn-4.hotstar.com/subtitles/B0100XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1182",
+      "url": "https://www.hotstar.com/in/movies/title-8/B0100XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1183",
+      "url": "https://img1.hotstar.com/image/upload/B0100XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1184",
+      "url": "https://www.jiohotstar.com/shows/show-8/B0100XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1185",
+      "url": "https://aiv-cdn.amazon.com/dm/B0111XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1186",
+      "url": "https://aiv-cdn.amazon.com/dm/B0111XYZ/video_9_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1187",
+      "url": "https://aiv-cdn.amazon.com/dm/B0111XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1188",
+      "url": "https://www.primevideo.com/detail/B0111XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1189",
+      "url": "https://m.media-amazon.com/images/I/B0111XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1190",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0111XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1191",
+      "url": "https://cdn-5.hotstar.com/video/vod/B0111XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1192",
+      "url": "https://cdn-5.hotstar.com/video/vod/B0111XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1193",
+      "url": "https://cdn-5.hotstar.com/subtitles/B0111XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1194",
+      "url": "https://www.hotstar.com/in/movies/title-9/B0111XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1195",
+      "url": "https://img1.hotstar.com/image/upload/B0111XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1196",
+      "url": "https://www.jiohotstar.com/shows/show-9/B0111XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1197",
+      "url": "https://aiv-cdn.amazon.com/dm/B0122XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1198",
+      "url": "https://aiv-cdn.amazon.com/dm/B0122XYZ/video_10_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1199",
+      "url": "https://aiv-cdn.amazon.com/dm/B0122XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1200",
+      "url": "https://www.primevideo.com/detail/B0122XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1201",
+      "url": "https://m.media-amazon.com/images/I/B0122XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1202",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0122XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1203",
+      "url": "https://cdn-1.hotstar.com/video/vod/B0122XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1204",
+      "url": "https://cdn-1.hotstar.com/video/vod/B0122XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1205",
+      "url": "https://cdn-1.hotstar.com/subtitles/B0122XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1206",
+      "url": "https://www.hotstar.com/in/movies/title-10/B0122XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1207",
+      "url": "https://img1.hotstar.com/image/upload/B0122XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1208",
+      "url": "https://www.jiohotstar.com/shows/show-10/B0122XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1209",
+      "url": "https://aiv-cdn.amazon.com/dm/B0133XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1210",
+      "url": "https://aiv-cdn.amazon.com/dm/B0133XYZ/video_11_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1211",
+      "url": "https://aiv-cdn.amazon.com/dm/B0133XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1212",
+      "url": "https://www.primevideo.com/detail/B0133XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1213",
+      "url": "https://m.media-amazon.com/images/I/B0133XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1214",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0133XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1215",
+      "url": "https://cdn-2.hotstar.com/video/vod/B0133XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1216",
+      "url": "https://cdn-2.hotstar.com/video/vod/B0133XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1217",
+      "url": "https://cdn-2.hotstar.com/subtitles/B0133XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1218",
+      "url": "https://www.hotstar.com/in/movies/title-11/B0133XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1219",
+      "url": "https://img1.hotstar.com/image/upload/B0133XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1220",
+      "url": "https://www.jiohotstar.com/shows/show-11/B0133XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1221",
+      "url": "https://aiv-cdn.amazon.com/dm/B0144XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1222",
+      "url": "https://aiv-cdn.amazon.com/dm/B0144XYZ/video_12_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1223",
+      "url": "https://aiv-cdn.amazon.com/dm/B0144XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1224",
+      "url": "https://www.primevideo.com/detail/B0144XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1225",
+      "url": "https://m.media-amazon.com/images/I/B0144XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1226",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0144XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1227",
+      "url": "https://cdn-3.hotstar.com/video/vod/B0144XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1228",
+      "url": "https://cdn-3.hotstar.com/video/vod/B0144XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1229",
+      "url": "https://cdn-3.hotstar.com/subtitles/B0144XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1230",
+      "url": "https://www.hotstar.com/in/movies/title-12/B0144XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1231",
+      "url": "https://img1.hotstar.com/image/upload/B0144XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1232",
+      "url": "https://www.jiohotstar.com/shows/show-12/B0144XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1233",
+      "url": "https://aiv-cdn.amazon.com/dm/B0155XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1234",
+      "url": "https://aiv-cdn.amazon.com/dm/B0155XYZ/video_13_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1235",
+      "url": "https://aiv-cdn.amazon.com/dm/B0155XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1236",
+      "url": "https://www.primevideo.com/detail/B0155XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1237",
+      "url": "https://m.media-amazon.com/images/I/B0155XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1238",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0155XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1239",
+      "url": "https://cdn-4.hotstar.com/video/vod/B0155XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1240",
+      "url": "https://cdn-4.hotstar.com/video/vod/B0155XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1241",
+      "url": "https://cdn-4.hotstar.com/subtitles/B0155XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1242",
+      "url": "https://www.hotstar.com/in/movies/title-13/B0155XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1243",
+      "url": "https://img1.hotstar.com/image/upload/B0155XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1244",
+      "url": "https://www.jiohotstar.com/shows/show-13/B0155XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1245",
+      "url": "https://aiv-cdn.amazon.com/dm/B0166XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1246",
+      "url": "https://aiv-cdn.amazon.com/dm/B0166XYZ/video_14_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1247",
+      "url": "https://aiv-cdn.amazon.com/dm/B0166XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1248",
+      "url": "https://www.primevideo.com/detail/B0166XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1249",
+      "url": "https://m.media-amazon.com/images/I/B0166XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1250",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0166XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1251",
+      "url": "https://cdn-5.hotstar.com/video/vod/B0166XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1252",
+      "url": "https://cdn-5.hotstar.com/video/vod/B0166XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1253",
+      "url": "https://cdn-5.hotstar.com/subtitles/B0166XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1254",
+      "url": "https://www.hotstar.com/in/movies/title-14/B0166XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1255",
+      "url": "https://img1.hotstar.com/image/upload/B0166XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1256",
+      "url": "https://www.jiohotstar.com/shows/show-14/B0166XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1257",
+      "url": "https://aiv-cdn.amazon.com/dm/B0177XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1258",
+      "url": "https://aiv-cdn.amazon.com/dm/B0177XYZ/video_15_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1259",
+      "url": "https://aiv-cdn.amazon.com/dm/B0177XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1260",
+      "url": "https://www.primevideo.com/detail/B0177XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1261",
+      "url": "https://m.media-amazon.com/images/I/B0177XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1262",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0177XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1263",
+      "url": "https://cdn-1.hotstar.com/video/vod/B0177XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1264",
+      "url": "https://cdn-1.hotstar.com/video/vod/B0177XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1265",
+      "url": "https://cdn-1.hotstar.com/subtitles/B0177XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1266",
+      "url": "https://www.hotstar.com/in/movies/title-15/B0177XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1267",
+      "url": "https://img1.hotstar.com/image/upload/B0177XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1268",
+      "url": "https://www.jiohotstar.com/shows/show-15/B0177XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1269",
+      "url": "https://aiv-cdn.amazon.com/dm/B0188XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1270",
+      "url": "https://aiv-cdn.amazon.com/dm/B0188XYZ/video_16_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1271",
+      "url": "https://aiv-cdn.amazon.com/dm/B0188XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1272",
+      "url": "https://www.primevideo.com/detail/B0188XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1273",
+      "url": "https://m.media-amazon.com/images/I/B0188XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1274",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0188XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1275",
+      "url": "https://cdn-2.hotstar.com/video/vod/B0188XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1276",
+      "url": "https://cdn-2.hotstar.com/video/vod/B0188XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1277",
+      "url": "https://cdn-2.hotstar.com/subtitles/B0188XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1278",
+      "url": "https://www.hotstar.com/in/movies/title-16/B0188XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1279",
+      "url": "https://img1.hotstar.com/image/upload/B0188XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1280",
+      "url": "https://www.jiohotstar.com/shows/show-16/B0188XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1281",
+      "url": "https://aiv-cdn.amazon.com/dm/B0199XYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1282",
+      "url": "https://aiv-cdn.amazon.com/dm/B0199XYZ/video_17_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1283",
+      "url": "https://aiv-cdn.amazon.com/dm/B0199XYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1284",
+      "url": "https://www.primevideo.com/detail/B0199XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1285",
+      "url": "https://m.media-amazon.com/images/I/B0199XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1286",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B0199XYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1287",
+      "url": "https://cdn-3.hotstar.com/video/vod/B0199XYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1288",
+      "url": "https://cdn-3.hotstar.com/video/vod/B0199XYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1289",
+      "url": "https://cdn-3.hotstar.com/subtitles/B0199XYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1290",
+      "url": "https://www.hotstar.com/in/movies/title-17/B0199XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1291",
+      "url": "https://img1.hotstar.com/image/upload/B0199XYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1292",
+      "url": "https://www.jiohotstar.com/shows/show-17/B0199XYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1293",
+      "url": "https://aiv-cdn.amazon.com/dm/B01AAXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1294",
+      "url": "https://aiv-cdn.amazon.com/dm/B01AAXYZ/video_18_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1295",
+      "url": "https://aiv-cdn.amazon.com/dm/B01AAXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1296",
+      "url": "https://www.primevideo.com/detail/B01AAXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1297",
+      "url": "https://m.media-amazon.com/images/I/B01AAXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1298",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B01AAXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1299",
+      "url": "https://cdn-4.hotstar.com/video/vod/B01AAXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1300",
+      "url": "https://cdn-4.hotstar.com/video/vod/B01AAXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1301",
+      "url": "https://cdn-4.hotstar.com/subtitles/B01AAXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1302",
+      "url": "https://www.hotstar.com/in/movies/title-18/B01AAXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1303",
+      "url": "https://img1.hotstar.com/image/upload/B01AAXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1304",
+      "url": "https://www.jiohotstar.com/shows/show-18/B01AAXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1305",
+      "url": "https://aiv-cdn.amazon.com/dm/B01BBXYZ/manifest.mpd",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1306",
+      "url": "https://aiv-cdn.amazon.com/dm/B01BBXYZ/video_19_seg_00012.m4s",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1307",
+      "url": "https://aiv-cdn.amazon.com/dm/B01BBXYZ/subs/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1308",
+      "url": "https://www.primevideo.com/detail/B01BBXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1309",
+      "url": "https://m.media-amazon.com/images/I/B01BBXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1310",
+      "url": "https://aiv-cdn.amazon.com/ads/subs/B01BBXYZ.vtt",
+      "category": "adversarial-subtitle-under-ads-path"
+    },
+    {
+      "id": "clean-1311",
+      "url": "https://cdn-5.hotstar.com/video/vod/B01BBXYZ/master.m3u8",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1312",
+      "url": "https://cdn-5.hotstar.com/video/vod/B01BBXYZ/seg_00007.ts",
+      "category": "streaming-content"
+    },
+    {
+      "id": "clean-1313",
+      "url": "https://cdn-5.hotstar.com/subtitles/B01BBXYZ/en.vtt",
+      "category": "streaming-subtitle"
+    },
+    {
+      "id": "clean-1314",
+      "url": "https://www.hotstar.com/in/movies/title-19/B01BBXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1315",
+      "url": "https://img1.hotstar.com/image/upload/B01BBXYZ.jpg",
+      "category": "streaming-artwork"
+    },
+    {
+      "id": "clean-1316",
+      "url": "https://www.jiohotstar.com/shows/show-19/B01BBXYZ",
+      "category": "streaming-page"
+    },
+    {
+      "id": "clean-1317",
+      "url": "https://notdoubleclick.net/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1318",
+      "url": "https://notdoubleclick.net/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1319",
+      "url": "https://notdoubleclick.net/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1320",
+      "url": "https://doubleclick.net.example.org/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1321",
+      "url": "https://doubleclick.net.example.org/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1322",
+      "url": "https://doubleclick.net.example.org/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1323",
+      "url": "https://googlesyndication.com.example.net/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1324",
+      "url": "https://googlesyndication.com.example.net/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1325",
+      "url": "https://googlesyndication.com.example.net/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1326",
+      "url": "https://adsjiohotstar.com/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1327",
+      "url": "https://adsjiohotstar.com/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1328",
+      "url": "https://adsjiohotstar.com/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1329",
+      "url": "https://ads.jiohotstar.com.example.io/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1330",
+      "url": "https://ads.jiohotstar.com.example.io/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1331",
+      "url": "https://ads.jiohotstar.com.example.io/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1332",
+      "url": "https://ad-tier-1.prd.primevideo.com.example.io/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1333",
+      "url": "https://ad-tier-1.prd.primevideo.com.example.io/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1334",
+      "url": "https://ad-tier-1.prd.primevideo.com.example.io/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1335",
+      "url": "https://cdn-1.hotstar.com.example.io/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1336",
+      "url": "https://cdn-1.hotstar.com.example.io/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1337",
+      "url": "https://cdn-1.hotstar.com.example.io/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1338",
+      "url": "https://myfwmrm.net/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1339",
+      "url": "https://myfwmrm.net/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1340",
+      "url": "https://myfwmrm.net/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1341",
+      "url": "https://moatads.org/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1342",
+      "url": "https://moatads.org/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1343",
+      "url": "https://moatads.org/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1344",
+      "url": "https://amazon-adsystem.org/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1345",
+      "url": "https://amazon-adsystem.org/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1346",
+      "url": "https://amazon-adsystem.org/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1347",
+      "url": "https://pubmatic.org/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1348",
+      "url": "https://pubmatic.org/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1349",
+      "url": "https://pubmatic.org/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1350",
+      "url": "https://openx.org/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1351",
+      "url": "https://openx.org/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1352",
+      "url": "https://openx.org/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1353",
+      "url": "https://adnxs.org/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1354",
+      "url": "https://adnxs.org/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1355",
+      "url": "https://adnxs.org/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1356",
+      "url": "https://criteo.org/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1357",
+      "url": "https://criteo.org/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1358",
+      "url": "https://criteo.org/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1359",
+      "url": "https://innovid.org/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1360",
+      "url": "https://innovid.org/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1361",
+      "url": "https://innovid.org/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1362",
+      "url": "https://mads.amazon.example.com/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1363",
+      "url": "https://mads.amazon.example.com/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1364",
+      "url": "https://mads.amazon.example.com/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1365",
+      "url": "https://aiv-cdn.amazon.com.example.io/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1366",
+      "url": "https://aiv-cdn.amazon.com.example.io/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1367",
+      "url": "https://aiv-cdn.amazon.com.example.io/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1368",
+      "url": "https://primevideo.com.example.io/",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1369",
+      "url": "https://primevideo.com.example.io/ads/index.html",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1370",
+      "url": "https://primevideo.com.example.io/video/watch?id=1",
+      "category": "lookalike"
+    },
+    {
+      "id": "clean-1371",
+      "url": "https://www.iab.com/guidelines/vast/",
+      "category": "heuristic-edge"
+    },
+    {
+      "id": "clean-1372",
+      "url": "https://blog.example.com/what-is-vpaid",
+      "category": "heuristic-edge"
+    },
+    {
+      "id": "clean-1373",
+      "url": "https://docs.example.org/vast/overview",
+      "category": "heuristic-edge"
+    },
+    {
+      "id": "clean-1374",
+      "url": "https://www.example.com/vastu-shastra/home",
+      "category": "heuristic-edge"
+    },
+    {
+      "id": "clean-1375",
+      "url": "https://news-site-0.example.org/article/0?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1376",
+      "url": "https://news-site-1.example.org/article/1?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1377",
+      "url": "https://news-site-2.example.org/article/2?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1378",
+      "url": "https://news-site-3.example.org/article/3?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1379",
+      "url": "https://news-site-4.example.org/article/4?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1380",
+      "url": "https://news-site-5.example.org/article/5?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1381",
+      "url": "https://news-site-6.example.org/article/6?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1382",
+      "url": "https://news-site-7.example.org/article/7?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1383",
+      "url": "https://news-site-8.example.org/article/8?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1384",
+      "url": "https://news-site-9.example.org/article/9?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1385",
+      "url": "https://news-site-10.example.org/article/10?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1386",
+      "url": "https://news-site-11.example.org/article/11?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1387",
+      "url": "https://news-site-12.example.org/article/12?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1388",
+      "url": "https://news-site-13.example.org/article/13?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1389",
+      "url": "https://news-site-14.example.org/article/14?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1390",
+      "url": "https://news-site-15.example.org/article/15?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1391",
+      "url": "https://news-site-16.example.org/article/16?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1392",
+      "url": "https://news-site-17.example.org/article/17?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1393",
+      "url": "https://news-site-18.example.org/article/18?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1394",
+      "url": "https://news-site-19.example.org/article/19?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1395",
+      "url": "https://news-site-20.example.org/article/20?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1396",
+      "url": "https://news-site-21.example.org/article/21?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1397",
+      "url": "https://news-site-22.example.org/article/22?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1398",
+      "url": "https://news-site-23.example.org/article/23?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1399",
+      "url": "https://news-site-24.example.org/article/24?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1400",
+      "url": "https://news-site-25.example.org/article/25?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1401",
+      "url": "https://news-site-26.example.org/article/26?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1402",
+      "url": "https://news-site-27.example.org/article/27?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1403",
+      "url": "https://news-site-28.example.org/article/28?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1404",
+      "url": "https://news-site-29.example.org/article/29?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1405",
+      "url": "https://news-site-30.example.org/article/30?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1406",
+      "url": "https://news-site-31.example.org/article/31?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1407",
+      "url": "https://news-site-32.example.org/article/32?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1408",
+      "url": "https://news-site-33.example.org/article/33?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1409",
+      "url": "https://news-site-34.example.org/article/34?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1410",
+      "url": "https://news-site-35.example.org/article/35?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1411",
+      "url": "https://news-site-36.example.org/article/36?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1412",
+      "url": "https://news-site-37.example.org/article/37?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1413",
+      "url": "https://news-site-38.example.org/article/38?ref=home",
+      "category": "synthetic"
+    },
+    {
+      "id": "clean-1414",
+      "url": "https://news-site-39.example.org/article/39?ref=home",
+      "category": "synthetic"
+    }
+  ]
+}

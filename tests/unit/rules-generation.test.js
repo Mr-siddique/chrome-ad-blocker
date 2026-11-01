@@ -3,20 +3,26 @@ import path from 'path';
 import { JIO_HOTSTAR_FILTER } from '../../src/filters/jio-hotstar.js';
 import { PRIME_VIDEO_FILTER } from '../../src/filters/prime-video.js';
 import { VAST_VPAID_FILTER } from '../../src/filters/vast-vpaid.js';
-import { BLOCKED_RESOURCE_TYPES, PRIORITY, buildStreamingRules, ruleToUrlFilter } from '../../src/utils/dnr-rules.js';
+import { BLOCKED_RESOURCE_TYPES, PRIORITY, TLD_EXPANSION, buildStreamingRules, ruleToUrlFilters } from '../../src/utils/dnr-rules.js';
 import { compileRules, evaluate, urlFilterToRegExp } from '../harness/dnr-sim.js';
 
 const sources = { filters: [PRIME_VIDEO_FILTER, JIO_HOTSTAR_FILTER], vast: VAST_VPAID_FILTER };
 const generated = buildStreamingRules(sources);
 
-describe('ruleToUrlFilter', () => {
+describe('ruleToUrlFilters', () => {
   it.each([
-    [{ host: 'ads.jiohotstar.com' }, '||ads.jiohotstar.com^'],
-    [{ host: 'aiv-cdn.amazon.com', path: '/ads' }, '||aiv-cdn.amazon.com/ads^'],
-    [{ host: 'ad-tier-*.prd.primevideo.*' }, '||ad-tier-*.prd.primevideo.'],
-    [{ host: 'cdn-*.hotstar.com', path: '/ads' }, '||cdn-*.hotstar.com/ads^'],
-  ])('%j -> %s', (rule, expected) => {
-    expect(ruleToUrlFilter(rule)).toBe(expected);
+    [{ host: 'ads.jiohotstar.com' }, ['||ads.jiohotstar.com^']],
+    [{ host: 'aiv-cdn.amazon.com', path: '/ads' }, ['||aiv-cdn.amazon.com/ads^']],
+    [{ host: 'cdn-*.hotstar.com', path: '/ads' }, ['||cdn-*.hotstar.com/ads^']],
+  ])('%j -> %j', (rule, expected) => {
+    expect(ruleToUrlFilters(rule)).toEqual(expected);
+  });
+
+  it('expands a TLD wildcard into explicit, separator-terminated filters', () => {
+    const filters = ruleToUrlFilters({ host: 'ad-tier-*.prd.primevideo.*' });
+    expect(filters).toHaveLength(TLD_EXPANSION.length);
+    expect(filters[0]).toBe('||ad-tier-*.prd.primevideo.com^');
+    expect(filters.every((filter) => filter.endsWith('^'))).toBe(true);
   });
 });
 
@@ -74,5 +80,8 @@ describe('dnr simulator and priority resolution', () => {
     expect(evaluate('https://example.com/a/vast.xml', compiled)).toBe('block');
     expect(evaluate('https://example.com/a/master.m3u8?vast=1', compiled)).toBe('allow');
     expect(evaluate('https://example.com/movie.mp4', compiled)).toBe('none');
+    expect(evaluate('https://ad-tier-1.prd.primevideo.com.evil.io/x', compiled)).toBe('none');
+    expect(evaluate('https://ad-tier-1.prd.primevideo.co.uk/x', compiled)).toBe('block');
+    expect(evaluate('https://example.com/vastu-shastra', compiled)).toBe('none');
   });
 });

@@ -1,35 +1,51 @@
 import { isAllowlistedPlayerResource, isSubtitleUrl, parseUrl } from '../utils/filters.js';
 
-// Each signature pairs a JS test with the equivalent substring urlFilter used for the
-// generated declarativeNetRequest rule. The JS test is stricter (token boundaries), so the
-// DNR rule is a superset of what the JS matcher blocks.
+const PATH_DELIMITERS = ['^', '.', '_', '-'];
+const withDelimiters = (segment) => PATH_DELIMITERS.map((delimiter) => `${segment}${delimiter}`);
+const withVersions = (segment) => ['1', '2', '3', '4'].map((digit) => `${segment}${digit}`);
+
+// Each signature pairs a JS test with the equivalent DNR urlFilters. The JS test is stricter
+// (token boundaries), so the DNR rules are a superset of what the JS matcher blocks.
 const SIGNATURES = [
-  { type: 'vast', urlFilter: '/vast', test: /(^|[/_.-])vast\d*([/_.-]|$)/ },
-  { type: 'vast', urlFilter: '/vmap', test: /(^|[/_.-])vmap\d*([/_.-]|$)/ },
-  { type: 'vast', urlFilter: 'output=vast', test: /[?&]output=vast/ },
-  { type: 'vast', urlFilter: 'output=xml_vast', test: /[?&]output=xml_vast/ },
-  { type: 'vast', urlFilter: 'output=vmap', test: /[?&]output=(xml_)?vmap/ },
-  { type: 'vast', urlFilter: 'vast=', test: /[?&]vast(version)?=/ },
-  { type: 'vast', urlFilter: 'ad_type=vast', test: /[?&]ad_type=vast/ },
-  { type: 'vast', urlFilter: 'adtype=vast', test: /[?&]adtype=vast/ },
-  { type: 'vpaid', urlFilter: 'vpaid', test: /vpaid/ },
+  {
+    type: 'vast',
+    on: 'path',
+    test: /(^|\/)(vast|vmap)\d*([/_.-]|$)/,
+    urlFilters: ['/vast', '/vmap'].flatMap((s) => [...withDelimiters(s), ...withVersions(s)]),
+  },
+  { type: 'vast', on: 'search', test: /[?&]output=(xml_)?(vast|vmap)/, urlFilters: [
+    '?output=vast', '&output=vast', '?output=xml_vast', '&output=xml_vast',
+    '?output=vmap', '&output=vmap', '?output=xml_vmap', '&output=xml_vmap',
+  ] },
+  { type: 'vast', on: 'search', test: /[?&]vast(version)?=/, urlFilters: [
+    '?vast=', '&vast=', '?vastversion=', '&vastversion=',
+  ] },
+  { type: 'vast', on: 'search', test: /[?&]ad_?type=vast/, urlFilters: [
+    '?ad_type=vast', '&ad_type=vast', '?adtype=vast', '&adtype=vast',
+  ] },
+  { type: 'vpaid', on: 'url', test: /vpaid/, urlFilters: ['vpaid'] },
 ];
 
 export const VAST_VPAID_FILTER = {
   id: 'vast-vpaid',
-  version: '1.0.0',
-  signatures: SIGNATURES.map((signature, index) => ({
-    id: `vv-${String(index + 1).padStart(3, '0')}`,
+  version: '1.1.0',
+  signatures: SIGNATURES.flatMap((signature) => signature.urlFilters.map((urlFilter) => ({
     type: signature.type,
-    urlFilter: signature.urlFilter,
-  })),
+    urlFilter,
+  }))).map((entry, index) => ({ id: `vv-${String(index + 1).padStart(3, '0')}`, ...entry })),
 };
+
+function targetFor(signature, parsed) {
+  const path = parsed.path.toLowerCase();
+  const search = parsed.search.toLowerCase();
+  if (signature.on === 'path') return path;
+  return signature.on === 'search' ? search : `${path}${search}`;
+}
 
 export function classifyAdProtocolRequest(url) {
   const parsed = parseUrl(url);
   if (!parsed || isSubtitleUrl(url) || isAllowlistedPlayerResource(url)) return null;
-  const target = `${parsed.path}${parsed.search}`.toLowerCase();
-  const hit = SIGNATURES.find((signature) => signature.test.test(target));
+  const hit = SIGNATURES.find((signature) => signature.test.test(targetFor(signature, parsed)));
   return hit ? hit.type : null;
 }
 

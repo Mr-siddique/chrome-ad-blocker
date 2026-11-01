@@ -13,11 +13,19 @@ const SUBTITLE_FILTERS = [
 ];
 const PLAYER_FILTERS = ['.mpd^', '.m3u8^', '.ism^', '.m4s^'];
 
-export function ruleToUrlFilter(rule) {
+// A trailing `.*` in a host pattern is a TLD. A bare `||host.` filter would also match
+// lookalikes such as primevideo.com.evil.io, so common TLDs are listed explicitly and
+// terminated with the `^` separator.
+export const TLD_EXPANSION = [
+  'com', 'net', 'org', 'co.uk', 'de', 'fr', 'es', 'it', 'jp', 'co.jp', 'in', 'ca', 'com.au', 'com.br', 'com.mx',
+];
+
+export function ruleToUrlFilters(rule) {
   const wildcardTld = rule.host.endsWith('.*');
-  const host = wildcardTld ? rule.host.slice(0, -1) : rule.host;
-  if (rule.path) return `||${host}${rule.path}^`;
-  return wildcardTld ? `||${host}` : `||${host}^`;
+  const hosts = wildcardTld
+    ? TLD_EXPANSION.map((tld) => `${rule.host.slice(0, -1)}${tld}`)
+    : [rule.host];
+  return hosts.map((host) => (rule.path ? `||${host}${rule.path}^` : `||${host}^`));
 }
 
 function makeRule(id, urlFilter, priority, type, resourceTypes) {
@@ -40,8 +48,8 @@ function uniqueFilters(entries) {
 }
 
 function collectEntries({ filters, vast }) {
-  const hostEntries = filters.flatMap((filter) => filter.rules).map((rule) => ({
-    urlFilter: ruleToUrlFilter(rule), priority: PRIORITY.host, action: 'block',
+  const hostEntries = filters.flatMap((filter) => filter.rules).flatMap(ruleToUrlFilters).map((urlFilter) => ({
+    urlFilter, priority: PRIORITY.host, action: 'block',
   }));
   const vastEntries = vast.signatures.map((signature) => ({
     urlFilter: signature.urlFilter, priority: PRIORITY.heuristic, action: 'block',
