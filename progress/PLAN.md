@@ -39,7 +39,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Satisfies:** foundation for AT-1, AT-2, AT-3, AT-7, AT-8, AT-16 (invalid pattern rejection), AT-10 (load time design), AT-12
 - **Notes:** pure functions, no chrome APIs: `matchUrl(url, ruleSet)`, `matchElement(descriptor, ruleSet)`, host-indexed lookup (hash by registrable domain) for speed, `isAllowlistedPlayerResource()` guard for subtitles/manifests/content segments, `validatePattern()`.
 - **Test Strategy:** Unit with table-driven cases; boundary cases for lookalike domains (`notads.jiohotstar.com.evil`), empty/malformed URLs, match-all rejection; 85%+ coverage of both files; micro-benchmark asserting single-match speed.
-- **Status:** NOT STARTED
+- **Status:** DONE (60 tests total, 98% coverage)
 
 ### T3: Prime Video filter list, ad corpus, block-rate test (STREAMING, FIRST)
 - **Scope:** Large

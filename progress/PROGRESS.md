@@ -5,9 +5,9 @@
 
 ## Completed Tasks
 - [x] T1: Project scaffolding, manifest, test infrastructure - MV3 manifest, webpack/babel/eslint config, richer chrome mocks, fixtures README (8 tests)
+- [x] T2: Filter engine core (matcher, pattern parsing, validation) - host-indexed URL/element matcher, pattern validation (60 tests total, 98% coverage)
 
 ## Remaining Tasks
-- [ ] T2: Filter engine core (matcher, pattern parsing, validation)
 - [ ] T3: Prime Video filter list, ad corpus, block-rate test (STREAMING, FIRST)
 - [ ] T4: Jio Hotstar filter list, ad corpus, block-rate test (STREAMING)
 - [ ] T5: VAST/VPAID detection and blocking

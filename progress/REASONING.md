@@ -477,3 +477,9 @@ For agents to use before making big decisions:
 - webpack `devtool: false`: default dev devtool uses eval, which MV3 CSP forbids. A small inline plugin copies static files (no new dependency).
 - tests/setup.js mocks support callback and promise styles and keep an in-memory store with onChanged.
 - ESLint enforces max 30 lines per function in src (tests exempt).
+
+### T2: Matcher design
+**Agent:** Build Agent | **Task:** T2 | **Risk:** LOW
+- Rules are `{id, host, path?, contains?, heuristic?}`. Non-wildcard hosts go into a Map and are looked up by walking host suffixes (O(labels)); wildcard hosts use anchored regexes. `*` in a host is one label; a trailing `.*` is a TLD (com, de, co.uk) so `primevideo.com.evil` cannot match.
+- Subtitles are never blocked. Manifests/segments are protected only from `heuristic` rules, so an explicit ad-host rule can still block an ad manifest (needed for the 90% target).
+- Size matching applies only to iframe/ins elements (+-2px) to limit false positives on legitimate 300x250 images.
