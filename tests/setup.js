@@ -34,6 +34,29 @@ function pickKeys(data, keys) {
   return out;
 }
 
+const QUOTAS = {
+  sync: { total: 102400, perItem: 8192, maxItems: 512 },
+  local: { total: 10485760, perItem: Infinity, maxItems: Infinity },
+};
+
+function itemBytes(key, value) {
+  return key.length + JSON.stringify(value).length;
+}
+
+// Mirrors chrome.storage quotas; the whole set() call is rejected atomically.
+function assertQuota(name, data, items) {
+  const limits = QUOTAS[name];
+  const merged = { ...data };
+  for (const [key, value] of Object.entries(items)) {
+    if (itemBytes(key, value) > limits.perItem) throw new Error('QUOTA_BYTES_PER_ITEM quota exceeded');
+    merged[key] = value;
+  }
+  const keys = Object.keys(merged);
+  if (keys.length > limits.maxItems) throw new Error('MAX_ITEMS quota exceeded');
+  const total = keys.reduce((sum, key) => sum + itemBytes(key, merged[key]), 0);
+  if (total > limits.total) throw new Error('QUOTA_BYTES quota exceeded');
+}
+
 function makeStorageArea(name, onChanged) {
   const data = {};
   const notify = (changes) => {
@@ -43,6 +66,12 @@ function makeStorageArea(name, onChanged) {
     _data: data,
     get: jest.fn((keys, callback) => respond(pickKeys(data, keys), callback)),
     set: jest.fn((items, callback) => {
+      try {
+        assertQuota(name, data, items);
+      } catch (error) {
+        if (typeof callback === 'function') return callback();
+        return Promise.reject(error);
+      }
       const changes = {};
       for (const [key, value] of Object.entries(items)) {
         changes[key] = { oldValue: data[key], newValue: value };

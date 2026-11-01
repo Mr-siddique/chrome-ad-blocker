@@ -109,7 +109,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T1 (independent of T3 to T8, may be built in parallel with them; placed here to keep streaming first)
 - **Satisfies:** AT-14 (settings persistence), AT-13 (whitelist/blacklist persistence part), AT-12, Performance: storage latency <20 ms p95, edge cases: sync quota exceeded (evict stats first, never whitelist), local full (evict oldest stats), read failure falls back to bundled defaults, session-disable cleared on startup
 - **Test Strategy:** Unit with mocked chrome.storage for get/set/remove, defaults fallback, error paths; quota test fills sync to 100 KB / 8 KB per item and local to 10 MB and verifies eviction order and graceful error message; timing test over >=100 ops p95 <20 ms. Whitelist sync across two profiles is MANUAL (T17).
-- **Status:** NOT STARTED
+- **Status:** DONE (272 tests total, storage.js 98.7% stmts)
 
 ### T10: Messaging, per-tab stats, whitelist/blacklist enforcement, badge
 - **Scope:** Medium

@@ -522,3 +522,12 @@ For agents to use before making big decisions:
 ### T8: Streaming gate
 **Agent:** Build Agent | **Task:** T8 | **Risk:** LOW
 - The gate spawns a child `jest` (coverage off, explicit suite paths, so it cannot recurse) for AT-1/2/3/4/6 and also recomputes per-platform corpus rates. It writes `progress/streaming-gate-report.json`, which is gitignored (generated; also perf-report.json). Re-run after T12 as the regression check.
+
+### T9: Storage layer
+**Agent:** Build Agent | **Task:** T9 | **Risk:** MEDIUM
+- Whitelist/blacklist are sharded into <=6000-byte chunks (`whitelist.n`, `whitelist.0..`) because sync allows only 8 KB per item; writes are a single atomic `set` then stale chunks are removed, so a quota failure leaves the old list intact.
+- Semantics chosen for AT-13: blacklist forces blocking (even when blocking is globally/session disabled); whitelist disables blocking on the domain and its subdomains; a domain is in at most one list; otherwise global `enabled` and the session flag decide.
+- Session disable lives in `storage.local` (`chrome.storage.session` is v102+, floor is v90); clearing on `runtime.onStartup` is wired in T10.
+- Stats are per-day buckets in `storage.local` (`statsDaily`, max 90 days). On local quota errors the oldest half is evicted. On sync quota errors stats are evicted first (per the spec edge-case row), the write is retried once, and then a visible message is returned; the whitelist is never evicted. Note that evicting local stats does not actually free sync space; the behavior follows the spec wording.
+- tests/setup.js now enforces Chrome's sync (100 KB / 8 KB per item / 512 items) and local (10 MB) quotas. `HEALTH_KEY` moved into storage.js; rules-loader re-exports it.
+- Custom patterns and import/export persistence arrive in T14.

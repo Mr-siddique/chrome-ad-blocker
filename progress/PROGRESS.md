@@ -12,9 +12,9 @@
 - [x] T6: declarativeNetRequest rules generation and service worker (request-level blocking) - DNR rule generation (85 rules), service worker with fail-safe init, parity tests (165 tests total, 99.6% stmt coverage)
 - [x] T7: Player DOM handling (content script, dynamic injection, playback integrity) - content script, player DOM ad removal with protected controls/subtitles, mock player harness, AT-4/AT-6/AT-11 tests (227 tests total)
 - [x] T8: Streaming checkpoint (quality gate, no new features) - streaming gate aggregating AT-1/2/3/4/6 (PASS) (235 tests total)
+- [x] T9: Storage layer (sync whitelist, local stats, quotas, fallbacks) - chunked sync whitelist/blacklist, settings, session flag, per-day local stats, quota handling (272 tests total, storage.js 98.7% stmts)
 
 ## Remaining Tasks
-- [ ] T9: Storage layer (sync whitelist, local stats, quotas, fallbacks)
 - [ ] T10: Messaging, per-tab stats, whitelist/blacklist enforcement, badge
 - [ ] T11: Clean corpus and false-positive suite (streaming-sensitive)
 - [ ] T12: General banner ad blocking (secondary)

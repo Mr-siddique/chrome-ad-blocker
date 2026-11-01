@@ -4,7 +4,7 @@ import { isVastVpaidRequest } from '../filters/vast-vpaid.js';
 import { buildRuleSet, shouldBlockUrl } from './filters.js';
 import { validatePattern } from './patterns.js';
 
-export const HEALTH_KEY = 'health';
+export { HEALTH_KEY } from './storage.js';
 const DEFAULT_FILTERS = [PRIME_VIDEO_FILTER, JIO_HOTSTAR_FILTER];
 
 export function validateFilterList(filter) {
