@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <title>Streaming Ad Blocker</title>
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <main class="popup">
+    <header class="popup-header">
+      <h1>Streaming Ad Blocker</h1>
+      <button id="settings-button" type="button" class="link-button">Settings</button>
+    </header>
+
+    <p id="warning" class="banner banner-warning" role="alert" hidden></p>
+    <p id="error" class="banner banner-error" role="alert" hidden></p>
+    <p id="unavailable" class="banner" hidden>Not available on this page</p>
+
+    <section id="stats" class="stats" aria-live="polite">
+      <p class="count"><span id="count">0</span> <span id="count-caption">ads blocked on this page</span></p>
+      <ul id="labels" class="labels"></ul>
+      <h2 class="section-title">Blocked domains</h2>
+      <ul id="domains" class="domains"></ul>
+      <p id="domains-empty" class="muted">No ads blocked yet</p>
+    </section>
+
+    <section class="toggles">
+      <label class="toggle"><input id="whitelist-toggle" type="checkbox"> <span>Don't block on <strong id="hostname">this site</strong></span></label>
+      <label class="toggle"><input id="session-toggle" type="checkbox"> <span>Pause blocking until the browser restarts</span></label>
+      <label class="toggle"><input id="permanent-toggle" type="checkbox"> <span>Turn blocking off permanently</span></label>
+    </section>
+    <p id="message" class="muted" role="status"></p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

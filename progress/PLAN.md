@@ -149,7 +149,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T10 (stats/messaging), T9
 - **Satisfies:** AT-15 (0, 1, 100+ counts, per-platform label, blocked-domain list, no render errors), AT-13 (whitelist/blacklist toggle writes to storage), spec 2 (settings button opens options, session/permanent disable, non-web tab "Not available on this page", retry once within 1 s when service worker unavailable, corrupted-list warning state)
 - **Test Strategy:** jsdom integration: render with 0/1/100+ ads on Prime Video and Jio Hotstar tab fixtures; assert console.error not called; whitelist button writes to mocked sync storage; settings button calls `openOptionsPage`; error state with retry timing via fake timers; CSS test asserts dark and light variables. Popup open/close during playback is covered by a harness test asserting no DOM/progress change in the mock player (real-site check in T17).
-- **Status:** NOT STARTED
+- **Status:** DONE (510 tests total)
 
 ### T14: Options page
 - **Scope:** Large

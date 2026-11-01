@@ -550,8 +550,16 @@ For agents to use before making big decisions:
 
 ### T12: General banner blocking
 **Agent:** Build Agent | **Task:** T12 | **Risk:** MEDIUM
-- 114 general ad hosts (all `vendor-known`, unconfirmed). Two plausible-but-unverified hosts I considered were left out rather than guessed. Separate `general` static ruleset (enabled by default) so disabling it cannot change streaming rules; duplicates of streaming vendor hosts are intentional for that independence.
+- 116 general ad hosts (all `vendor-known`, unconfirmed). Two plausible-but-unverified hosts I considered were left out rather than guessed. Separate `general` static ruleset (enabled by default) so disabling it cannot change streaming rules; duplicates of streaming vendor hosts are intentional for that independence.
 - Streaming precedence: on Prime Video / Jio Hotstar pages the content script uses only the platform context; every other page gets the banner context. Banner class patterns exclude `ad-free*` badges. Size matching (300x250, 728x90, 970x90, +-2px) applies only to `iframe`/`ins`; a legitimate iframe of those exact dimensions would be a false positive (not measurable offline).
 - AT-7 on the unconfirmed corpus: 116/119 domains, 105/108 DOM fixtures (97.4% combined); the misses are deliberately included unlisted domains and obfuscated-class/odd-size fixtures. Not a real-world measurement.
 - Refactor: content script logic moved to `src/content/runner.js` (extra file) so that importing it has no side effects; `content-script.js` is now a two-line entry. `rules-loader` validates the general list too, so a corrupted general list disables blocking entirely (fail-safe, simple).
 - Regression: streaming gate PASS, AT-8 clean URLs unchanged (3/1414), 55 clean streaming DOM fixtures untouched by banner rules, streaming request-level rate identical with/without the general ruleset.
+
+### T13: Popup
+**Agent:** Build Agent | **Task:** T13 | **Risk:** LOW
+- All dynamic strings (domains, labels) are written with `textContent`, never HTML, since blocked-domain strings originate from web page content. HTML has no inline script/style/handlers (MV3 CSP); asserted in tests.
+- Popup auto-starts only when `chrome.runtime.id` is set (a real extension page), avoiding a test-only hook.
+- Service worker unavailable: `sendWithRetry` with a 500 ms delay, i.e. one retry well within the spec's 1 second; a second failure shows the error state.
+- "Popup open/close during playback = 0 interruptions" is verified on the mock player (popup never messages the page, mock DOM and clock unchanged). The real-site check remains manual (T17).
+- Controls: whitelist, "pause until browser restarts" (session), "off permanently", settings button, per-platform labels, blocked-domain list, health warning, "Not available on this page" for non-http(s) tabs. The toolbar badge is set by the background (T10).

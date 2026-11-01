@@ -16,9 +16,9 @@
 - [x] T10: Messaging, per-tab stats, whitelist/blacklist enforcement, badge - typed messaging, per-tab stats + badge, whitelist/blacklist DNR enforcement, session/permanent disable (323 tests total)
 - [x] T11: Clean corpus and false-positive suite (streaming-sensitive) - 1414-URL clean corpus + 55 clean streaming DOM fixtures; AT-8 test; fixed 2 DNR over-matches it found (388 tests total, 0.21% FP)
 - [x] T12: General banner ad blocking (secondary) - general banner ads: 114-host list, general DNR ruleset, banner context, AT-7 corpora; streaming gate re-run PASS (486 tests total, AT-7 97.4%)
+- [x] T13: Popup UI - popup UI (counts, platform labels, domain list, whitelist/session/permanent toggles, settings, warning/error states, light/dark CSS) (510 tests total)
 
 ## Remaining Tasks
-- [ ] T13: Popup UI
 - [ ] T14: Options page
 - [ ] T15: Error handling and edge-case hardening
 - [ ] T16: Performance benchmarks and CI regression checks
