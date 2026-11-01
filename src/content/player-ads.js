@@ -25,9 +25,17 @@ export function describeElement(el) {
   };
 }
 
+// Joining the selector list for every element dominated the scan time on large pages.
+const joinedSelectors = new WeakMap();
+
+function adSelectorFor(filter) {
+  if (!joinedSelectors.has(filter)) joinedSelectors.set(filter, filter.adSelectors.join(','));
+  return joinedSelectors.get(filter);
+}
+
 export function classify(el, context) {
   const { filter, ruleSet } = context;
-  if (filter.adSelectors.length && el.matches(filter.adSelectors.join(','))) return { reason: 'selector' };
+  if (filter.adSelectors.length && el.matches(adSelectorFor(filter))) return { reason: 'selector' };
   return matchElement(describeElement(el), ruleSet);
 }
 

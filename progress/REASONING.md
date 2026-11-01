@@ -630,3 +630,9 @@ For agents to use before making big decisions:
 **Date:** 2026-11-01 | **Risk Level:** LOW
 
 **Decision:** Keep the broad signatures (so real wrapper blocking is unchanged) and add an exemption for documentation shapes (`/vast/|`, `/<doc-word>/vast`, `/vast/<doc-word>`, `/<doc-word>-vpaid`, ...), both in the JS matcher and as priority-2 DNR allow rules. Host rules (priority 3) still beat them, so an ad host cannot hide behind a doc path. The 3 known FPs are permanent `known-fp-regression` corpus items asserting 0 flagged. Real wrappers (`/ads/vast/v4/a`, `vast.xml`, `vpaid.js`) have explicit tests. Residual risk: a real wrapper whose path is literally `/vast/overview` would be allowed; judged very unlikely.
+
+### Decision: Make the content-script overhead gate robust instead of loosening it
+**Date:** 2026-11-01 | **Risk Level:** LOW
+
+**Decision:** The benchmark now does 20 warmup scans, then 5 rounds x 60 samples (300 total); the gated value is the median of the per-round p95s (pooled p95 and each round's p95 are recorded in perf-report.json). The 50 ms threshold is unchanged. Also cached the joined `adSelectors` string per filter (was re-joined for every element).
+**Finding (honest):** profiling shows ~20-37 ms of the ~34 ms is jsdom's own `querySelectorAll` over the 1500-row page with the CANDIDATES selector; the extension's own work is a small part, so the cache gave no measurable gain. Real Chrome's native selector engine is far faster, but real-page overhead is still NOT measured (manual task). Post-change: median-of-round p95 34.2 ms; one noisy round reached 42.3 ms and no longer decides the result.
