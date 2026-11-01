@@ -59,7 +59,7 @@ Source: SPEC.md (FINALIZED, AT-1 to AT-17). Planned by the Plan Agent. Build mus
 - **Dependencies:** T2 (parallel-capable with T3)
 - **Satisfies:** AT-2 (>=90%), part of AT-6
 - **Test Strategy:** Same as T3 for Hotstar. Include test that `hotstar.com` content CDN paths (non `/ads`) are not blocked.
-- **Status:** NOT STARTED
+- **Status:** DONE (102 tests total, corpus rate 91.8%)
 
 ### T5: VAST/VPAID detection and blocking
 - **Scope:** Medium

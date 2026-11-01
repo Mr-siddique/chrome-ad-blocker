@@ -7,9 +7,9 @@
 - [x] T1: Project scaffolding, manifest, test infrastructure - MV3 manifest, webpack/babel/eslint config, richer chrome mocks, fixtures README (8 tests)
 - [x] T2: Filter engine core (matcher, pattern parsing, validation) - host-indexed URL/element matcher, pattern validation (60 tests total, 98% coverage)
 - [x] T3: Prime Video filter list, ad corpus, block-rate test (STREAMING, FIRST) - Prime Video list (55 rules), 59 endpoint + 30 DOM fixture corpus (unconfirmed), AT-1 test (82 tests total, corpus rate 92.1%)
+- [x] T4: Jio Hotstar filter list, ad corpus, block-rate test (STREAMING) - Jio Hotstar list (40 rules), 43 endpoint + 30 DOM fixture corpus (unconfirmed), AT-2 test (102 tests total, corpus rate 91.8%)
 
 ## Remaining Tasks
-- [ ] T4: Jio Hotstar filter list, ad corpus, block-rate test (STREAMING)
 - [ ] T5: VAST/VPAID detection and blocking
 - [ ] T6: declarativeNetRequest rules generation and service worker (request-level blocking)
 - [ ] T7: Player DOM handling (content script, dynamic injection, playback integrity)

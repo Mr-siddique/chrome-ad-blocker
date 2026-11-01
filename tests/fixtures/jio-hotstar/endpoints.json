@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "platform": "jio-hotstar",
+    "version": "1.0.0",
+    "confirmed": false,
+    "source": "Author-generated from SPEC.md named endpoints and public ad-tech domains. URL paths are synthetic. Not validated against live traffic captures."
+  },
+  "items": [
+    {
+      "id": "jh-e-001",
+      "url": "https://ads.jiohotstar.com/video/ads/v1/serve?placement=preroll&slot=0",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "spec",
+      "ruleId": "jh-001"
+    },
+    {
+      "id": "jh-e-002",
+      "url": "https://cdn-12.hotstar.com/ads/seg_001.mp4",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "spec",
+      "ruleId": "jh-002"
+    },
+    {
+      "id": "jh-e-003",
+      "url": "https://securepubads.g.doubleclick.net/gampad/ads",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-003"
+    },
+    {
+      "id": "jh-e-004",
+      "url": "https://pagead2.googlesyndication.com/pagead/ads",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-004"
+    },
+    {
+      "id": "jh-e-005",
+      "url": "https://www.googleadservices.com/pagead/conversion/1/",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-005"
+    },
+    {
+      "id": "jh-e-006",
+      "url": "https://imasdk.googleapis.com/js/sdkloader/ima3.js",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-006"
+    },
+    {
+      "id": "jh-e-007",
+      "url": "https://s0.2mdn.net/instream/video/client.js",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-007"
+    },
+    {
+      "id": "jh-e-008",
+      "url": "https://z.moatads.com/moatvideo.js",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-008"
+    },
+    {
+      "id": "jh-e-009",
+      "url": "https://video.adsafeprotected.com/video/ads/v1/serve?placement=preroll&slot=8",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-009"
+    },
+    {
+      "id": "jh-e-010",
+      "url": "https://serve.doubleverify.com/video/ads/v1/serve?placement=midroll&slot=9",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-010"
+    },
+    {
+      "id": "jh-e-011",
+      "url": "https://ads.serving-sys.com/video/ads/v1/serve?placement=bumper&slot=10",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-011"
+    },
+    {
+      "id": "jh-e-012",
+      "url": "https://pubads.innovid.com/video/ads/v1/serve?placement=overlay&slot=11",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-012"
+    },
+    {
+      "id": "jh-e-013",
+      "url": "https://vast.flashtalking.com/video/ads/v1/serve?placement=preroll&slot=12",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-013"
+    },
+    {
+      "id": "jh-e-014",
+      "url": "https://video.adsrvr.org/video/ads/v1/serve?placement=midroll&slot=13",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-014"
+    },
+    {
+      "id": "jh-e-015",
+      "url": "https://serve.rubiconproject.com/video/ads/v1/serve?placement=bumper&slot=14",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-015"
+    },
+    {
+      "id": "jh-e-016",
+      "url": "https://ads.pubmatic.com/video/ads/v1/serve?placement=overlay&slot=15",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-016"
+    },
+    {
+      "id": "jh-e-017",
+      "url": "https://pubads.openx.net/video/ads/v1/serve?placement=preroll&slot=16",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-017"
+    },
+    {
+      "id": "jh-e-018",
+      "url": "https://vast.spotxchange.com/video/ads/v1/serve?placement=midroll&slot=17",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-018"
+    },
+    {
+      "id": "jh-e-019",
+      "url": "https://2a7e9.v.fwmrm.net/ad/g/1",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-019"
+    },
+    {
+      "id": "jh-e-020",
+      "url": "https://serve.adnxs.com/video/ads/v1/serve?placement=overlay&slot=19",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-020"
+    },
+    {
+      "id": "jh-e-021",
+      "url": "https://ads.casalemedia.com/video/ads/v1/serve?placement=preroll&slot=20",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-021"
+    },
+    {
+      "id": "jh-e-022",
+      "url": "https://pubads.tremorhub.com/video/ads/v1/serve?placement=midroll&slot=21",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-022"
+    },
+    {
+      "id": "jh-e-023",
+      "url": "https://vast.springserve.com/video/ads/v1/serve?placement=bumper&slot=22",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-023"
+    },
+    {
+      "id": "jh-e-024",
+      "url": "https://video.smartadserver.com/video/ads/v1/serve?placement=overlay&slot=23",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-024"
+    },
+    {
+      "id": "jh-e-025",
+      "url": "https://serve.teads.tv/video/ads/v1/serve?placement=preroll&slot=24",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-025"
+    },
+    {
+      "id": "jh-e-026",
+      "url": "https://ads.krxd.net/video/ads/v1/serve?placement=midroll&slot=25",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-026"
+    },
+    {
+      "id": "jh-e-027",
+      "url": "https://pubads.bidswitch.net/video/ads/v1/serve?placement=bumper&slot=26",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-027"
+    },
+    {
+      "id": "jh-e-028",
+      "url": "https://vast.inmobi.com/video/ads/v1/serve?placement=overlay&slot=27",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-028"
+    },
+    {
+      "id": "jh-e-029",
+      "url": "https://video.inmobicdn.net/video/ads/v1/serve?placement=preroll&slot=28",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-029"
+    },
+    {
+      "id": "jh-e-030",
+      "url": "https://serve.vserv.mobi/video/ads/v1/serve?placement=midroll&slot=29",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-030"
+    },
+    {
+      "id": "jh-e-031",
+      "url": "https://ads.affle.com/video/ads/v1/serve?placement=bumper&slot=30",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-031"
+    },
+    {
+      "id": "jh-e-032",
+      "url": "https://pubads.colombiaonline.com/video/ads/v1/serve?placement=overlay&slot=31",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-032"
+    },
+    {
+      "id": "jh-e-033",
+      "url": "https://vast.tyroo.com/video/ads/v1/serve?placement=preroll&slot=32",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-033"
+    },
+    {
+      "id": "jh-e-034",
+      "url": "https://video.tubemogul.com/video/ads/v1/serve?placement=midroll&slot=33",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-034"
+    },
+    {
+      "id": "jh-e-035",
+      "url": "https://serve.brightroll.com/video/ads/v1/serve?placement=bumper&slot=34",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-035"
+    },
+    {
+      "id": "jh-e-036",
+      "url": "https://ads.lkqd.net/video/ads/v1/serve?placement=overlay&slot=35",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-036"
+    },
+    {
+      "id": "jh-e-037",
+      "url": "https://pubads.stickyadstv.com/video/ads/v1/serve?placement=preroll&slot=36",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-037"
+    },
+    {
+      "id": "jh-e-038",
+      "url": "https://vast.adform.net/video/ads/v1/serve?placement=midroll&slot=37",
+      "kind": "midroll",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-038"
+    },
+    {
+      "id": "jh-e-039",
+      "url": "https://video.mathtag.com/video/ads/v1/serve?placement=bumper&slot=38",
+      "kind": "bumper",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-039"
+    },
+    {
+      "id": "jh-e-040",
+      "url": "https://serve.indexww.com/video/ads/v1/serve?placement=overlay&slot=39",
+      "kind": "overlay",
+      "stitched": false,
+      "confidence": "vendor-known",
+      "ruleId": "jh-040"
+    },
+    {
+      "id": "jh-e-041",
+      "url": "https://hses1.hotcdn-example.net/vod/ad-break-1/seg_00007.ts",
+      "kind": "midroll",
+      "stitched": true,
+      "confidence": "synthetic"
+    },
+    {
+      "id": "jh-e-042",
+      "url": "https://hses2.hotcdn-example.net/vod/ad-break-2/seg_00031.ts",
+      "kind": "midroll",
+      "stitched": true,
+      "confidence": "synthetic"
+    },
+    {
+      "id": "jh-e-043",
+      "url": "https://promo.unlisted-adtech-example.in/serve?slot=mid",
+      "kind": "preroll",
+      "stitched": false,
+      "confidence": "synthetic",
+      "note": "ad domain not in the bundled list; expected unblocked (spec edge case)"
+    }
+  ]
+}
